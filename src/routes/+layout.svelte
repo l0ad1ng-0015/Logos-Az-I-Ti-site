@@ -22,15 +22,19 @@
     --green-main: rgba(175,214,131,255);
     --green-secondory: rgba(148, 205, 83, 255);
     --green-dark: rgba(47, 77, 25, 1);
-    --green-button: rgba(226, 240, 153, 1);
+    --green-button: #e2f099;
     --yellow: rgba(254,246,1,255);
     --blue-example: rgba(227,242,255,255);
-    font-family: "ABeeZee", sans-serif;
     font-weight: 400;
+    
     font-style: normal;
-    /* zoom: 90%; */
-
+    zoom: 90%;
+    
     /* min-height: calc(100vh - 140px); */
+  }
+  
+  :global(h1, h2, h3, h4, h5, h6) {
+    font-family: "ABeeZee", sans-serif;
   }
 
   main {
@@ -41,6 +45,6 @@
     /* background-color: var(--blue-example); */
     min-height: calc(100vh - 140px);
     /* padding: 20px; */
-    height: 1000px;
+    height: 2000px;
   }
 </style>

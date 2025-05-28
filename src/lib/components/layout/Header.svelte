@@ -161,7 +161,7 @@
 
   .nav-links a {
     text-decoration: none;
-    color: var(--green-button);
+    color: var(--green-dark);
     font-size: 1.2em;
     font-weight: bolder;
   }
