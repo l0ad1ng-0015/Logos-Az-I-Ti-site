@@ -325,6 +325,55 @@
   </div>
 </div>
 
+<div class="reviews">
+  <div class="reviews-container">
+    <h1 id="reviews-h">Родителите за нас</h1>
+    <div class="reviews-content">
+      <div class="card">
+        <div id="reviews-upper">
+          <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="50" fill="#9ECCF0"/>
+            </svg>
+          <div id="card-info">
+            <p>Анна<br>Генадиева</p>
+            <div id="stars">★★★★★</div>
+          </div>
+        </div>
+        <div id="reviews-lower">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error labore inventore, illum itaque fuga quisquam beatae libero magni ullam! Natus deleniti fugit repellat eius tempora id ea quasi quae nesciunt.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div id="reviews-upper">
+          <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="50" fill="orange"/>
+            </svg>
+          <div id="card-info">
+            <p>Анна<br>Генадиева</p>
+            <div id="stars">★★★★★</div>
+          </div>
+        </div>
+        <div id="reviews-lower">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error labore inventore, illum itaque fuga quisquam beatae libero magni ullam! Natus deleniti fugit repellat eius tempora id ea quasi quae nesciunt.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div id="reviews-upper">
+          <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="50" fill="green"/>
+            </svg>
+          <div id="card-info">
+            <p>Анна<br>Генадиева</p>
+            <div id="stars">★★★★★</div>
+          </div>
+        </div>
+        <div id="reviews-lower">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error labore inventore, illum itaque fuga quisquam beatae libero magni ullam! Natus deleniti fugit repellat eius tempora id ea quasi quae nesciunt.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <style>
 /* ---------- 1. GLOBAL RESETS FOR THIS DEMO (optional) ---------- */
 /* ---- 1. GLOBAL RESETS FOR THIS DEMO (optional) ---- */
@@ -657,7 +706,7 @@ img{max-width:100%;display:block}
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 0.6rem 0;
+  margin: 0.6rem 1rem;
 }
 
 iframe {
@@ -665,13 +714,14 @@ iframe {
   height: 300px;
   border: none;
   border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact-info {
   flex: 1 1 40%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: end;
 }
 
 .contact-info ul {
@@ -686,6 +736,7 @@ iframe {
   background-color: var(--orange);
   margin-bottom: 1.8rem;
   padding: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact-info li:hover {
@@ -711,28 +762,144 @@ iframe {
   transition: fill 0.3s ease;
 }
 
+/* ---------- 6 REVIEWS ---------- */
+.reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.reviews-container {
+  width: 90%;
+  max-width: 1000px;
+}
+
+#reviews-h {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #000;
+  text-align: left;
+}
+
+.reviews-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 310px;
+  margin: 0 0.7rem;
+  padding: 1rem;
+  border-radius: 5px;
+  /* background-color: var(--orange);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+#reviews-upper {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 1rem;
+}
+
+#reviews-upper svg {
+  width: 80px;
+  height: 80px;
+  margin-right: 1rem;
+  border: 4px solid var(--orange);
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#stars {
+  color: #FFD700;
+  font-size: 18px;
+}
+
+#reviews-lower p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0;
+}
 
 @media screen and (max-width: 955px) {
   /* ---------- 5 CONTACTS ---------- */
- iframe {
+  iframe {
     width: 100%;
     height: 250px;
   }
+  .contacts {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  iframe {
+    width: 75%;
+    height: 350px;
+    margin-bottom: 1rem;
+    border: 2px solid black;
+  }
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info {
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
 
   .contact-info li {
-    padding: 0.2rem;
-  }
-
-  .contact-info a{
-    font-size: 1.2rem;
-  }
-
-  .contact-info a svg {
-    width: 30px;
-    height: 30px;
     margin-right: 1rem;
   }
 
+
+  /* ---------- 6 REVIEWS ---------- */
+  .reviews-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card {
+    width: 90%;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+
+  #reviews-upper svg {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0.5rem;
+    border: 3px solid var(--orange);
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-top-color: transparent;
+  }
+
+  #card-info {
+    text-align: center;
+  }
+
+  #card-info p {
+    font-size: 1.2rem;
+    margin: 0.2rem 0;
+  }
+
+  #stars {
+    font-size: 16px;
+  }
+  
 }
 
 @media screen and (max-width: 755px) {
@@ -748,28 +915,68 @@ iframe {
     text-align: center;
   }
 
-  #square {
-    width: 100%;
-    max-width: 300px;
+  /* ---------- 5 Contacts ---------- */
+  .content {
+    flex-direction: column;
+    align-items: center;
   }
-
-  #square p, .more-btn, .less-btn {
-    font-size: 1.2rem;
-    margin: 0.5rem 0;
-  }
-
-  #square svg {
-    width: 300px;
-    margin: 1.5rem;
+  iframe {
+    width: 85%;
+    height: 350px;
     margin-bottom: 1rem;
+    border: 2px solid black;
+  }
+  .contact-info {
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
   }
 
-  /* ---------- 4 Texts ---------- */
-  /* ---------- 4.2 Mission ---------- */
-  #mission-content img {
-    
-}
+  /* ---------- 6 REVIEWS ----------- */
+  .reviews-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+
+
+  #reviews-upper svg {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 0.5rem;
+    border: 3px solid var(--orange);
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-top-color: transparent;
+  }
+
+  #card-info {
+    text-align: center;
+  }
+
+  #card-info p {
+    font-size: 1.2rem;
+    margin: 0.2rem 0;
+  }
+
+  #stars {
+    font-size: 16px;
+  }
 }
 
+@media screen and (max-width: 500px) {
+  /* ---------- 5 Contacts ---------- */
+  iframe {
+    width: 95%;
+  }
+}
 
 </style>
