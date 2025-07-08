@@ -378,7 +378,6 @@
 <style>
 /* ---------- 1. GLOBAL RESETS FOR THIS DEMO (optional) ---------- */
 /* ---- 1. GLOBAL RESETS FOR THIS DEMO (optional) ---- */
-*{box-sizing:border-box;margin:0;padding:0;font-family:"Cormorant Garamond",serif;}
 img{max-width:100%;display:block}
 
 /* ---- 1.5. HERO WRAPPER & BACKGROUND SHAPE ---- */
@@ -471,7 +470,7 @@ img{max-width:100%;display:block}
 }
 
 #services-h {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   line-height: 1.2;
   font-weight: 700;
   color: #000;
@@ -485,7 +484,8 @@ img{max-width:100%;display:block}
   justify-content: center;
 }
 #items > * {
-  width: 300px;
+  width: 280px;
+  height: 210px;
 }
 
 #items a {
@@ -521,7 +521,7 @@ img{max-width:100%;display:block}
   color: #fff; 
 }
 #service-item- svg {
-    width: 190px;
+    width: 170px;
 }
 
 /* .service-item svg {
@@ -549,7 +549,7 @@ img{max-width:100%;display:block}
 }
 
 .podhodi-h, .mission-h {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   line-height: 1.2;
   font-weight: 700;
   color: #000;
@@ -606,7 +606,7 @@ img{max-width:100%;display:block}
 }
 
 #whyus-h {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   line-height: 1.2;
   font-weight: 700;
   color: #000;
@@ -694,7 +694,7 @@ img{max-width:100%;display:block}
 }
 
 #contacts-h {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   line-height: 1.2;
   font-weight: 700;
   color: #000;
@@ -778,7 +778,7 @@ iframe {
 }
 
 #reviews-h {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   line-height: 1.2;
   font-weight: 700;
   color: #000;
@@ -793,7 +793,7 @@ iframe {
 }
 
 .card {
-  width: 310px;
+  width: 278px;
   margin: 0 0.7rem;
   padding: 1rem;
   border-radius: 5px;
@@ -907,13 +907,13 @@ iframe {
   /* ---------- 2 SERVICES ---------- */
   #services-h {
     margin-left: 0;
-    text-align: center;
+    /* text-align: center; */
   }
 
   /* ---------- 3 Why us? ---------- */
   #whyus-h {
     margin-left: 0;
-    text-align: center;
+    /* text-align: center; */
   }
 
   /* ---------- 5 Contacts ---------- */
