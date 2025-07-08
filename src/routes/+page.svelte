@@ -206,7 +206,6 @@
 </div>
 
 <!-- Podhodi and Our mission section -->
-
 <div class="texts">
   <div class="texts-container">
     <div class="podhodi">
@@ -295,6 +294,7 @@
   </div>
 </div>
 
+<!-- Contacts section -->
 <div class="contacts">
   <div class="contacts-container">
     <h1 id="contacts-h">Контакти</h1>
@@ -325,6 +325,7 @@
   </div>
 </div>
 
+<!-- Reviews section -->
 <div class="reviews">
   <div class="reviews-container">
     <h1 id="reviews-h">Родителите за нас</h1>
@@ -380,7 +381,7 @@
 *{box-sizing:border-box;margin:0;padding:0;font-family:"Cormorant Garamond",serif;}
 img{max-width:100%;display:block}
 
-/* ---- 2. HERO WRAPPER & BACKGROUND SHAPE ---- */
+/* ---- 1.5. HERO WRAPPER & BACKGROUND SHAPE ---- */
 .hero-wrapper{
   position:relative;
   width:95%;

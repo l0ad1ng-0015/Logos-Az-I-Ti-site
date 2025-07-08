@@ -15,7 +15,7 @@
   <div class="nav-links">
     <ul>
       <!-- <li><a href="#">Начало</a></li> -->
-      <li><a href="#">За нас</a></li>
+      <li><a href="/za-nas">За нас</a></li>
       <li><a href="#">Услуги</a></li>
       <li><a href="#">Блог</a></li>
       <li><a href="#">За вас</a></li>
@@ -39,7 +39,7 @@
         <hr>
       </li>
       <li>
-        <a href="#">
+        <a href="/za-nas">
           <span class="left-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48" {...$$props}><!-- Icon from IconPark Outline by ByteDance - https://github.com/bytedance/IconPark/blob/master/LICENSE --><path fill="#2f4d19" stroke="#2f4d19" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M24 20a7 7 0 1 0 0-14a7 7 0 0 0 0 14M12 7.255A6.99 6.99 0 0 0 9 13a7 7 0 0 0 3.392 6M36 7.255A6.99 6.99 0 0 1 39 13a6.99 6.99 0 0 1-3 5.746M12 40v2h24v-2c0-3.727 0-5.591-.609-7.062a8 8 0 0 0-4.33-4.329C29.592 28 27.728 28 24 28s-5.591 0-7.061.609a8 8 0 0 0-4.33 4.33C12 34.409 12 36.273 12 40m32 2v-1.2c0-4.48 0-6.72-.872-8.432a8 8 0 0 0-3.496-3.496M4 42v-1.2c0-4.48 0-6.72.872-8.432a8 8 0 0 1 3.496-3.496"/></svg>
           </span>
@@ -185,7 +185,7 @@
   }
 
   .green-button:hover {
-    background-color: var(--blue-example);
+    background-color: var(--green-button-hover);
     transition: 0.5s;
     box-shadow: 4px 6px #888888b1;
   }
