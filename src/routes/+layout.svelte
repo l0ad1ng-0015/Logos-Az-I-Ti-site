@@ -17,7 +17,7 @@
   :global(body) {
     margin: 0 !important;
     --background: rgb(255 249 238); 
-    --orange: rgb(255 172 113);
+    --orange: rgb(255, 172, 113);
     --orange-light: rgb(255 236 211);
     --orange-dark: rgba(254, 223, 183, 0.962);
     --green-main: rgba(175,214,131,255);

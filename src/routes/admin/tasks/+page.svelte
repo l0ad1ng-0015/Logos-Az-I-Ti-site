@@ -198,17 +198,17 @@
         bind:value={newTask.title}
         on:keydown={handleKeydown}
       />
-      <button class="btn" on:click={addTask}>
-        ➕ Add Task
-      </button>
     </div>
     <input 
-      type="text" 
-      class="input-field" 
-      placeholder="📝 Enter task description (optional)..."
-      bind:value={newTask.description}
-      on:keydown={handleKeydown}
+    type="text" 
+    class="input-field" 
+    placeholder="📝 Enter task description (optional)..."
+    bind:value={newTask.description}
+    on:keydown={handleKeydown}
     />
+    <button class="btn" on:click={addTask}>
+      ➕ Add Task
+    </button>
   </div>
 
   <div class="tasks-container">
