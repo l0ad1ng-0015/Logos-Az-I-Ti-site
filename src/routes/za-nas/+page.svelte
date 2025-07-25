@@ -187,7 +187,7 @@
     }
     
     .first-svg {
-        transform: translateY(-50%);
+        transform: translateY(-100%);
     }
     
     .second-svg {
@@ -487,7 +487,7 @@
                 0 0 0 1px rgba(255, 255, 255, 0.3);
         }
 
-
+    /* ---- Media query - 955 ---- */
     @media screen and (max-width: 955px) {
         /* ---- 1. Heading ---- */
         .heading {
@@ -598,6 +598,7 @@
         }
     }
 
+    /* ---- Media query - 755 ---- */
     @media screen and (max-width: 755px) {
         h2 {
             margin-left: 0;
@@ -675,6 +676,11 @@
             padding: 1.5rem;
             margin-bottom: 2.5rem;
             border-radius: 20px;
+        }
+
+        .team-content, h3, p, li {
+            font-size: larger;
+            line-height: 1.5;
         }
 
         /* Member Stats for mobile */
