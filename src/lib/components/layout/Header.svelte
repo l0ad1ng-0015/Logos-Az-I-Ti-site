@@ -1,6 +1,9 @@
 <script>
+  import { onMount } from 'svelte';
+  
   let menuOpen = false;
   let activeDropdown = null;
+  let isScrolled = false;
 
   function toggleMenu() {
     menuOpen = !menuOpen;
@@ -23,9 +26,20 @@
     // Close mobile menu when navigating to a page
     closeMenu();
   }
+
+  function handleScroll() {
+    isScrolled = window.scrollY > 80;
+  }
+
+  onMount(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  });
 </script>
 
-<nav>  
+<nav class:scrolled={isScrolled}>  
   <a href="/" on:click={handleLinkClick}>
     <img class="logo" src="/logos/nav-logo.png" alt="Лого" width="100px" height="86px"/>
   </a>
@@ -209,6 +223,9 @@
   </div>
 </nav>
 
+<!-- Add this spacer div to prevent content from being hidden behind the sticky navbar -->
+<div class="navbar-spacer"></div>
+
 <style>
   nav {
     display: flex;
@@ -217,6 +234,43 @@
     background-color: var(--orange-light);
     padding: 0 40px;
     height: 110px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+
+  nav.scrolled {
+    height: 80px;
+    padding: 0 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0.95;
+  }
+
+  /* Spacer to prevent content from being hidden behind sticky navbar */
+  .navbar-spacer {
+    height: 110px;
+    transition: height 0.3s ease;
+  }
+
+  nav.scrolled + .navbar-spacer {
+    height: 80px;
+  }
+
+  nav.scrolled .logo {
+    width: 70px;
+    height: 60px;
+  }
+
+  nav.scrolled .nav-links a {
+    font-size: 1.1em;
+  }
+
+  nav.scrolled .green-button {
+    font-size: 1.1em;
+    padding: 7px 20px;
   }
 
   .nav-links {
@@ -281,7 +335,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: var(--background);
+    background-color: var(--orange-light);
     min-width: 200px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     border-radius: 8px;
@@ -479,6 +533,19 @@
       padding: 0 20px;
     }
 
+    nav.scrolled {
+      height: 70px;
+      padding: 0 15px;
+    }
+
+    .navbar-spacer {
+      height: 95px;
+    }
+
+    nav.scrolled + .navbar-spacer {
+      height: 70px;
+    }
+
     .logo {
       display: flex;
       justify-content: center;
@@ -487,18 +554,36 @@
       height: 75px;
     }
 
+    nav.scrolled .logo {
+      width: 60px;
+      height: 55px;
+    }
+
     .nav-links a {
       display: flex;
       font-size: 1.1em;
+    }
+
+    nav.scrolled .nav-links a {
+      font-size: 1em;
     }
 
     .nav-links ul {
       gap: 30px;
     }
 
+    nav.scrolled .nav-links ul {
+      gap: 20px;
+    }
+
     .green-button {
       font-size: 1.1em;
       padding: 7px 20px;
+    }
+
+    nav.scrolled .green-button {
+      font-size: 1em;
+      padding: 5px 15px;
     }
   }
 
@@ -508,12 +593,29 @@
       margin: none !important;
     }
 
+    nav.scrolled {
+      height: 70px;
+    }
+
+    .navbar-spacer {
+      height: 95px;
+    }
+
+    nav.scrolled + .navbar-spacer {
+      height: 70px;
+    }
+
     .logo {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 87px;
       height: 75px;
+    }
+
+    nav.scrolled .logo {
+      width: 65px;
+      height: 55px;
     }
 
     .hamburger {
@@ -536,6 +638,10 @@
       padding: 8px 0 16px 0;
       z-index: 1000;
       transition: 0.3s;
+    }
+
+    nav.scrolled .nav-links-mobile {
+      top: 70px;
     }
 
     .nav-links-mobile.open {
@@ -592,13 +698,34 @@
       height: 90px;
     }
 
+    nav.scrolled {
+      height: 65px;
+    }
+
+    .navbar-spacer {
+      height: 90px;
+    }
+
+    nav.scrolled + .navbar-spacer {
+      height: 65px;
+    }
+
     .logo {
       width: 78px;
       height: 67px;
     }
 
+    nav.scrolled .logo {
+      width: 58px;
+      height: 50px;
+    }
+
     .nav-links-mobile {
       top: 90px;
+    }
+
+    nav.scrolled .nav-links-mobile {
+      top: 65px;
     }
 
     .nav-links a {
@@ -614,23 +741,57 @@
     nav {
       height: 90px;
     }
+
+    nav.scrolled {
+      height: 60px;
+    }
+
+    .navbar-spacer {
+      height: 90px;
+    }
+
+    nav.scrolled + .navbar-spacer {
+      height: 60px;
+    }
+
     .logo {
       width: 76px;
       height: 65px;
     }
+
+    nav.scrolled .logo {
+      width: 55px;
+      height: 47px;
+    }
+
     .green-button {
       font-size: 0.95em;
       padding: 7px 10px;
     }
+
+    nav.scrolled .green-button {
+      font-size: 0.9em;
+      padding: 5px 8px;
+    }
+
     .nav-links a {
       font-size: 0.9em;
     }
+
     .nav-links-mobile a {
       font-size: 0.9em;
     }
 
     .hamburger {
       border: 6px solid rgb(253, 218, 176);
+    }
+
+    .nav-links-mobile {
+      top: 90px;
+    }
+
+    nav.scrolled .nav-links-mobile {
+      top: 60px;
     }
   }
 </style>
