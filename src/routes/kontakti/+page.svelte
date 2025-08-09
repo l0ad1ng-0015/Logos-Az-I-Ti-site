@@ -372,7 +372,30 @@
     </div>
 </div>
 
-
+<div class="map">
+    '<div class="map-container">
+        <h2>Как да ни намерите</h2>
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1583.8185306095959!2d23.250366453474165!3d42.68603595385592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa9b20fa501a25%3A0x9afb3ddb6f64ad3c!2zZy5rLiBPdmNoYSBrdXBlbCAxLCDQti7Qui4g0J7QstGH0LAg0LrRg9C_0LXQuyAxIDQwOdCQINCRLCAxNjMyIFNvZmlh!5e0!3m2!1sen!2sbg!4v1748363247477!5m2!1sen!2sbg"
+          width="100%" 
+          height="400" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Нашето местоположение">
+        </iframe>
+        <div class="map-overlay">
+          <div class="map-info">
+            <h3>Лесно достъпно място</h3>
+            <p>Намираме се на удобно място в София с лесен достъп до обществен транспорт.</p>
+            <a href="https://maps.app.goo.gl/FLwhQgPQaasM1piy5" target="_blank" class="directions-btn">
+              Вземете указания
+            </a>
+          </div>
+        </div>
+    </div>
+</div>
 
 
 <style>
@@ -444,7 +467,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 60px;
-        margin-bottom: 60px;
+        margin-bottom: 20px;
         width: 90%;
         max-width: 1000px;
     }
@@ -709,7 +732,7 @@
     }
 
     /* ---- 6. Social Media ---- */
-    .social-media {
+    /* .social-media {
         margin-top: 40px;
     }
 
@@ -720,6 +743,66 @@
 
     .social-links svg:hover {
         transform: translateY(-3px);
+    } */
+
+    /* ---- 6. Map ---- */
+    .map {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    .map-container {
+        width: 90%;
+        max-width: 1000px;
+        position: relative;
+        margin-bottom: 20px; /* Margin само за този елемент */
+    }
+    
+    /* .map-container iframe {
+
+    } */
+
+    .map-overlay {
+        position: absolute;
+        top: 70px;
+        left: 8px;
+        background: var(--orange-light);
+        padding: 20px;
+        border-radius: 12px;
+        backdrop-filter: blur(10px);
+        max-width: 320px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .map-info h3 {
+        color: var(--orange);
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+
+    .map-info p {
+        color: var(--green-dark);
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+    }
+
+    .directions-btn {
+        background: var(--orange);
+        color: white;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+    }
+
+    .directions-btn:hover {
+        background: #4a7c59;
     }
     
 
@@ -754,8 +837,9 @@
             gap: 25px;
             margin-bottom: 25px;
         } */
-    }
 
+    }
+    
     /* ---- Media query - 755 ---- */
     @media screen and (max-width: 755px) {
         /* ---- 1. Heading ---- */
@@ -813,15 +897,23 @@
             gap: 25px;
             margin-bottom: 25px;
         }
-
+        
         .checkbox-label {
             font-size: 1rem !important;
         }
+
+        /* ---- 6. Map ---- */
+        iframe {
+            height: 600px;
+        }
     }
 
-    @media screen and (max-width: 755px) {
-        .checkbox-label {
-            font-size: 0.64rem !important;
+    /* ---- Media query - 425 ---- */
+    @media screen and (max-width: 425px) {
+        .map-overlay {
+            top: 115px;
+            left: 5px;
+            max-width: 305px;
         }
     }
 </style>

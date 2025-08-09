@@ -246,7 +246,6 @@
     height: 80px;
     padding: 0 30px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    opacity: 0.95;
   }
 
   /* Spacer to prevent content from being hidden behind sticky navbar */
