@@ -1,4 +1,22 @@
-<script></script>
+<script>
+  let showAdditionalSection1 = false;
+  let showAdditionalSection2 = false;
+  let showAdditionalSection3 = false;
+  let showAdditionalSection4 = false;
+
+  function toggleSection1() {
+    showAdditionalSection1 = !showAdditionalSection1;
+  }
+  function toggleSection2() {
+    showAdditionalSection2 = !showAdditionalSection2;
+  }
+  function toggleSection3() {
+    showAdditionalSection3 = !showAdditionalSection3;
+  }
+  function toggleSection4() {
+    showAdditionalSection4 = !showAdditionalSection4;
+  }
+</script>
 
 <!-- Heading -->
 <div class="heading">
@@ -37,23 +55,118 @@
     </div>
 </div>
 
-<!-- Age info -->
-<div class="age-info">
-    <strong>Важен период:</strong> В периода до 5 години мозъкът се развива интензивно. Това е времето, когато децата започват да разбират, да говорят, да общуват и изграждат когнитивни умения.
+<!-- Section 1-->
+<div class="main-section">
+    <h2>
+        <!-- <span class="icon">🧠</span> -->
+        1. Ранното развитие е ключово
+    </h2>
+        
+    <div class="content-card">
+        <div class="age-highlight">
+            <strong>Критичен период: до 5 години</strong>
+            <p>В периода до 5 години мозъкът се развива интензивно. Това е времето, когато детето изгражда основите на своето развитие.</p>
+        </div>
+        <p>В този период децата:</p>
+        <ul class="key-points">
+            <li>започват да разбират, да говорят, да общуват</li>
+            <li>изграждат когнитивни умения (внимание, памет, мислене)</li>
+            <li>„попиват" езика чрез игра, общуване и близост</li>
+        </ul>
+
+        <div class="age-highlight">
+            <h4 style="font-family: 'ABeeZee', sans-serif; font-size: 1.5rem; color: var(--orange); margin-bottom: 8px;">Ако в този период имате притеснения в развитието на детето</h4>
+            <p>Превенцията и ранната логопедична намеса са изключително полезни.</p>
+        </div>
+
+        <div class="benefits-box">
+            <h4>Това ще Ви помогне да:</h4>
+            <ul class="key-points">
+              <li>Избегнете колебанията си</li>
+              <li>Получите отговор на въпроси като: „Да изчакам ли?", „Дали това е нормално?"</li>
+            </ul>
+            <p class="emphasis">Превенцията дава яснота и възможност за реакция.</p>
+        </div>
+
+        <div class="outcomes-section">
+            <h4 style="font-size: 1.7rem !important;">Така се постига:</h4>
+            <div class="outcomes-grid">
+                <div class="outcome-item">
+                    <span class="outcome-icon">🚫</span>
+                    <p>Избягване на натрупване на трудности, които често водят до сериозни проблеми</p>
+                </div>
+                <div class="outcome-item">
+                    <span class="outcome-icon">⏰</span>
+                    <p>Не се губи време, което е ценно за развитието на детето</p>
+                </div>
+                <div class="outcome-item">
+                    <span class="outcome-icon">💪</span>
+                    <p>Изгражда се увереност в общуване и самочувствие</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="highlight-section">
-    <h3>Защо превенцията е толкова важна?</h3>
-    <p>Превенцията дава яснота и възможност за реакция. Тя ще Ви помогне да избегнете колебанията си и ще Ви даде отговор на въпроси като: „Да изчакам ли?", „Дали това е нормално?"</p>
-    <div class="benefits-explanation">
-        <strong>Превенцията помага да:</strong>
-        <ul class="key-points">
-            <li>Се избегне натрупване на трудности, които често водят до сериозни проблеми</li>
-            <li>Не се губи време, което е ценно за развитието на детето</li>
-            <li>Се изгради увереност в общуването и самочувствие</li>
-            <li>Се осигури успешна адаптация в детска градина и училище</li>
-            <li>Се развият езиково-говорни, когнитивни и социални умения</li>
-        </ul>
+ <!-- Section 2 -->
+<div class="main-section">
+    <h2>
+        <!-- <span class="icon">🤝</span> -->
+        2. Превенцията не е диагноза, подкрепа и насочване
+    </h2>
+        
+    <div class="content-card">
+        <h3 class="section-intro">Чрез наблюдение, игрови задачи и консултация с родителя, логопедът може да:</h3>
+        <div class="services-grid">
+            <div class="service-item">
+                <svg width="195" height="111" viewBox="0 0 195 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M168.217 66.5031L168.747 66.9785C171.075 68.9329 174.197 71.6269 179.489 71.6269C186.951 71.6269 194.465 66.6088 194.465 55.3048C194.465 44.0009 185.733 38.8771 179.489 38.8771C174.303 38.8771 171.022 41.6239 168.588 43.6311L167.9 44.2122C165.466 46.2194 162.979 47.223 160.597 47.223C156.681 47.223 153.453 44.4235 152.924 40.5146V40.3561V0H112.812H112.706C111.224 0.316933 110.272 1.47903 110.272 2.95805C110.272 4.22578 110.96 5.7048 112.23 7.28947L112.812 7.97615C114.982 10.6173 118.686 15.0015 118.686 21.8156C118.686 30.003 112.124 41.4654 97.5184 41.4654C83.7067 41.4654 76.4569 31.5877 76.4569 21.8156C76.4569 14.843 80.1083 10.5116 82.3308 7.92333L82.8071 7.39511C84.2888 5.65198 85.0297 4.06731 85.0297 2.74676C85.0297 1.37338 84.183 0.264111 82.86 0H82.7542H41.7424V41.0428V41.2013C41.2132 44.9517 38.091 47.6456 34.2809 47.6456C31.7937 47.6456 29.2536 46.5363 26.6077 44.3178L26.0256 43.8424C23.5385 41.7295 20.4162 39.0884 15.1773 39.0884C7.71582 39.0884 0.201416 44.1065 0.201416 55.4105C0.201416 66.7144 8.93295 71.8382 15.1773 71.8382C20.3633 71.8382 23.6443 69.0914 26.0785 67.0842L26.7665 66.5031C29.2007 64.4959 31.6879 63.4923 34.0692 63.4923C37.9852 63.4923 41.2132 66.3446 41.7424 70.2007V70.3591V110.715H152.977V70.0422V69.8837C153.506 66.0805 156.681 63.3338 160.544 63.3338C163.137 63.3338 165.677 64.3902 168.217 66.5031Z" fill="white"/>
+                </svg>
+                <p>Оцени нивото на развитие</p>
+                {#if showAdditionalSection1}
+                    <p class="info" style="margin: 10px 15px; padding: 10px; background-color: #FFCFAD; border: 1px solid black; border-radius: 8px">Професионална оценка на текущото състояние на детето</p>
+                    <button class="less-btn" on:click={toggleSection1}>Покажи по-малко</button>
+                {:else}
+                <button class="more-btn" on:click={toggleSection1}>Покажи повече</button>
+                {/if}
+            </div>
+            <div class="service-item">
+                <svg width="195" height="111" viewBox="0 0 195 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M168.217 66.5031L168.747 66.9785C171.075 68.9329 174.197 71.6269 179.489 71.6269C186.951 71.6269 194.465 66.6088 194.465 55.3048C194.465 44.0009 185.733 38.8771 179.489 38.8771C174.303 38.8771 171.022 41.6239 168.588 43.6311L167.9 44.2122C165.466 46.2194 162.979 47.223 160.597 47.223C156.681 47.223 153.453 44.4235 152.924 40.5146V40.3561V0H112.812H112.706C111.224 0.316933 110.272 1.47903 110.272 2.95805C110.272 4.22578 110.96 5.7048 112.23 7.28947L112.812 7.97615C114.982 10.6173 118.686 15.0015 118.686 21.8156C118.686 30.003 112.124 41.4654 97.5184 41.4654C83.7067 41.4654 76.4569 31.5877 76.4569 21.8156C76.4569 14.843 80.1083 10.5116 82.3308 7.92333L82.8071 7.39511C84.2888 5.65198 85.0297 4.06731 85.0297 2.74676C85.0297 1.37338 84.183 0.264111 82.86 0H82.7542H41.7424V41.0428V41.2013C41.2132 44.9517 38.091 47.6456 34.2809 47.6456C31.7937 47.6456 29.2536 46.5363 26.6077 44.3178L26.0256 43.8424C23.5385 41.7295 20.4162 39.0884 15.1773 39.0884C7.71582 39.0884 0.201416 44.1065 0.201416 55.4105C0.201416 66.7144 8.93295 71.8382 15.1773 71.8382C20.3633 71.8382 23.6443 69.0914 26.0785 67.0842L26.7665 66.5031C29.2007 64.4959 31.6879 63.4923 34.0692 63.4923C37.9852 63.4923 41.2132 66.3446 41.7424 70.2007V70.3591V110.715H152.977V70.0422V69.8837C153.506 66.0805 156.681 63.3338 160.544 63.3338C163.137 63.3338 165.677 64.3902 168.217 66.5031Z" fill="white"/>
+                </svg>
+                <p>Даде идеи и насоки</p>
+                {#if showAdditionalSection2}
+                    <p class="info" style="margin: 10px 15px; padding: 10px; background-color: #FFCFAD; border: 1px solid black; border-radius: 8px"> Конкретни предложения за игри, книги за езиково-говорно стимулиране вкъщи</p>
+                    <button class="less-btn" on:click={toggleSection2}>Покажи по-малко</button>
+                {:else}
+                <button class="more-btn" on:click={toggleSection2}>Покажи повече</button>
+                {/if}
+            </div>
+            <div class="service-item">
+                <svg width="195" height="111" viewBox="0 0 195 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M168.217 66.5031L168.747 66.9785C171.075 68.9329 174.197 71.6269 179.489 71.6269C186.951 71.6269 194.465 66.6088 194.465 55.3048C194.465 44.0009 185.733 38.8771 179.489 38.8771C174.303 38.8771 171.022 41.6239 168.588 43.6311L167.9 44.2122C165.466 46.2194 162.979 47.223 160.597 47.223C156.681 47.223 153.453 44.4235 152.924 40.5146V40.3561V0H112.812H112.706C111.224 0.316933 110.272 1.47903 110.272 2.95805C110.272 4.22578 110.96 5.7048 112.23 7.28947L112.812 7.97615C114.982 10.6173 118.686 15.0015 118.686 21.8156C118.686 30.003 112.124 41.4654 97.5184 41.4654C83.7067 41.4654 76.4569 31.5877 76.4569 21.8156C76.4569 14.843 80.1083 10.5116 82.3308 7.92333L82.8071 7.39511C84.2888 5.65198 85.0297 4.06731 85.0297 2.74676C85.0297 1.37338 84.183 0.264111 82.86 0H82.7542H41.7424V41.0428V41.2013C41.2132 44.9517 38.091 47.6456 34.2809 47.6456C31.7937 47.6456 29.2536 46.5363 26.6077 44.3178L26.0256 43.8424C23.5385 41.7295 20.4162 39.0884 15.1773 39.0884C7.71582 39.0884 0.201416 44.1065 0.201416 55.4105C0.201416 66.7144 8.93295 71.8382 15.1773 71.8382C20.3633 71.8382 23.6443 69.0914 26.0785 67.0842L26.7665 66.5031C29.2007 64.4959 31.6879 63.4923 34.0692 63.4923C37.9852 63.4923 41.2132 66.3446 41.7424 70.2007V70.3591V110.715H152.977V70.0422V69.8837C153.506 66.0805 156.681 63.3338 160.544 63.3338C163.137 63.3338 165.677 64.3902 168.217 66.5031Z" fill="white"/>
+                </svg>
+                <p>Предложи насоки за подкрепа</p>
+                {#if showAdditionalSection3}
+                    <p class="info" style="margin: 10px 15px; padding: 10px; background-color: #FFCFAD; border: 1px solid black; border-radius: 8px">Индивидуален план за подкрепа на развитието</p>
+                    <button class="less-btn" on:click={toggleSection3}>Покажи по-малко</button>
+                {:else}
+                <button class="more-btn" on:click={toggleSection3}>Покажи повече</button>
+                {/if}
+            </div>
+            <div class="service-item">
+                <svg width="195" height="111" viewBox="0 0 195 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M168.217 66.5031L168.747 66.9785C171.075 68.9329 174.197 71.6269 179.489 71.6269C186.951 71.6269 194.465 66.6088 194.465 55.3048C194.465 44.0009 185.733 38.8771 179.489 38.8771C174.303 38.8771 171.022 41.6239 168.588 43.6311L167.9 44.2122C165.466 46.2194 162.979 47.223 160.597 47.223C156.681 47.223 153.453 44.4235 152.924 40.5146V40.3561V0H112.812H112.706C111.224 0.316933 110.272 1.47903 110.272 2.95805C110.272 4.22578 110.96 5.7048 112.23 7.28947L112.812 7.97615C114.982 10.6173 118.686 15.0015 118.686 21.8156C118.686 30.003 112.124 41.4654 97.5184 41.4654C83.7067 41.4654 76.4569 31.5877 76.4569 21.8156C76.4569 14.843 80.1083 10.5116 82.3308 7.92333L82.8071 7.39511C84.2888 5.65198 85.0297 4.06731 85.0297 2.74676C85.0297 1.37338 84.183 0.264111 82.86 0H82.7542H41.7424V41.0428V41.2013C41.2132 44.9517 38.091 47.6456 34.2809 47.6456C31.7937 47.6456 29.2536 46.5363 26.6077 44.3178L26.0256 43.8424C23.5385 41.7295 20.4162 39.0884 15.1773 39.0884C7.71582 39.0884 0.201416 44.1065 0.201416 55.4105C0.201416 66.7144 8.93295 71.8382 15.1773 71.8382C20.3633 71.8382 23.6443 69.0914 26.0785 67.0842L26.7665 66.5031C29.2007 64.4959 31.6879 63.4923 34.0692 63.4923C37.9852 63.4923 41.2132 66.3446 41.7424 70.2007V70.3591V110.715H152.977V70.0422V69.8837C153.506 66.0805 156.681 63.3338 160.544 63.3338C163.137 63.3338 165.677 64.3902 168.217 66.5031Z" fill="white"/>
+                </svg>
+                <p>При нужда - препоръка</p>
+                {#if showAdditionalSection4}
+                    <p class="info" style="margin: 10px 15px; padding: 10px; background-color: #FFCFAD; border: 1px solid black; border-radius: 8px">Насочване към допълнителна оценка или терапия, ако е необходимо</p>
+                    <button class="less-btn" on:click={toggleSection4}>Покажи по-малко</button>
+                {:else}
+                <button class="more-btn" on:click={toggleSection4}>Покажи повече</button>
+                {/if}
+            </div>
+        </div>
     </div>
 </div>
 
@@ -126,16 +239,17 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 2rem;
         width: 100%;
+        margin-top: 2rem;
     }
-
+    
     .why-e-a-container {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 90%;
         max-width: 1000px;
+        margin-bottom: 2rem;
     }
 
     .w-left {
@@ -178,47 +292,263 @@
         border-radius: 16px;
     }
 
-    /* ---- 3. Age info ---- */
-    .age-info {
+    /* ---- 3. Main section ---- */
+    .main-section {
+        width: 90%;
         max-width: 1000px;
-        background: var(--orange-light);
-        border-radius: 10px;
-        padding: 20px;
-        margin: 20px 0;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+        position: relative;
+        margin-bottom: 50px;
         font-size: larger;
-        border-left: 4px solid #ff9d6b;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    /* ---- ---- */
-    .highlight-section {
-        max-width: 1000px;
-        background: linear-gradient(135deg, #fff5f0, #ffe8d9);
+    .main-section h4 {
+        font-size: 1.5rem !important;
+    }
+
+    .main-section p, li {
+        font-size: 1.25rem !important;
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+        background: #ff9d6b;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.4rem;
+        flex-shrink: 0;
+    }
+
+    .content-card {
+        background: var(--orange-light);
         border-radius: 15px;
         padding: 40px;
-        margin: 40px 0;
-        border-left: 5px solid #ff9d6b;
-    }
-
-    .highlight-section h3 {
-        color: #ff9d6b;
-        font-size: 1.5rem;
+        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.142);
         margin-bottom: 20px;
     }
 
-    .benefits-explanation {
-        margin-top: 20px;
+    .age-highlight {
+        background: var(--background);
+        border-radius: 10px;
+        padding: 25px;
+        margin-bottom: 25px;
+        border-left: 5px solid #ff9d6b;
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .age-highlight strong {
+        color: var(--orange);
+        font-family: 'ABeeZee', sans-serif;
+        font-size: 1.5rem;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+
+    /* Евентуално може да се ползва
+     .important-note {
+        background: #f8f9fa;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 25px 0;
+        border-left: 4px solid #ff9d6b;
+        } 
+        
+        .important-note h4 {
+            color: #ff9d6b;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        } */
+
+    .benefits-box {
+        background: var(--background);
+        border-radius: 10px;
+        border: 3px solid var(--orange);
+        padding: 25px;
+        margin: 25px 0;
+    }
+
+    .benefits-box h4 {
+        color: var(--orange);
+        margin-bottom: 15px;
+    }
+
+    .emphasis {
+        background: var(--orange-dark);
+        padding: 15px;
+        border-radius: 8px;
+        border-left: 4px solid #ffb347;
+        margin-top: 15px;
+        font-style: italic;
+        font-weight: 600;
+    }
+
+    .outcomes-section h4 {
+        color: var(--orange);
+        margin-bottom: 20px;
+    }
+
+    .outcomes-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .outcome-item {
+        display: flex;
+        align-items: flex-start;
+        background: var(--background);
+        padding: 20px;
+        border: 2px solid var(--orange);
+        border-radius: 10px;
+        gap: 15px;
+    }
+
+    .outcome-icon {
+        font-size: 1.5rem;
+        flex-shrink: 0;
+    }
+
+    /* ---- 3.2. Main section ---- */
+    .foundation-section {
+        background: linear-gradient(135deg, #fff5f0, #ffe8d9);
+        border-radius: 10px;
+        padding: 25px;
+        margin-top: 25px;
+    }
+
+    .foundation-section h4 {
+        color: #ff9d6b;
+        margin-bottom: 15px;
+    }
+
+    .services-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 25px;
+        margin-top: 25px;
+    }
+
+    .services-grid > * {
+        width: 210px;
+    }
+
+    .service-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        width: 230px;
+        margin: 0.6rem;
+        border-radius: 10px;
+        background-color: var(--orange);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .service-item svg {
+        width: 110px;
+        height: 110px;
+    }
+
+    .more-btn {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+        font-weight: 500;
+        color: black;
+        background-color: var(--green-button);
+        border: 2px solid black;
+        padding: 0.4rem 0.8rem;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        }
+        .more-btn:hover {
+        background-color: var(--green-secondory);
+        color: white;
+        }
+
+        .less-btn {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+        font-weight: 500;
+        color: white;
+        background-color: var(--green-secondory);
+        border: 2px solid black;
+        padding: 0.4rem 0.8rem;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        }
+        .less-btn:hover {
+        background-color: var(--green-button);
+        color: black;
+        }
+
+    /* .service-icon {
+        font-size: 2rem;
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .service-item h4 {
+        color: var(--orange);
+        margin-bottom: 10px;
+        font-size: 1.4rem !important;
+    }
+
+    .service-icon p {
+        font-size: 1.1rem;
+        color: #555;
+        line-height: 1.4;
+    } */
+
+    .family-benefits {
+        margin-top: 25px;
+    }
+
+    .benefit-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 20px;
+        margin-bottom: 15px;
+        background: #f8f9fa;
+        border-radius: 12px;
+        transition: background-color 0.3s ease;
+    }
+
+    .benefit-item:hover {
+        background: #e9ecef;
+    }
+
+    .benefit-icon {
+        font-size: 1.8rem;
+        flex-shrink: 0;
+    }
+
+    .benefit-item h4 {
+        color: #ff9d6b;
+        margin-bottom: 8px;
+        font-size: 1.1rem;
     }
 
     .key-points {
         list-style: none;
         padding-left: 0;
-        margin-top: 15px;
+        margin: 15px 0;
     }
 
     .key-points li {
-        margin-bottom: 15px;
+        margin-bottom: 12px;
         padding-left: 30px;
         position: relative;
     }
@@ -230,6 +560,59 @@
         color: #ff9d6b;
         font-weight: bold;
         font-size: 1.2rem;
+    }
+
+    .section-intro {
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+        color: #555;
+        line-height: 1.5;
+    }
+
+    .intro-text {
+        font-size: 1.3rem;
+        color: #555;
+        line-height: 1.5;
+    }
+
+    .key-message-section {
+        background: linear-gradient(135deg, #ff9d6b, #ffb380);
+        color: white;
+        border-radius: 15px;
+        padding: 50px;
+        text-align: center;
+        margin: 50px 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .key-message-section::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        width: 100px;
+        height: 100px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+    }
+
+    .key-message-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .key-message-section h3 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .key-text {
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+        opacity: 0.95;
+        line-height: 1.5;
     }
 
     /* ---- Media query - 955 ---- */
