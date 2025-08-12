@@ -28,7 +28,7 @@
   }
 
   function handleScroll() {
-    isScrolled = window.scrollY > 80;
+    isScrolled = window.scrollY > 120;
   }
 
   onMount(() => {
