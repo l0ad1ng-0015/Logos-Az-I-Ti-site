@@ -72,10 +72,12 @@
         </a>
         <div class="dropdown-menu" class:show={activeDropdown === 'services'} on:mouseenter={() => activeDropdown = 'services'} on:mouseleave={() => activeDropdown = null}>
           <a href="#" on:click={handleLinkClick}>Всички услуги</a>
-          <a href="#" on:click={handleLinkClick}>Консултации</a>
-          <a href="#" on:click={handleLinkClick}>Терапия</a>
-          <a href="#" on:click={handleLinkClick}>Диагностика</a>
-        </div>
+          <a href="/uslugi/ranna-prevenciq" on:click={handleLinkClick}>Ранна превенция</a>
+          <a href="/uslugi/konsultaciq" on:click={handleLinkClick}>Консултация и оценка</a>
+          <a href="#" on:click={handleLinkClick}>Логопедична терапия</a>
+          <a href="#" on:click={handleLinkClick}>Официална терапия</a>
+          <a href="#" on:click={handleLinkClick}>Подпомагане и обучения</a>
+          <a href="#" on:click={handleLinkClick}>Логопедична вдъхновителница</a>
       </li>
 
       <li><a href="/blog" on:click={handleLinkClick}>Блог</a></li>
@@ -155,9 +157,12 @@
         </div>
         <div class="mobile-submenu" class:show={activeDropdown === 'mobile-services'}>
           <a href="#" on:click={handleLinkClick}>Всички услуги</a>
-          <a href="#" on:click={handleLinkClick}>Консултации</a>
-          <a href="#" on:click={handleLinkClick}>Терапия</a>
-          <a href="#" on:click={handleLinkClick}>Диагностика</a>
+          <a href="/uslugi/ranna-prevenciq" on:click={handleLinkClick}>Ранна превенция</a>
+          <a href="/uslugi/konsultaciq" on:click={handleLinkClick}>Консултация и оценка</a>
+          <a href="#" on:click={handleLinkClick}>Логопедична терапия</a>
+          <a href="#" on:click={handleLinkClick}>Официална терапия</a>
+          <a href="#" on:click={handleLinkClick}>Подпомагане и обучения</a>
+          <a href="#" on:click={handleLinkClick}>Логопедична вдъхновителница</a>
         </div>
         <hr>
       </li>

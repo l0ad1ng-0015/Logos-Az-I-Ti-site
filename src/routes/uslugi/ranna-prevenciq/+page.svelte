@@ -468,18 +468,6 @@
     }
 
     /* ---- 3.2. Main section ---- */
-    .foundation-section {
-        background: linear-gradient(135deg, #fff5f0, #ffe8d9);
-        border-radius: 10px;
-        padding: 25px;
-        margin-top: 25px;
-    }
-
-    .foundation-section h4 {
-        color: #ff9d6b;
-        margin-bottom: 15px;
-    }
-
     .services-grid {
         display: flex;
         flex-wrap: wrap;
@@ -520,7 +508,6 @@
         font-weight: 500;
         color: black;
         background-color: var(--orange);
-        border: 2px solid black;
         padding: 0.4rem 0.8rem;
         border-radius: 20px;
         cursor: pointer;
@@ -536,7 +523,6 @@
         font-size: 1rem;
         font-weight: 500;
         background-color: var(--orange-dark);
-        border: 2px solid black;
         padding: 0.4rem 0.8rem;
         border-radius: 20px;
         cursor: pointer;
@@ -621,52 +607,6 @@
         font-size: 1.4rem;
         margin-bottom: 25px;
         color: #555;
-        line-height: 1.5;
-    }
-
-    .intro-text {
-        font-size: 1.3rem;
-        color: #555;
-        line-height: 1.5;
-    }
-
-    .key-message-section {
-        background: linear-gradient(135deg, #ff9d6b, #ffb380);
-        color: white;
-        border-radius: 15px;
-        padding: 50px;
-        text-align: center;
-        margin: 50px 0;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .key-message-section::before {
-        content: '';
-        position: absolute;
-        top: -20px;
-        right: -20px;
-        width: 100px;
-        height: 100px;
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 50%;
-    }
-
-    .key-message-content {
-        position: relative;
-        z-index: 2;
-    }
-
-    .key-message-section h3 {
-        font-size: 2.2rem;
-        margin-bottom: 20px;
-        font-weight: 700;
-    }
-
-    .key-text {
-        font-size: 1.3rem;
-        margin-bottom: 25px;
-        opacity: 0.95;
         line-height: 1.5;
     }
 
@@ -821,7 +761,6 @@
         .cta-section h3 {
             font-size: 1.3rem;
         }
-
         .cta-button {
             width: 315px;
         }
