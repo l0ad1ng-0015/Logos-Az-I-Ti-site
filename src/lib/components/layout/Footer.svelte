@@ -25,8 +25,8 @@
             <ul>
                 <li><a href="#">За вас</a></li>
                 <li><a href="#">Блог</a></li>
-                <li><a href="/privacy-policy">Политика за поверителност</a></li>
-                <li><a href="#">Условия за ползване</a></li>
+                <li><a href="/privacy-policy" target="_blank">Политика за поверителност</a></li>
+                <li><a href="/terms-and-conditions" target="_blank">Условия за ползване</a></li>
             </ul>
         </div>
         <div class="column">
