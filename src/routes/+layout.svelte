@@ -35,7 +35,7 @@
     /* min-height: calc(100vh - 140px); */
   }
   
-  :global(h1, h2, h3, h4, h5, h6) {
+  :global(h1, h2, h3, h4, h5, h6, p, li, a, strong) {
     font-family: "ABeeZee", sans-serif !important;
   }
 

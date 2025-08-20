@@ -88,6 +88,121 @@
     </div>
 </div>
 
+<!-- Diagnosis Content -->
+<!-- <div class="diagnosis">
+    <div class="consultation-container">
+        <h2>Логопедична диагностика</h2>
+        <div class="consultation-content">
+            <div class="subsection">
+                <p><strong>Логопедична диагностика</strong> е систематичен процес на оценка на езиково-говорното развитие и комуникативните умения на дете или възрастен, с цел да се установи:</p>
+                <ul>
+                    <li>Дали е налице езиково-говорен дефицит</li>
+                    <li>Каква е причината и степента на затруднението</li>
+                    <li>Каква терапия или подкрепа е най-подходяща за детето/възрастния</li>
+                </ul>
+            </div>
+            <div class="subsection">
+                <h3>Кога да се обърнете към логопед за диагностика?</h3>
+                <div class="conditions-grid">
+                    <div class="condition-card">
+                        <h4>Нарушения на езиковата система</h4>
+                        <p><strong>Общо недоразвитие на речта:</strong></p>
+                        <ul>
+                            <li>Детето не говори или говори малко за възрастта си</li>
+                            <li>Речта е неразбираема</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="condition-card">
+                        <h4>Разбиране и комуникация</h4>
+                        <ul>
+                            <li>Не разбира словесни инструкции</li>
+                            <li>Използва жестове, мимики вместо думи</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="condition-card">
+                        <h4>Артикулационни проблеми</h4>
+                        <p>Затруднения при артикулация на звуковете:</p>
+                        <ul>
+                            <li>Изопачава звукове</li>
+                            <li>Заменя или пропуска звукове</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="condition-card">
+                        <h4>Плавност и ритъм на говора</h4>
+                        <ul>
+                            <li>Заекване</li>
+                            <li>Клътеринг</li>
+                            <li>Нарушена плавност на говора</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="condition-card">
+                        <h4>Дисфазия</h4>
+                        <ul>
+                            <li>Експресивен тип</li>
+                            <li>Импресивно-експресивен тип</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="condition-card">
+                        <h4>Обучителни затруднения</h4>
+                        <p><strong>Дислексия на развитието:</strong></p>
+                        <ul>
+                            <li>Специфични обучителни затруднения – четене, писане</li>
+                            <li>Дисграфия, дискалкулия и др.</li>
+                            <li>Затруднения в обучителния процес</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="condition-card">
+                        <h4>ХАДВ</h4>
+                        <p><strong>Хиперактивност и дефицит на вниманието:</strong></p>
+                        <ul>
+                            <li>Неустойчива концентрация на вниманието</li>
+                            <li>Слаба концентрация на вниманието</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="condition-card">
+                        <h4>Неврологични състояния</h4>
+                        <ul>
+                            <li>Разстройства от аутистичния спектър</li>
+                            <li>ДЦП</li>
+                            <li>Дизатрии, апраксии</li>
+                            <li>Синдроми и др.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="condition-card">
+                        <h4>Травми и придобити нарушения</h4>
+                        <p>Загуба на говор вследствие на травма:</p>
+                        <ul>
+                            <li>Афазии</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="condition-card">
+                        <h4>Моторни затруднения</h4>
+                        <ul>
+                            <li>Затруднения в развитието на грубата моторика</li>
+                            <li>Затруднения в развитието на фината моторика</li>
+                            <li>RMTI обучения</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="condition-card">
+                        <h4>Билингвизъм</h4>
+                        <p>Затруднения при деца, израстнали в билингвистична среда.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
 <style>
     /* ---- 0. Global ---- */
     *{box-sizing:border-box;margin:0;padding:0;font-family:"Cormorant Garamond",serif;}
@@ -138,7 +253,7 @@
     }
     
     .first-svg {
-        transform: translateY(-90%);
+        transform: translateY(-190%);
     }
     
     .second-svg {
@@ -215,8 +330,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 2rem;
         width: 100%;
+    }
+
+    .consultation h4 {
+        font-size: 1.4rem !important;
+    }
+
+    .consultation p, li {
+        font-size: 1.2rem !important;
     }
 
     .consultation-container {
@@ -226,7 +348,7 @@
 
     .consultation-content {
         background: var(--orange-light);
-        margin: 30px 0;
+        margin-bottom: 30px;
         padding: 40px;
         border-radius: 20px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -238,13 +360,13 @@
         font-size: 1.4rem;
         margin-bottom: 15px;
         font-weight: 600;
-        border-left: 4px solid #ff9a73;
+        border-left: 4px solid var(--orange);
         padding-left: 15px;
     }
 
     .subsection h4 {
         color: #555;
-        font-size: 1.2rem;
+        font-size: 1.3rem !important;
         margin-bottom: 12px;
         font-weight: 600;
     }
@@ -253,7 +375,7 @@
         color: #666;
         line-height: 1.7;
         margin-bottom: 15px;
-        font-size: 1rem;
+        font-size: 1rem !important;
     }
 
     .subsection ul {
@@ -304,6 +426,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        font-size: 1.3rem;
         font-weight: bold;
         flex-shrink: 0;
     }
@@ -311,12 +434,13 @@
     .step-content h4 {
         color: #333;
         margin-bottom: 10px;
-        font-size: 1.1rem;
+        font-size: 1.2rem !important;
     }
 
     .step-content p {
         color: #666;
         margin: 0;
+        font-size: 1.15rem !important;
     }
 
     /* Highlight Box */
@@ -339,6 +463,7 @@
     .highlight-box p {
         color: #555;
         margin-bottom: 10px;
+        font-size: 1.15rem !important;
     }
 
     .numbered-list {
@@ -346,13 +471,33 @@
         padding: 25px;
         margin: 25px 0;
         border-radius: 10px;
+        counter-reset: item;
         box-shadow: 0 4px 15px rgba(255, 154, 115, 0.1);
     }
 
     .numbered-list li {
+        display: block;
+        margin-bottom: 15px;
+        padding-left: 40px;
+        position: relative;
+    }
+
+    .numbered-list li::before {
+        content: counter(item);
+        counter-increment: item;
+        background: var(--orange);
+        color: white;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
         display: flex;
         align-items: center;
-        margin-bottom: 10px;
+        justify-content: center;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+        top: 6px;
+        font-size: 14px;
     }
 
     /* Important Note Box */
@@ -463,6 +608,28 @@
             margin: 50px 0;
             display: flex;
             flex-direction: column;
+        }
+
+        /* ---- 3. Consultation ---- */
+        .consultation-content {
+            padding: 30px 20px;
+        }
+
+        .numbered-list {
+            padding-left: 10px !important;
+            padding-right: 20px !important;
+        }
+
+        .numbered-list li {
+            padding-left: 55px;
+        }
+
+        .numbered-list li::before {
+            width: 40px;
+            height: 40px;
+            left: 4px;
+            font-size: 20px;
+            margin-right: 20px;
         }
     }
 
