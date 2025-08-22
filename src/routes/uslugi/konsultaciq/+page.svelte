@@ -89,13 +89,13 @@
 </div>
 
 <!-- Diagnosis Content -->
-<!-- <div class="diagnosis">
-    <div class="consultation-container">
+<div class="diagnosis">
+    <div class="diagnosis-container">
         <h2>Логопедична диагностика</h2>
-        <div class="consultation-content">
-            <div class="subsection">
-                <p><strong>Логопедична диагностика</strong> е систематичен процес на оценка на езиково-говорното развитие и комуникативните умения на дете или възрастен, с цел да се установи:</p>
-                <ul>
+        <div class="diagnosis-content">
+            <div class="subsection" style="background: var(--background); padding: 20px; margin-bottom: 30px; border: 2px solid var(--orange); border-radius: 10px;">
+                <p>Логопедичната диагностика е систематичен процес на оценка на езиково-говорното развитие и комуникативните умения на дете или възрастен, с цел да се установи:</p>
+                <ul style="margin-bottom: 0 !important;">
                     <li>Дали е налице езиково-говорен дефицит</li>
                     <li>Каква е причината и степента на затруднението</li>
                     <li>Каква терапия или подкрепа е най-подходяща за детето/възрастния</li>
@@ -199,9 +199,30 @@
                     </div>
                 </div>
             </div>
+            <div class="highlight-box">
+          <h4>Как се извършва диагностиката?</h4>
+          <p>Диагностиката се извършва с тестови батерии, включващи диагностични маркери, съобразени с възрастта на детето, вид и специфичността на затруднението.</p>
+        </div>
+
+        <div class="therapy-info">
+          <h4>След логопедична диагностика</h4>
+          <p>След логопедична диагностика се прави оценка на езиково-говорното развитие и се назначава персонализирана терапевтична програма за развитие на детето.</p>
+          <p>Назначават се терапевтични сесии, включващи целите и задачите, посочени в терапевтичната програма. Сесиите могат да се провеждат два или три пъти седмично в зависимост от степента на нарушението.</p>
+        </div>
         </div>
     </div>
-</div> -->
+</div>
+
+<!-- Call to action -->
+<div class="cta-section-container">
+    <h2>Готови за първата крачка?</h2>
+    <div class="cta-section">
+        <h3 class="section-intro">Започнете с ранната превенция днес и дайте на детето си най-добрия старт в живота.</h3>
+        <a class="cta-button" href="/kontakti">
+            <h4>Запишете консултация</h4>
+        </a>
+    </div>
+</div>
 
 <style>
     /* ---- 0. Global ---- */
@@ -516,6 +537,153 @@
         font-weight: 500;
     }
 
+    /* ---- 4. Diagnosis ---- */
+    .diagnosis {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .diagnosis h4 {
+        font-size: 1.4rem !important;
+    }
+
+    .diagnosis p, li {
+        font-size: 1.2rem !important;
+    }
+
+    .diagnosis-container {
+        width: 90%;
+        max-width: 1000px;
+    }
+
+    .diagnosis-content {
+        background: var(--orange-light);
+        margin-bottom: 30px;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    /* When to Visit Section */
+    .conditions-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 25px;
+        margin: 30px 0;
+    }
+
+    .condition-card {
+        background: var(--background);
+        padding: 25px;
+        border-radius: 15px;
+        border: 1px solid #eee;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .condition-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: var(--orange);
+        border-radius: 15px 0 0 15px;
+    }
+
+    .condition-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .condition-card h4 {
+        color: var(--orange);
+        margin-bottom: 12px;
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+
+    .condition-card p {
+        margin-bottom: 10px;
+        color: #666;
+    }
+
+    .condition-card ul {
+        color: #666;
+        margin: 0;
+    }
+    
+    /* Therapy Info Box */
+    .therapy-info {
+        background: var(--background);
+        border: 2px solid var(--orange);
+        border-radius: 15px;
+        padding: 25px;
+        margin-top: 30px;
+    }
+
+    .therapy-info h4 {
+        color: var(--orange);
+        margin-bottom: 15px;
+        font-size: 1.3rem;
+    }
+
+    .therapy-info p {
+        color: #424242;
+        margin-bottom: 10px;
+    }
+
+    /* ---- 5. CTA Section ---- */
+    .cta-section {
+        max-width: 1000px;
+        background: var(--orange-light);
+        border-radius: 15px;
+        padding: 40px;
+        text-align: center;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        border: 3px solid #ff9d6b;
+    }
+
+    .cta-section-container {
+        width: 90%;
+        max-width: 1000px;
+        margin-bottom: 2.2rem;
+    }
+
+    .cta-section h3 {
+        color: black;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+
+    .cta-button {
+        display: inline-block;
+        width: 350px;
+        height: 65px;
+        line-height: 35px;
+        background: var(--orange);
+        color: white;
+        text-decoration: none;
+        padding: 12px 25px;
+        border-radius: 25px;
+        font-weight: bold;
+        font-size: 1.3rem;
+        transition: all 0.3s ease;
+        border: 2px solid #ff9d6b;
+        cursor: pointer;
+    }
+
+    .cta-button:hover {
+        background: var(--orange-dark);
+        color: black;
+        transform: translateY(-2px);
+        border: black 2px solid;
+        box-shadow: 0 5px 15px rgba(255, 157, 107, 0.3);
+    }
 
     /* ---- Media query - 955 ---- */
     @media screen and (max-width: 955px) {
