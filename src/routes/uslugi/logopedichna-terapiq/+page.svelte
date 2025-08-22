@@ -4,8 +4,8 @@
 <div class="heading">
     <div class="heading-container">
         <div id="h-left">
-            <h1>Консултация и диагностика</h1>
-            <p><strong>Логопедичната консултация и диагностика</strong> помагат да разберем нуждите на детето и да изградим най-подходящия път за неговото развитие – с внимание, грижа и професионализъм.</p>
+            <h1>Логопедична терапия</h1>
+            <p><strong>Логопедичната терапия</strong> подпомага развитието на ясна реч и уверена комуникация чрез игри, упражнения и последователна подкрепа, съобразена с индивидуалните нужди.</p>
         </div>
         <div id="h-right">
             <svg class="first-svg" style="top: 0; position:static" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70px" height="70px" viewBox="0,0,255.99055,255.99055"> 
@@ -23,7 +23,7 @@
     <div class="what-i-t-container">
         <div class="w-left">
             <h2>Какво е това?</h2>
-            <p>Логопедичната консултация е първата крачка към разбиране и подкрепа в развитието на детето. Тя е възможност за открит разговор, наблюдение чрез игра и споделяне на притеснения, за да се очертае ясна картина на езиково-говорното развитие и да се дадат конкретни насоки за следващи стъпки. Чрез нея родителят получава спокойствие и увереност, че върви по правилния път заедно със специалист.</p>
+            <p>Логопедичната терапия е поредица от занимания, които помагат на децата и възрастните да развият по-ясен говор, по-богат речник и по-лесна комуникация. Чрез игри и упражнения се преодоляват трудностите, изгражда се увереност и се създават умения, които подпомагат ученето и общуването в ежедневието.</p>
         </div>
         <div class="w-right">
             <svg class="first-svg-w" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70px" height="70px" viewBox="0,0,255.99055,255.99055"> 
@@ -37,192 +37,62 @@
     </div>
 </div>
 
-<!-- Consultation Content -->
-<div class="consultation">
-    <div class="consultation-container">
-        <h2>Логопедична консултация</h2>
-        <div class="consultation-content">
-            <div class="subsection">
-            <h3>Какво включва консултацията?</h3>
-            <div class="process-steps" style="margin-top: 5px !important;">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h4>Разговор с родителя</h4>
-                        <p>За притеснения, тревожни моменти, наблюдения и история на развитието на детето.</p>
-                    </div>
-                    </div>
-                    <div class="process-step">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <h4>Игрови задачи с детето</h4>
-                            <p>С цел предразполагане в обстановката за наблюдение и проверка на разбиране, изразяване, внимание и др.</p>
-                        </div>
-                    </div>   
-                    <div class="process-step">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <h4>Обсъждане и препоръки</h4>
-                            <p>Необходимо ли е допълнително проследяване, терапия или допълнително подпомагане в домашна обстановка.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="highlight-box">
-                <h4>Каква е целта?</h4>
-                <p>Целта не е да се постави "диагноза" веднага, а да се получи ясна картина за най-доброто на детето: дали детето има нужда от логопедична подкрепа – и каква точно.</p>
-                </div>
-                <div class="subsection">
-                    <h3>Как да се подготвим за логопедичната консултация?</h3>
-                    <ul style="margin-top: 5px !important;" class="numbered-list">
-                        <li>Подгответе кратка информация за езиково-говорното развитие на детето в отделните възрастови периоди (пример - очен контакт, лепетна реч, гукане, сядане, прохождане, разбиране на прости словесни инструкции, първи думи, изречения, хранене и тн.)</li>
-                        <li>Помислете и споделете с логопеда Вашата тревожност за детето (разбиране, звукове, думи, ситуации и тн.)</li>
-                        <li>Ако имате документи (мнения от специалисти), доносете ги</li>
-                        <li>Позволете на детето да вземе любимата си играчка с него – тя помага на детето да се отпусне в непознатата за него обстановка</li>
-                    </ul>
-                    <div class="important-note">
-                        <h4>Важно: Детето не е нужно „да се представя добре" – ние сме тук да го разберем, не да го оценим.</h4>
-                    </div>
-            </div>
+<!-- Types -->
+ <div class="types">
+    <div class="types-container">
+        <h2>Цели и видове</h2>
+        <div class="types-content">
+            <h3>Целите на логопедичната терапия са:</h3>
+            <ul style="margin-bottom: 0 !important;">
+                <li>Подобряване на артикулацията</li>
+                <li>Стимулиране на езиковото разбиране и изразяване на детето / възрастен</li>
+                <li>Развитие на фонематичен слух и фонологично осъзнаване;</li>
+                <li>Подкрепа при заекване или клътеринг;</li>
+                <li>Подобряване на социалната комуникация;</li>
+                <li>Възстановяване на говорните умения след прекаран инсулт, травма (при възрастни);</li>
+                <li>Подобряване на гласовите и дихателните функции;</li>
+                <p> и други цели и задачи, заложени в персонализираната програма, изготвена вследствие на диагностиката и оценката.</p>
+            </ul>
+            <h3 style="margin-top: 1.5rem;">При деца логопедичната терапия включва:</h3>
+            <ul style="margin-bottom: 0 !important;">
+                <li>Артикулационна терапия</li>
+                <li>Езикова терапия</li>
+                <li>Фонологична терапия</li>
+                <li>Комуникативна терапия</li>
+                <li>Допълваща и алтернативна комуникация</li>
+            </ul>
         </div>
     </div>
-</div>
+ </div>
 
-<!-- Diagnosis Content -->
-<div class="diagnosis">
-    <div class="diagnosis-container">
-        <h2>Логопедична диагностика</h2>
-        <div class="diagnosis-content">
-            <div class="subsection" style="background: var(--background); padding: 20px; margin-bottom: 30px; border: 2px solid var(--orange); border-radius: 10px;">
-                <p>Логопедичната диагностика е систематичен процес на оценка на езиково-говорното развитие и комуникативните умения на дете или възрастен, с цел да се установи:</p>
-                <ul style="margin-bottom: 0 !important;">
-                    <li>Дали е налице езиково-говорен дефицит</li>
-                    <li>Каква е причината и степента на затруднението</li>
-                    <li>Каква терапия или подкрепа е най-подходяща за детето/възрастния</li>
-                </ul>
-            </div>
-            <div class="subsection">
-                <h3>Кога да се обърнете към логопед за диагностика?</h3>
-                <div class="conditions-grid">
-                    <div class="condition-card">
-                        <h4>Нарушения на езиковата система</h4>
-                        <p><strong>Общо недоразвитие на речта:</strong></p>
-                        <ul>
-                            <li>Детето не говори или говори малко за възрастта си</li>
-                            <li>Речта е неразбираема</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="condition-card">
-                        <h4>Разбиране и комуникация</h4>
-                        <ul>
-                            <li>Не разбира словесни инструкции</li>
-                            <li>Използва жестове, мимики вместо думи</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="condition-card">
-                        <h4>Артикулационни проблеми</h4>
-                        <p>Затруднения при артикулация на звуковете:</p>
-                        <ul>
-                            <li>Изопачава звукове</li>
-                            <li>Заменя или пропуска звукове</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="condition-card">
-                        <h4>Плавност и ритъм на говора</h4>
-                        <ul>
-                            <li>Заекване</li>
-                            <li>Клътеринг</li>
-                            <li>Нарушена плавност на говора</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="condition-card">
-                        <h4>Дисфазия</h4>
-                        <ul>
-                            <li>Експресивен тип</li>
-                            <li>Импресивно-експресивен тип</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="condition-card">
-                        <h4>Обучителни затруднения</h4>
-                        <p><strong>Дислексия на развитието:</strong></p>
-                        <ul>
-                            <li>Специфични обучителни затруднения – четене, писане</li>
-                            <li>Дисграфия, дискалкулия и др.</li>
-                            <li>Затруднения в обучителния процес</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="condition-card">
-                        <h4>ХАДВ</h4>
-                        <p><strong>Хиперактивност и дефицит на вниманието:</strong></p>
-                        <ul>
-                            <li>Неустойчива концентрация на вниманието</li>
-                            <li>Слаба концентрация на вниманието</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="condition-card">
-                        <h4>Неврологични състояния</h4>
-                        <ul>
-                            <li>Разстройства от аутистичния спектър</li>
-                            <li>ДЦП</li>
-                            <li>Дизатрии, апраксии</li>
-                            <li>Синдроми и др.</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="condition-card">
-                        <h4>Травми и придобити нарушения</h4>
-                        <p>Загуба на говор вследствие на травма:</p>
-                        <ul>
-                            <li>Афазии</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="condition-card">
-                        <h4>Моторни затруднения</h4>
-                        <ul>
-                            <li>Затруднения в развитието на грубата моторика</li>
-                            <li>Затруднения в развитието на фината моторика</li>
-                            <li>RMTI обучения</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="condition-card">
-                        <h4>Билингвизъм</h4>
-                        <p>Затруднения при деца, израстнали в билингвистична среда.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="highlight-box">
-          <h4>Как се извършва диагностиката?</h4>
-          <p>Диагностиката се извършва с тестови батерии, включващи диагностични маркери, съобразени с възрастта на детето, вид и специфичността на затруднението.</p>
-        </div>
-
-        <div class="therapy-info">
-          <h4>След логопедична диагностика</h4>
-          <p>След логопедична диагностика се прави оценка на езиково-говорното развитие и се назначава персонализирана терапевтична програма за развитие на детето.</p>
-          <p>Назначават се терапевтични сесии, включващи целите и задачите, посочени в терапевтичната програма. Сесиите могат да се провеждат два или три пъти седмично в зависимост от степента на нарушението.</p>
+<!-- How does it work? -->
+<div class="how-d-i-w">
+    <div class="how-d-i-w-container">
+        <h2>Как протича една логопедична сесия?</h2>
+        <div class="how-d-i-w-content">
+            <div class="benefits-box">
+            <p class="emphasis">Индивидуално – 30 – 40 минути </p>
+            <h4>Включва:</h4>
+            <ul class="key-points">
+                <li>Игрови метод като основен терапевтичен инструмент</li>
+                <li>Изгражда се доверие и мотивация</li>
+                <li>Домашни задачи за упражнение</li>
+            </ul>
         </div>
         </div>
     </div>
 </div>
 
-<!-- Call to action -->
-<div class="cta-section-container">
-    <h2>Готови за първата крачка?</h2>
+ <!-- Call to action -->
+ <div class="cta-section-container">
+     <h2>Готови за първата крачка?</h2>
     <div class="cta-section">
         <h3 class="section-intro">Започнете с ранната превенция днес и дайте на детето си най-добрия старт в живота.</h3>
         <a class="cta-button" href="/kontakti">
             <h4>Запишете консултация</h4>
         </a>
     </div>
-</div>
+ </div>
 
 <style>
     /* ---- 0. Global ---- */
@@ -346,28 +216,20 @@
         border-radius: 16px;
     }
 
-    /* ---- 3. Consultation ---- */
-    .consultation {
+    /* ---- 3. Types ---- */
+    .types {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
     }
 
-    .consultation h4 {
-        font-size: 1.4rem !important;
-    }
-
-    .consultation p, li {
-        font-size: 1.2rem !important;
-    }
-
-    .consultation-container {
+    .types-container {
         width: 90%;
         max-width: 1000px;
     }
 
-    .consultation-content {
+    .types-content {
         background: var(--orange-light);
         margin-bottom: 30px;
         padding: 40px;
@@ -375,8 +237,7 @@
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
 
-    /* Content Sections */
-    .subsection h3 {
+    .types h3 {
         color: #333;
         font-size: 1.4rem;
         margin-bottom: 15px;
@@ -385,255 +246,97 @@
         padding-left: 15px;
     }
 
-    .subsection h4 {
-        color: #555;
-        font-size: 1.3rem !important;
-        margin-bottom: 12px;
-        font-weight: 600;
-    }
-
-    .subsection p {
-        color: #666;
-        line-height: 1.7;
-        margin-bottom: 15px;
-        font-size: 1rem !important;
-    }
-
-    .subsection ul {
-        color: #666;
-        line-height: 1.7;
-        padding-left: 20px;
-        margin-bottom: 20px;
-    }
-
-    .subsection li {
-        margin-bottom: 8px;
-        position: relative;
-    }
-
-    .subsection li strong {
-        color: #333;
-    }
-
-    /* Diagnosis Process */
-    .process-steps {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        margin: 30px 0;
-    }
-
-    .process-step {
-        display: flex;
-        align-items: flex-start;
-        gap: 20px;
-        padding: 20px;
+    .types ul {
         background: var(--background);
-        border-radius: 15px;
-        transition: all 0.3s ease;
+        border: 2px solid var(--orange);
+        border-radius: 10px;
+        color: #666;
+        line-height: 1.7;
+        padding: 20px;
+        margin-bottom: 20px;
+        list-style: none;
     }
 
-    .process-step:hover {
-        transform: translateX(5px);
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    .types li {
+        margin-bottom: 8px;
+        margin-left: 20px;
+        position: relative;
+        font-size: 1.2rem !important;
+        list-style:outside
     }
 
-    .step-number {
-        background: var(--orange);
-        color: white;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.3rem;
-        font-weight: bold;
-        flex-shrink: 0;
-    }
-
-    .step-content h4 {
-        color: #333;
-        margin-bottom: 10px;
+    .types p {
+        color: black;
+        line-height: 1.7;
+        margin-top: 15px;
         font-size: 1.2rem !important;
     }
 
-    .step-content p {
-        color: #666;
-        margin: 0;
-        font-size: 1.15rem !important;
-    }
-
-    /* Highlight Box */
-    .highlight-box {
-        background: var(--background);
-        border-left: 5px solid var(--orange);
-        padding: 25px;
-        margin: 25px 0;
-        border-radius: 10px;
-        box-shadow: 0 4px 15px rgba(255, 154, 115, 0.1);
-    }
-
-    .highlight-box h4 {
-        color: var(--orange);
-        margin-bottom: 15px;
-        font-weight: 600;
-        font-size: 1.3rem;
-    }
-
-    .highlight-box p {
-        color: #555;
-        margin-bottom: 10px;
-        font-size: 1.15rem !important;
-    }
-
-    .numbered-list {
-        background: var(--background);
-        padding: 25px;
-        margin: 25px 0;
-        border-radius: 10px;
-        counter-reset: item;
-        box-shadow: 0 4px 15px rgba(255, 154, 115, 0.1);
-    }
-
-    .numbered-list li {
-        display: block;
-        margin-bottom: 15px;
-        padding-left: 40px;
-        position: relative;
-    }
-
-    .numbered-list li::before {
-        content: counter(item);
-        counter-increment: item;
-        background: var(--orange);
-        color: white;
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        position: absolute;
-        left: 0;
-        top: 6px;
-        font-size: 14px;
-    }
-
-    /* Important Note Box */
-    .important-note {
-        background: linear-gradient(135deg, #e8f5e8, #d4f1d4);
-        border-left: 5px solid #4caf50;
-        padding: 20px;
-        margin-top: 25px;
-        border-radius: 10px;
-        font-style: italic;
-    }
-
-    .important-note p {
-        color: #2e7d32;
-        margin: 0;
-        font-weight: 500;
-    }
-
-    /* ---- 4. Diagnosis ---- */
-    .diagnosis {
+    /* ---- 4. How does it work? ---- */
+    .how-d-i-w {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
     }
 
-    .diagnosis h4 {
-        font-size: 1.4rem !important;
-    }
-
-    .diagnosis p, li {
-        font-size: 1.2rem !important;
-    }
-
-    .diagnosis-container {
+    .how-d-i-w-container {
         width: 90%;
         max-width: 1000px;
     }
 
-    .diagnosis-content {
+    .how-d-i-w-content {
         background: var(--orange-light);
         margin-bottom: 30px;
-        padding: 40px;
+        padding: 30px;
         border-radius: 20px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
 
-    /* When to Visit Section */
-    .conditions-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 25px;
-        margin: 30px 0;
-    }
-
-    .condition-card {
+    .benefits-box {
         background: var(--background);
-        padding: 25px;
-        border-radius: 15px;
-        border: 1px solid #eee;
-        transition: all 0.3s ease;
-        position: relative;
-    }
-
-    .condition-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 4px;
-        height: 100%;
-        background: var(--orange);
-        border-radius: 15px 0 0 15px;
-    }
-
-    .condition-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    }
-
-    .condition-card h4 {
-        color: var(--orange);
-        margin-bottom: 12px;
-        font-weight: 600;
-        font-size: 1.2rem;
-    }
-
-    .condition-card p {
-        margin-bottom: 10px;
-        color: #666;
-    }
-
-    .condition-card ul {
-        color: #666;
-        margin: 0;
-    }
-    
-    /* Therapy Info Box */
-    .therapy-info {
-        background: var(--background);
+        border-radius: 10px;
         border: 2px solid var(--orange);
-        border-radius: 15px;
         padding: 25px;
-        margin-top: 30px;
     }
 
-    .therapy-info h4 {
+    .benefits-box h4 {
         color: var(--orange);
         margin-bottom: 15px;
-        font-size: 1.3rem;
+        font-size: 1.5rem !important;
     }
 
-    .therapy-info p {
-        color: #424242;
-        margin-bottom: 10px;
+    .emphasis {
+        background: var(--orange-dark);
+        padding: 15px;
+        border-radius: 8px;
+        border-left: 4px solid #ffb347;
+        margin-bottom: 15px;
+        font-style: italic;
+        font-weight: 600;
+        font-size: 1.25rem !important;
+    }
+
+    .key-points {
+        list-style: none;
+        padding-left: 0;
+        margin: 15px 0;
+    }
+
+    .key-points li {
+        margin-bottom: 12px;
+        padding-left: 30px;
+        position: relative;
+        font-size: 1.25rem !important;
+    }
+
+    .key-points li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: #ff9d6b;
+        font-weight: bold;
+        font-size: 1.25rem;
     }
 
     /* ---- 5. CTA Section ---- */
@@ -684,6 +387,7 @@
         border: black 2px solid;
         box-shadow: 0 5px 15px rgba(255, 157, 107, 0.3);
     }
+
 
     /* ---- Media query - 955 ---- */
     @media screen and (max-width: 955px) {
@@ -778,28 +482,6 @@
             flex-direction: column;
         }
 
-        /* ---- 3. Consultation ---- */
-        .consultation-content {
-            padding: 30px 20px;
-        }
-
-        .numbered-list {
-            padding-left: 10px !important;
-            padding-right: 20px !important;
-        }
-
-        .numbered-list li {
-            padding-left: 55px;
-        }
-
-        .numbered-list li::before {
-            width: 40px;
-            height: 40px;
-            left: 4px;
-            font-size: 20px;
-            margin-right: 20px;
-        }
-        
         /* ---- 4. CTA Section ---- */
         .cta-section {
             max-width: 1000px;
