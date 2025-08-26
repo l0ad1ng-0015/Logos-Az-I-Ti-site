@@ -33,10 +33,6 @@
       formErrors.phone = 'Моля въведете валиден телефонен номер';
     }
     
-    if (!formData.subject.trim()) {
-      formErrors.subject = 'Темата е задължително поле';
-    }
-    
     if (!formData.message.trim()) {
       formErrors.message = 'Съобщението е задължително поле';
     } else if (formData.message.trim().length < 10) {
@@ -325,8 +321,6 @@
                             id="subject" 
                             bind:value={formData.subject}
                             on:change={() => clearError('subject')}
-                            class:error={formErrors.subject}
-                            required
                             >
                             <option value="">ОМТ</option>
                             </select>
