@@ -274,12 +274,12 @@
     }
     
     .first-svg {
-        transform: translateY(-90%);
+        transform: translateY(-145%);
     }
     
     .second-svg {
         align-self: flex-end;
-        transform: translateY(45%);
+        transform: translateY(55%);
     }
 
     .heading p {

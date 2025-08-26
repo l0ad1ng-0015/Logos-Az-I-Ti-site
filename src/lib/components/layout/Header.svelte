@@ -75,7 +75,7 @@
           <a href="/uslugi/ranna-prevenciq" on:click={handleLinkClick}>Ранна превенция</a>
           <a href="/uslugi/konsultaciq" on:click={handleLinkClick}>Консултация и оценка</a>
           <a href="/uslugi/logopedichna-terapiq" on:click={handleLinkClick}>Логопедична терапия</a>
-          <a href="#" on:click={handleLinkClick}>Официална терапия</a>
+          <a href="/uslugi/omt" on:click={handleLinkClick}>Орофациална миофункционална терапия (ОМТ)</a>
           <a href="#" on:click={handleLinkClick}>Подпомагане и обучения</a>
           <a href="#" on:click={handleLinkClick}>Логопедична вдъхновителница</a>
       </li>
@@ -160,7 +160,7 @@
           <a href="/uslugi/ranna-prevenciq" on:click={handleLinkClick}>Ранна превенция</a>
           <a href="/uslugi/konsultaciq" on:click={handleLinkClick}>Консултация и оценка</a>
           <a href="/uslugi/logopedichna-terapiq" on:click={handleLinkClick}>Логопедична терапия</a>
-          <a href="#" on:click={handleLinkClick}>Официална терапия</a>
+          <a href="/uslugi/omt" on:click={handleLinkClick}>Орофациална миофункционална терапия (ОМТ)</a>
           <a href="#" on:click={handleLinkClick}>Подпомагане и обучения</a>
           <a href="#" on:click={handleLinkClick}>Логопедична вдъхновителница</a>
         </div>
