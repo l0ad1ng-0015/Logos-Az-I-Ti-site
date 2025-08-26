@@ -482,7 +482,17 @@
             flex-direction: column;
         }
 
-        /* ---- 4. CTA Section ---- */
+        /* ---- 3. Types ---- */
+        .types-content {
+            padding: 30px 20px;
+        }
+
+        /* ---- 4. How does it work? ---- */
+        .how-d-i-w-content {
+            padding: 30px 20px;
+        }
+
+        /* ---- 5. CTA Section ---- */
         .cta-section {
             max-width: 1000px;
             background: var(--orange-light);

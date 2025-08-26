@@ -714,14 +714,6 @@
     background: linear-gradient(135deg, #ff7b47 0%, #ff6b3d 25%, #ff5722 50%, #f4511e 75%, #e64a19 100%);
   }
 
-  .bg-peach-50 {
-    background-color: #fef7f0;
-  }
-
-  .bg-peach-100 {
-    background-color: #fed7c3;
-  }
-
   .card-hover {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }

@@ -31,7 +31,7 @@
 	});
 
 	let commits = [];
-	const MAX_COMMITS = 20;
+	const MAX_COMMITS = 25;
 
 	async function fetchCommits() {
 		const response = await fetch('https://api.github.com/repos/l0ad1ng-0015/Logos-Az-I-Ti-site/commits');

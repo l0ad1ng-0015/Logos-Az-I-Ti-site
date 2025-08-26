@@ -433,7 +433,7 @@
   }
 
   .mobile-submenu.show {
-    max-height: 300px;
+    max-height: 350px;
     padding: 8px 0;
   }
 
