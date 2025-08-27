@@ -361,7 +361,7 @@
                         />
                         <span class="checkmark"></span>
                         Съгласявам се с условията за
-                        <a href="/защита-лични-данни" target="_blank">защита на личните данни</a> *
+                        <a href="/privacy-policy" target="_blank">защита на личните данни</a> *
                     </label>
                     {#if formErrors.agree}
                         <span class="error-message">{formErrors.agree}</span>
