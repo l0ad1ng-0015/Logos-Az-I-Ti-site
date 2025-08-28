@@ -231,10 +231,10 @@
     <div class="podhodi">
       <h1 class="podhodi-h">Подходи</h1>
       <ul>
-        <li>Планиране и осъществяване всяка терапия /
+        <li>Планираме и осъществяваме всяка терапия /
           обучение с отговорно отношение към родителите и
           децата.</li>
-        <li>Разработване на програми, съобразени с
+        <li>Разработваме програми, съобразени с
           индивидуалните особености на всяко дете и
           неговите индивидуални нужди.</li>
         <li>Прилагаме нашия уникален опит, знания и
@@ -242,14 +242,14 @@
           забавен начин за децата.</li>
         <li>За нас е изключително важно споделената радост
           и емоция в комуникацията с дете и родител,
-          предлагащи се в една уютна , спокойна, творческа
+          предлагащи се в една уютна , спокойна и творческа
           среда.</li>
       </ul>
     </div>
     <div class="mission">
       <h1 class="mission-h">Нашата мисия</h1>
       <div id="mission-content">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas deserunt provident, expedita officia accusantium, eius libero illum maxime fugiat, soluta quae dignissimos eum? Consequatur ratione, ut obcaecati quasi quaerat ad?</p>
+        <p>Мисията на ОЦ „Логос – Аз и Ти“ е да подкрепяме цялостното развитие на детето – езиково-говорно, моторно, когнитивно и емоционално – чрез професионален, индивидуален и ефективен подход. Работим в партньорство с родителите, за да изградим сигурна среда, в която всяко дете се чувства разбрано, мотивирано и способно да разгърне своя потенциал.</p>
         <img src="others/flag-icon.svg" alt="Flag Icon"/>
       </div>
     </div>
@@ -267,7 +267,7 @@
         </svg>
         <p>Игрови подход</p>
         {#if showAdditionalSection1}
-            <p class="info" style="margin: 10px 15px; padding: 10px; background-color: #FFCFAD; border: 1px solid black; border-radius: 8px">Ние използваме игрови подход, който прави терапията забавна и ефективна за децата. Игровите техники помагат на децата да се чувстват комфортно и да се ангажират активно в процеса на учене.</p>
+            <p class="info" style="margin: 10px 15px; padding: 10px; background-color: #FFCFAD; border: 1px solid black; border-radius: 8px">Играта е естественият начин, по който децата учат. Затова всяко логопедично занимание включва игрови елементи, които помагат по-забавен, лесен и интересен начин да се усвояват нови знания и умения. </p>
             <button class="less-btn" on:click={toggleSection1}>Покажи по-малко</button>
         {:else}
           <button class="more-btn" on:click={toggleSection1}>Покажи повече</button>
@@ -280,7 +280,7 @@
         </svg>
         <p>Подкрепа</p>
         {#if showAdditionalSection2}
-            <p class="info" style="margin: 10px 15px; padding: 10px; background-color: #FFCFAD; border: 1px solid black; border-radius: 8px">Ние използваме игрови подход, който прави терапията забавна и ефективна за децата...</p>
+            <p class="info" style="margin: 10px 15px; padding: 10px; background-color: #FFCFAD; border: 1px solid black; border-radius: 8px">Ние сме до семейството във всяка стъпка по житейския път – с лично отношение и  професионална подкрепа за езиково-говорно, двигателно, когнитивно и емоционално развитие. Работим с внимание, търпение и разбиране.</p>
             <button class="less-btn" on:click={toggleSection2}>Покажи по-малко</button>
           {:else}
             <button class="more-btn" on:click={toggleSection2}>Покажи повече</button>
@@ -290,9 +290,9 @@
         <svg width="195" height="111" viewBox="0 0 195 111" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M168.217 66.5031L168.747 66.9785C171.075 68.9329 174.197 71.6269 179.489 71.6269C186.951 71.6269 194.465 66.6088 194.465 55.3048C194.465 44.0009 185.733 38.8771 179.489 38.8771C174.303 38.8771 171.022 41.6239 168.588 43.6311L167.9 44.2122C165.466 46.2194 162.979 47.223 160.597 47.223C156.681 47.223 153.453 44.4235 152.924 40.5146V40.3561V0H112.812H112.706C111.224 0.316933 110.272 1.47903 110.272 2.95805C110.272 4.22578 110.96 5.7048 112.23 7.28947L112.812 7.97615C114.982 10.6173 118.686 15.0015 118.686 21.8156C118.686 30.003 112.124 41.4654 97.5184 41.4654C83.7067 41.4654 76.4569 31.5877 76.4569 21.8156C76.4569 14.843 80.1083 10.5116 82.3308 7.92333L82.8071 7.39511C84.2888 5.65198 85.0297 4.06731 85.0297 2.74676C85.0297 1.37338 84.183 0.264111 82.86 0H82.7542H41.7424V41.0428V41.2013C41.2132 44.9517 38.091 47.6456 34.2809 47.6456C31.7937 47.6456 29.2536 46.5363 26.6077 44.3178L26.0256 43.8424C23.5385 41.7295 20.4162 39.0884 15.1773 39.0884C7.71582 39.0884 0.201416 44.1065 0.201416 55.4105C0.201416 66.7144 8.93295 71.8382 15.1773 71.8382C20.3633 71.8382 23.6443 69.0914 26.0785 67.0842L26.7665 66.5031C29.2007 64.4959 31.6879 63.4923 34.0692 63.4923C37.9852 63.4923 41.2132 66.3446 41.7424 70.2007V70.3591V110.715H152.977V70.0422V69.8837C153.506 66.0805 156.681 63.3338 160.544 63.3338C163.137 63.3338 165.677 64.3902 168.217 66.5031Z" fill="white"/>
         </svg>
-        <p>Грижа и спокойствие</p>
+        <p>Доверие и индивидуалност</p>
         {#if showAdditionalSection3}
-            <p class="info" style="margin: 10px 15px; padding: 10px; background-color: #FFCFAD; border: 1px solid black; border-radius: 8px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus iure adipisci beatae quidem quod, dicta, ratione quisquam voluptatum molestiae, debitis dolores! Quisquam ea totam voluptate architecto facilis. Libero, nisi laboriosam?</p>
+            <p class="info" style="margin: 10px 15px; padding: 10px; background-color: #FFCFAD; border: 1px solid black; border-radius: 8px">В основата на нашата работа стои доверието – между детето, родителя и специалиста. Подхождаме индивидуално – спрямо нуждите, силните страни и темпото на развитие на детето. </p>
             <button class="less-btn" on:click={toggleSection3}>Покажи по-малко</button>
         {:else}
           <button class="more-btn" on:click={toggleSection3}>Покажи повече</button>
@@ -304,7 +304,7 @@
         </svg>
         <p>Постигане на цели</p>
         {#if showAdditionalSection4}
-            <p class="info" style="margin: 10px 15px; padding: 10px; background-color: #FFCFAD; border: 1px solid black; border-radius: 8px">Ние използваме игрови подход, който прави терапията забавна и ефективна за децата. Игровите техники помагат на децата да се чувстват комфортно и да се ангажират активно в процеса на учене.</p>
+            <p class="info" style="margin: 10px 15px; padding: 10px; background-color: #FFCFAD; border: 1px solid black; border-radius: 8px">Работим с ясен план в изпълнение на поставените задачи за постигане на цели и очаквани резултати. Следим напредъка и го превръщаме в малки победи, които изграждат увереност и трайни умения.</p>
             <button class="less-btn" on:click={toggleSection4}>Покажи по-малко</button>
         {:else}
           <button class="more-btn" on:click={toggleSection4}>Покажи повече</button>

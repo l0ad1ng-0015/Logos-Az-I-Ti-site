@@ -23,7 +23,7 @@
     <div class="heading-container">
         <div id="h-left">
             <h1>За Нас</h1>
-            <p>Запознайте се с нашия екип и нашия екип и разберете за нашата история и мисия да помагаме на децата да открият себе си.</p>
+            <p>Запознайте се с нашия екип, разберете за нашата история и мисия да помагаме на децата да открият себе си.</p>
         </div>
         <div id="h-right">
             <svg class="first-svg" style="top: 0; position:static" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70px" height="70px" viewBox="0,0,255.99055,255.99055"> 
@@ -62,7 +62,7 @@
             <div class="member-stats">
                 <img src="/team/sonia.png" alt="Sonia" class="team-member">
                 <h3 class="team-member-name">Соня Игнатова</h3>
-                <p class="team-member-role">Логопед, Специален педагог</p>
+                <p class="team-member-role">логопед, специален педагог</p>
                 <p class="team-member-contacts">example@example.com</p>
                 <p class="team-member-contacts">+359 88 888 8888</p>
             </div>
@@ -107,7 +107,7 @@
             <div class="member-stats">
                 <img src="/team/maria.png" alt="Maria" class="team-member">
                 <h3 class="team-member-name">Мария-Паола Тупути</h3>
-                <p class="team-member-role">Логопед</p>
+                <p class="team-member-role">логопед</p>
                 <p class="team-member-contacts">example@example.com</p>
                 <p class="team-member-contacts">+359 88 888 8888</p>
             </div>

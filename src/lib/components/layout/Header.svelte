@@ -73,7 +73,7 @@
         <div class="dropdown-menu" class:show={activeDropdown === 'services'} on:mouseenter={() => activeDropdown = 'services'} on:mouseleave={() => activeDropdown = null}>
           <a href="#" on:click={handleLinkClick}>Всички услуги</a>
           <a href="/uslugi/ranna-prevenciq" on:click={handleLinkClick}>Ранна превенция</a>
-          <a href="/uslugi/konsultaciq" on:click={handleLinkClick}>Консултация и оценка</a>
+          <a href="/uslugi/konsultaciq" on:click={handleLinkClick}>Консултация и диагностика</a>
           <a href="/uslugi/logopedichna-terapiq" on:click={handleLinkClick}>Логопедична терапия</a>
           <a href="/uslugi/omt" on:click={handleLinkClick}>Орофациална миофункционална терапия (ОМТ)</a>
           <a href="#" on:click={handleLinkClick}>Подпомагане и обучения</a>
@@ -158,7 +158,7 @@
         <div class="mobile-submenu" class:show={activeDropdown === 'mobile-services'}>
           <a href="#" on:click={handleLinkClick}>Всички услуги</a>
           <a href="/uslugi/ranna-prevenciq" on:click={handleLinkClick}>Ранна превенция</a>
-          <a href="/uslugi/konsultaciq" on:click={handleLinkClick}>Консултация и оценка</a>
+          <a href="/uslugi/konsultaciq" on:click={handleLinkClick}>Консултация и диагностика</a>
           <a href="/uslugi/logopedichna-terapiq" on:click={handleLinkClick}>Логопедична терапия</a>
           <a href="/uslugi/omt" on:click={handleLinkClick}>Орофациална миофункционална терапия (ОМТ)</a>
           <a href="#" on:click={handleLinkClick}>Подпомагане и обучения</a>

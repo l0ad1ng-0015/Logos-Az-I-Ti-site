@@ -40,7 +40,7 @@
 <div class="why-e-a" style="margin-bottom: 1rem;">
     <div class="why-e-a-container">
         <div class="w-left">
-            <h2>Защо е важна тя?</h2>
+            <h2>Защо е важна превенцията?</h2>
             <p>Ранната превенция е първата и най-важна крачка в подкрепата на детето още преди да се появят сериозни езиково-говорни трудности. Тя не е диагноза, не е терапия – а навременна грижа и насока към правилното развитие. Чрез внимателно наблюдение, игрови дейности и консултация с родителите, ние помагаме да се разпознаят особеностите в развитието и да се предприемат точните стъпки навреме.</p>
         </div>
         <div class="w-right">
@@ -112,7 +112,7 @@
 <div class="main-section">
     <h2>
         <!-- <span class="icon">🤝</span> -->
-        2. Превенцията не е диагноза, подкрепа и насочване
+        2. Превенцията не е диагноза, а подкрепа и насочване
     </h2>
         
     <div class="content-card">
@@ -136,7 +136,7 @@
                 </svg>
                 <p>Даде идеи и насоки</p>
                 {#if showAdditionalSection2}
-                    <p class="info" style="margin: 10px 15px; padding: 10px; background-color: var(--orange-light); border: 1px solid black; border-radius: 8px">Професионална оценка на текущото състояние на детето. Конкретни предложения за игри, книги за езиково-говорно стимулиране вкъщи</p>
+                    <p class="info" style="margin: 10px 15px; padding: 10px; background-color: var(--orange-light); border: 1px solid black; border-radius: 8px">Конкретни предложения за игри, книги за езиково-говорно стимулиране вкъщи</p>
                     <button class="less-btn" on:click={toggleSection2}>Покажи по-малко</button>
                 {:else}
                 <button class="more-btn" on:click={toggleSection2}>Покажи повече</button>
@@ -150,7 +150,7 @@
                 </svg>
                 <p>Даде насоки за подкрепа</p>
                 {#if showAdditionalSection3}
-                    <p class="info" style="margin: 10px 15px; padding: 10px; background-color: var(--orange-light); border: 1px solid black; border-radius: 8px">Професионална оценка на текущото състояние на детето. Може да предложи индивидуален план за подкрепа на развитието</p>
+                    <p class="info" style="margin: 10px 15px; padding: 10px; background-color: var(--orange-light); border: 1px solid black; border-radius: 8px">Може да предложи индивидуален план за подкрепа на развитието</p>
                     <button class="less-btn" on:click={toggleSection3}>Покажи по-малко</button>
                 {:else}
                 <button class="more-btn" on:click={toggleSection3}>Покажи повече</button>
@@ -162,7 +162,7 @@
                 </svg>
                 <p>При нужда - препоръка</p>
                 {#if showAdditionalSection4}
-                    <p class="info" style="margin: 10px 15px; padding: 10px; background-color: var(--orange-light); border: 1px solid black; border-radius: 8px">Професионална оценка на текущото състояние на детето. Насочване към допълнителна оценка или терапия, ако е необходимо</p>
+                    <p class="info" style="margin: 10px 15px; padding: 10px; background-color: var(--orange-light); border: 1px solid black; border-radius: 8px">Насочване към допълнителна оценка или терапия, ако е необходимо</p>
                     <button class="less-btn" on:click={toggleSection4}>Покажи по-малко</button>
                 {:else}
                 <button class="more-btn" on:click={toggleSection4}>Покажи повече</button>
@@ -185,14 +185,14 @@
                 <span class="benefit-icon">😌</span>
                 <div>
                     <h4>Спокойствие чрез експертна оценка</h4>
-                    <p>Професионална увереност, че сте на правилния път</p>
+                    <p>Вдъхваме увереност, че сте на правилния път</p>
                 </div>
             </div>
             <div class="benefit-item">
                 <span class="benefit-icon">💡</span>
                 <div>
                     <h4>Отговори на въпросите си</h4>
-                    <p>Ясност по всички притеснения и съмнения</p>
+                    <p>Яснота по всички притеснения и съмнения</p>
                 </div>
             </div>
             <div class="benefit-item">
