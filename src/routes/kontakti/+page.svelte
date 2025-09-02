@@ -160,7 +160,8 @@
                     </div>
                     <div class="info-text">
                         <h3>Адрес</h3>
-                        <p>ж.к. "Овча купел-1," бл.411, вх."Г"<br>София, България</p>
+                        <p>ж.к. "Овча купел-1" - бл.409, вх."Б";</p>
+                        <p> бл.411, вх."Г" - София, България</p>
                     </div>
                 </div>
                 <div class="info-item">
@@ -171,8 +172,7 @@
                     </div>
                     <div class="info-text">
                         <h3>Телефон</h3>
-                        <p><a href="tel:+359 88 888 8888">+359 88 888 8888</a></p>
-                        <p><a href="tel:+359 88 888 8888">+359 88 888 8888</a></p>
+                        <p><a href="tel:+359876860602">+359 876 860 602</a></p>
                     </div>
                 </div>
                 <div class="info-item">
@@ -183,8 +183,7 @@
                     </div>
                     <div class="info-text">
                     <h3>Имейл</h3>
-                    <p><a href="mailto:logos-aziti@abv.bg">logos-aziti@abv.bg</a></p>
-                    <p><a href="mailto:info@example.bg">info@example.bg</a></p>
+                    <p><a href="mailto:logos_aziti@abv.bg">logos_aziti@abv.bg</a></p>
                     </div>
                 </div>
                 <div class="info-item">
@@ -197,7 +196,7 @@
                     <h3>Работно време</h3>
                     <p>Понеделник - Петък: 9:00 - 18:00</p>
                     <p>Събота: 9:00 - 14:00</p>
-                    <p>Неделя: Почивен ден</p>
+                    <p>Неделя: почивен ден</p>
                     </div>
                 </div>
             </div>
@@ -285,10 +284,9 @@
                             required
                             >
                             <option value="">Изберете тема</option>
-                            <option value="консултация">Консултация</option>
-                            <option value="запазване-на-час">Запазване на час</option>
+                            <option value="диагностика-и-консултация">Диагностика и консултация</option>
                             <option value="информация-за-услуги">Информация за услуги</option>
-                            <option value="ценова-информация">Ценова информация</option>
+                            <option value="ценова-листа">Ценова листа</option>
                             <option value="друго">Друго</option>
                             </select>
                             {#if formErrors.subject}
@@ -479,9 +477,11 @@
     } */
 
     .info-content {
+        display: grid;
         background: var(--orange-light);
         border-radius: 15px;
         padding: 30px;
+        height: 568px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         border: 1px solid #f0f0f0;
     }
@@ -585,7 +585,6 @@
         border-radius: 8px;
         font-size: 1rem;
         transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        font-family: inherit;
         width: 100%; /* Ensure full width usage */
         box-sizing: border-box; /* Include padding in width calculation */
     }

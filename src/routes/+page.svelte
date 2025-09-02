@@ -263,11 +263,11 @@
     <div id="whyus-items">
       <div id="square">
         <svg width="195" height="111" viewBox="0 0 195 111" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M168.217 66.5031L168.747 66.9785C171.075 68.9329 174.197 71.6269 179.489 71.6269C186.951 71.6269 194.465 66.6088 194.465 55.3048C194.465 44.0009 185.733 38.8771 179.489 38.8771C174.303 38.8771 171.022 41.6239 168.588 43.6311L167.9 44.2122C165.466 46.2194 162.979 47.223 160.597 47.223C156.681 47.223 153.453 44.4235 152.924 40.5146V40.3561V0H112.812H112.706C111.224 0.316933 110.272 1.47903 110.272 2.95805C110.272 4.22578 110.96 5.7048 112.23 7.28947L112.812 7.97615C114.982 10.6173 118.686 15.0015 118.686 21.8156C118.686 30.003 112.124 41.4654 97.5184 41.4654C83.7067 41.4654 76.4569 31.5877 76.4569 21.8156C76.4569 14.843 80.1083 10.5116 82.3308 7.92333L82.8071 7.39511C84.2888 5.65198 85.0297 4.06731 85.0297 2.74676C85.0297 1.37338 84.183 0.264111 82.86 0H82.7542H41.7424V41.0428V41.2013C41.2132 44.9517 38.091 47.6456 34.2809 47.6456C31.7937 47.6456 29.2536 46.5363 26.6077 44.3178L26.0256 43.8424C23.5385 41.7295 20.4162 39.0884 15.1773 39.0884C7.71582 39.0884 0.201416 44.1065 0.201416 55.4105C0.201416 66.7144 8.93295 71.8382 15.1773 71.8382C20.3633 71.8382 23.6443 69.0914 26.0785 67.0842L26.7665 66.5031C29.2007 64.4959 31.6879 63.4923 34.0692 63.4923C37.9852 63.4923 41.2132 66.3446 41.7424 70.2007V70.3591V110.715H152.977V70.0422V69.8837C153.506 66.0805 156.681 63.3338 160.544 63.3338C163.137 63.3338 165.677 64.3902 168.217 66.5031Z" fill="white"/>
+          <path d="M168.217 66.5031L168.747 66.9785C171.075 68.9329 174.197 71.6269 179.489 71.6269C186.951 71.6269 194.465 66.6088 194.465 55.3048C194.465 44.0009 185.733 38.8771 179.489 38.8771C174.303 38.8771 171.022 41.6239 168.588 43.6311L167.9 44.2122C165.466 46.2194 162.979 47.223 160.597 47.223C156.681 47.223 153.453 44.4235 152.924 40.5146V40.3561V0H112.812H112.706C111.224 0.316933 110.272 1.47903 110.272 2.95805C110.272 4.22578 110.96 5.7048 112.23 7.28947L112.812 7.97615C114.982 10.6173 118.686 15.0015 118.686 21.8156C118.686 30.003 112.124 41.4654 97.5184 41.4654C83.7067 41.4654 76.4569 31.5877 76.4569 21.8156C76.4569 14.843 80.1083 10.5116 82.3308 7.92333L82.8071 7.39511C84.2888 5.65198 85.0297 4.06731 85.0297 2.74676C85.0297 1.37338 84.183 0.264111 82.86 0H82.7542H41.7424V41.0428V41.2013C41.2132 44.9517 38.091 47.6456 34.2809 47.6456C31.7937 47.6456 29.2536 46.5363 26.6077 44.3178L26.0256 43.8424C23.5385 41.7295 20.4162 39.0884 15.1773 39.0884C7.71582 39.0884 0.201416 44.1065 0.201416 55.4105C0.201416 66.7144 8.93295 71.8382 15.1773 71.8382C20.3633 71.8382 23.6443 69.0914 26.0785 67.0842L26.7665 66.5031C29.2007 64.4959 31.6879 63.4923 34.0692 63.4923C37.9852 63.4923 41.2132 66.3446 41.7424 70.2007V70.3591V110.715H152.977V70.0422V69.8837C153.506 66.0805 156.681 63.3338 160.544 63.3338C163.137 63.3338 165.677 64.3902 168.217 66.5031Z" fill="white"/>
         </svg>
         <p>Игрови подход</p>
         {#if showAdditionalSection1}
-            <p class="info" style="margin: 10px 15px; padding: 10px; background-color: #FFCFAD; border: 1px solid black; border-radius: 8px">Играта е естественият начин, по който децата учат. Затова всяко логопедично занимание включва игрови елементи, които помагат по-забавен, лесен и интересен начин да се усвояват нови знания и умения. </p>
+            <p class="info" style="margin: 10px 15px; padding: 10px; background-color: var(--background); border: 1px solid black; border-radius: 8px">Играта е естественият начин, по който децата учат. Затова всяко логопедично занимание включва игрови елементи, които помагат по-забавен, лесен и интересен начин да се усвояват нови знания и умения. </p>
             <button class="less-btn" on:click={toggleSection1}>Покажи по-малко</button>
         {:else}
           <button class="more-btn" on:click={toggleSection1}>Покажи повече</button>
@@ -276,11 +276,11 @@
       
       <div id="square">
         <svg width="195" height="111" viewBox="0 0 195 111" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M168.217 66.5031L168.747 66.9785C171.075 68.9329 174.197 71.6269 179.489 71.6269C186.951 71.6269 194.465 66.6088 194.465 55.3048C194.465 44.0009 185.733 38.8771 179.489 38.8771C174.303 38.8771 171.022 41.6239 168.588 43.6311L167.9 44.2122C165.466 46.2194 162.979 47.223 160.597 47.223C156.681 47.223 153.453 44.4235 152.924 40.5146V40.3561V0H112.812H112.706C111.224 0.316933 110.272 1.47903 110.272 2.95805C110.272 4.22578 110.96 5.7048 112.23 7.28947L112.812 7.97615C114.982 10.6173 118.686 15.0015 118.686 21.8156C118.686 30.003 112.124 41.4654 97.5184 41.4654C83.7067 41.4654 76.4569 31.5877 76.4569 21.8156C76.4569 14.843 80.1083 10.5116 82.3308 7.92333L82.8071 7.39511C84.2888 5.65198 85.0297 4.06731 85.0297 2.74676C85.0297 1.37338 84.183 0.264111 82.86 0H82.7542H41.7424V41.0428V41.2013C41.2132 44.9517 38.091 47.6456 34.2809 47.6456C31.7937 47.6456 29.2536 46.5363 26.6077 44.3178L26.0256 43.8424C23.5385 41.7295 20.4162 39.0884 15.1773 39.0884C7.71582 39.0884 0.201416 44.1065 0.201416 55.4105C0.201416 66.7144 8.93295 71.8382 15.1773 71.8382C20.3633 71.8382 23.6443 69.0914 26.0785 67.0842L26.7665 66.5031C29.2007 64.4959 31.6879 63.4923 34.0692 63.4923C37.9852 63.4923 41.2132 66.3446 41.7424 70.2007V70.3591V110.715H152.977V70.0422V69.8837C153.506 66.0805 156.681 63.3338 160.544 63.3338C163.137 63.3338 165.677 64.3902 168.217 66.5031Z" fill="white"/>
+          <path d="M168.217 66.5031L168.747 66.9785C171.075 68.9329 174.197 71.6269 179.489 71.6269C186.951 71.6269 194.465 66.6088 194.465 55.3048C194.465 44.0009 185.733 38.8771 179.489 38.8771C174.303 38.8771 171.022 41.6239 168.588 43.6311L167.9 44.2122C165.466 46.2194 162.979 47.223 160.597 47.223C156.681 47.223 153.453 44.4235 152.924 40.5146V40.3561V0H112.812H112.706C111.224 0.316933 110.272 1.47903 110.272 2.95805C110.272 4.22578 110.96 5.7048 112.23 7.28947L112.812 7.97615C114.982 10.6173 118.686 15.0015 118.686 21.8156C118.686 30.003 112.124 41.4654 97.5184 41.4654C83.7067 41.4654 76.4569 31.5877 76.4569 21.8156C76.4569 14.843 80.1083 10.5116 82.3308 7.92333L82.8071 7.39511C84.2888 5.65198 85.0297 4.06731 85.0297 2.74676C85.0297 1.37338 84.183 0.264111 82.86 0H82.7542H41.7424V41.0428V41.2013C41.2132 44.9517 38.091 47.6456 34.2809 47.6456C31.7937 47.6456 29.2536 46.5363 26.6077 44.3178L26.0256 43.8424C23.5385 41.7295 20.4162 39.0884 15.1773 39.0884C7.71582 39.0884 0.201416 44.1065 0.201416 55.4105C0.201416 66.7144 8.93295 71.8382 15.1773 71.8382C20.3633 71.8382 23.6443 69.0914 26.0785 67.0842L26.7665 66.5031C29.2007 64.4959 31.6879 63.4923 34.0692 63.4923C37.9852 63.4923 41.2132 66.3446 41.7424 70.2007V70.3591V110.715H152.977V70.0422V69.8837C153.506 66.0805 156.681 63.3338 160.544 63.3338C163.137 63.3338 165.677 64.3902 168.217 66.5031Z" fill="white"/>
         </svg>
         <p>Подкрепа</p>
         {#if showAdditionalSection2}
-            <p class="info" style="margin: 10px 15px; padding: 10px; background-color: #FFCFAD; border: 1px solid black; border-radius: 8px">Ние сме до семейството във всяка стъпка по житейския път – с лично отношение и  професионална подкрепа за езиково-говорно, двигателно, когнитивно и емоционално развитие. Работим с внимание, търпение и разбиране.</p>
+            <p class="info" style="margin: 10px 15px; padding: 10px; background-color: var(--background); border: 1px solid black; border-radius: 8px">Ние сме до семейството във всяка стъпка по житейския път – с лично отношение и  професионална подкрепа за езиково-говорно, двигателно, когнитивно и емоционално развитие. Работим с внимание, търпение и разбиране.</p>
             <button class="less-btn" on:click={toggleSection2}>Покажи по-малко</button>
           {:else}
             <button class="more-btn" on:click={toggleSection2}>Покажи повече</button>
@@ -288,11 +288,11 @@
       </div>
       <div id="square">
         <svg width="195" height="111" viewBox="0 0 195 111" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M168.217 66.5031L168.747 66.9785C171.075 68.9329 174.197 71.6269 179.489 71.6269C186.951 71.6269 194.465 66.6088 194.465 55.3048C194.465 44.0009 185.733 38.8771 179.489 38.8771C174.303 38.8771 171.022 41.6239 168.588 43.6311L167.9 44.2122C165.466 46.2194 162.979 47.223 160.597 47.223C156.681 47.223 153.453 44.4235 152.924 40.5146V40.3561V0H112.812H112.706C111.224 0.316933 110.272 1.47903 110.272 2.95805C110.272 4.22578 110.96 5.7048 112.23 7.28947L112.812 7.97615C114.982 10.6173 118.686 15.0015 118.686 21.8156C118.686 30.003 112.124 41.4654 97.5184 41.4654C83.7067 41.4654 76.4569 31.5877 76.4569 21.8156C76.4569 14.843 80.1083 10.5116 82.3308 7.92333L82.8071 7.39511C84.2888 5.65198 85.0297 4.06731 85.0297 2.74676C85.0297 1.37338 84.183 0.264111 82.86 0H82.7542H41.7424V41.0428V41.2013C41.2132 44.9517 38.091 47.6456 34.2809 47.6456C31.7937 47.6456 29.2536 46.5363 26.6077 44.3178L26.0256 43.8424C23.5385 41.7295 20.4162 39.0884 15.1773 39.0884C7.71582 39.0884 0.201416 44.1065 0.201416 55.4105C0.201416 66.7144 8.93295 71.8382 15.1773 71.8382C20.3633 71.8382 23.6443 69.0914 26.0785 67.0842L26.7665 66.5031C29.2007 64.4959 31.6879 63.4923 34.0692 63.4923C37.9852 63.4923 41.2132 66.3446 41.7424 70.2007V70.3591V110.715H152.977V70.0422V69.8837C153.506 66.0805 156.681 63.3338 160.544 63.3338C163.137 63.3338 165.677 64.3902 168.217 66.5031Z" fill="white"/>
+        <path d="M168.217 66.5031L168.747 66.9785C171.075 68.9329 174.197 71.6269 179.489 71.6269C186.951 71.6269 194.465 66.6088 194.465 55.3048C194.465 44.0009 185.733 38.8771 179.489 38.8771C174.303 38.8771 171.022 41.6239 168.588 43.6311L167.9 44.2122C165.466 46.2194 162.979 47.223 160.597 47.223C156.681 47.223 153.453 44.4235 152.924 40.5146V40.3561V0H112.812H112.706C111.224 0.316933 110.272 1.47903 110.272 2.95805C110.272 4.22578 110.96 5.7048 112.23 7.28947L112.812 7.97615C114.982 10.6173 118.686 15.0015 118.686 21.8156C118.686 30.003 112.124 41.4654 97.5184 41.4654C83.7067 41.4654 76.4569 31.5877 76.4569 21.8156C76.4569 14.843 80.1083 10.5116 82.3308 7.92333L82.8071 7.39511C84.2888 5.65198 85.0297 4.06731 85.0297 2.74676C85.0297 1.37338 84.183 0.264111 82.86 0H82.7542H41.7424V41.0428V41.2013C41.2132 44.9517 38.091 47.6456 34.2809 47.6456C31.7937 47.6456 29.2536 46.5363 26.6077 44.3178L26.0256 43.8424C23.5385 41.7295 20.4162 39.0884 15.1773 39.0884C7.71582 39.0884 0.201416 44.1065 0.201416 55.4105C0.201416 66.7144 8.93295 71.8382 15.1773 71.8382C20.3633 71.8382 23.6443 69.0914 26.0785 67.0842L26.7665 66.5031C29.2007 64.4959 31.6879 63.4923 34.0692 63.4923C37.9852 63.4923 41.2132 66.3446 41.7424 70.2007V70.3591V110.715H152.977V70.0422V69.8837C153.506 66.0805 156.681 63.3338 160.544 63.3338C163.137 63.3338 165.677 64.3902 168.217 66.5031Z" fill="white"/>
         </svg>
         <p>Доверие и индивидуалност</p>
         {#if showAdditionalSection3}
-            <p class="info" style="margin: 10px 15px; padding: 10px; background-color: #FFCFAD; border: 1px solid black; border-radius: 8px">В основата на нашата работа стои доверието – между детето, родителя и специалиста. Подхождаме индивидуално – спрямо нуждите, силните страни и темпото на развитие на детето. </p>
+            <p class="info" style="margin: 10px 15px; padding: 10px; background-color: var(--background); border: 1px solid black; border-radius: 8px">В основата на нашата работа стои доверието – между детето, родителя и специалиста. Подхождаме индивидуално – спрямо нуждите, силните страни и темпото на развитие на детето. </p>
             <button class="less-btn" on:click={toggleSection3}>Покажи по-малко</button>
         {:else}
           <button class="more-btn" on:click={toggleSection3}>Покажи повече</button>
@@ -300,11 +300,11 @@
       </div>
       <div id="square">
         <svg width="195" height="111" viewBox="0 0 195 111" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M168.217 66.5031L168.747 66.9785C171.075 68.9329 174.197 71.6269 179.489 71.6269C186.951 71.6269 194.465 66.6088 194.465 55.3048C194.465 44.0009 185.733 38.8771 179.489 38.8771C174.303 38.8771 171.022 41.6239 168.588 43.6311L167.9 44.2122C165.466 46.2194 162.979 47.223 160.597 47.223C156.681 47.223 153.453 44.4235 152.924 40.5146V40.3561V0H112.812H112.706C111.224 0.316933 110.272 1.47903 110.272 2.95805C110.272 4.22578 110.96 5.7048 112.23 7.28947L112.812 7.97615C114.982 10.6173 118.686 15.0015 118.686 21.8156C118.686 30.003 112.124 41.4654 97.5184 41.4654C83.7067 41.4654 76.4569 31.5877 76.4569 21.8156C76.4569 14.843 80.1083 10.5116 82.3308 7.92333L82.8071 7.39511C84.2888 5.65198 85.0297 4.06731 85.0297 2.74676C85.0297 1.37338 84.183 0.264111 82.86 0H82.7542H41.7424V41.0428V41.2013C41.2132 44.9517 38.091 47.6456 34.2809 47.6456C31.7937 47.6456 29.2536 46.5363 26.6077 44.3178L26.0256 43.8424C23.5385 41.7295 20.4162 39.0884 15.1773 39.0884C7.71582 39.0884 0.201416 44.1065 0.201416 55.4105C0.201416 66.7144 8.93295 71.8382 15.1773 71.8382C20.3633 71.8382 23.6443 69.0914 26.0785 67.0842L26.7665 66.5031C29.2007 64.4959 31.6879 63.4923 34.0692 63.4923C37.9852 63.4923 41.2132 66.3446 41.7424 70.2007V70.3591V110.715H152.977V70.0422V69.8837C153.506 66.0805 156.681 63.3338 160.544 63.3338C163.137 63.3338 165.677 64.3902 168.217 66.5031Z" fill="white"/>
+          <path d="M168.217 66.5031L168.747 66.9785C171.075 68.9329 174.197 71.6269 179.489 71.6269C186.951 71.6269 194.465 66.6088 194.465 55.3048C194.465 44.0009 185.733 38.8771 179.489 38.8771C174.303 38.8771 171.022 41.6239 168.588 43.6311L167.9 44.2122C165.466 46.2194 162.979 47.223 160.597 47.223C156.681 47.223 153.453 44.4235 152.924 40.5146V40.3561V0H112.812H112.706C111.224 0.316933 110.272 1.47903 110.272 2.95805C110.272 4.22578 110.96 5.7048 112.23 7.28947L112.812 7.97615C114.982 10.6173 118.686 15.0015 118.686 21.8156C118.686 30.003 112.124 41.4654 97.5184 41.4654C83.7067 41.4654 76.4569 31.5877 76.4569 21.8156C76.4569 14.843 80.1083 10.5116 82.3308 7.92333L82.8071 7.39511C84.2888 5.65198 85.0297 4.06731 85.0297 2.74676C85.0297 1.37338 84.183 0.264111 82.86 0H82.7542H41.7424V41.0428V41.2013C41.2132 44.9517 38.091 47.6456 34.2809 47.6456C31.7937 47.6456 29.2536 46.5363 26.6077 44.3178L26.0256 43.8424C23.5385 41.7295 20.4162 39.0884 15.1773 39.0884C7.71582 39.0884 0.201416 44.1065 0.201416 55.4105C0.201416 66.7144 8.93295 71.8382 15.1773 71.8382C20.3633 71.8382 23.6443 69.0914 26.0785 67.0842L26.7665 66.5031C29.2007 64.4959 31.6879 63.4923 34.0692 63.4923C37.9852 63.4923 41.2132 66.3446 41.7424 70.2007V70.3591V110.715H152.977V70.0422V69.8837C153.506 66.0805 156.681 63.3338 160.544 63.3338C163.137 63.3338 165.677 64.3902 168.217 66.5031Z" fill="white"/>
         </svg>
         <p>Постигане на цели</p>
         {#if showAdditionalSection4}
-            <p class="info" style="margin: 10px 15px; padding: 10px; background-color: #FFCFAD; border: 1px solid black; border-radius: 8px">Работим с ясен план в изпълнение на поставените задачи за постигане на цели и очаквани резултати. Следим напредъка и го превръщаме в малки победи, които изграждат увереност и трайни умения.</p>
+            <p class="info" style="margin: 10px 15px; padding: 10px; background-color: background-color: var(); border: 1px solid black; border-radius: 8px">Работим с ясен план в изпълнение на поставените задачи за постигане на цели и очаквани резултати. Следим напредъка и го превръщаме в малки победи, които изграждат увереност и трайни умения.</p>
             <button class="less-btn" on:click={toggleSection4}>Покажи по-малко</button>
         {:else}
           <button class="more-btn" on:click={toggleSection4}>Покажи повече</button>
@@ -320,26 +320,41 @@
     <h1 id="contacts-h">Контакти</h1>
     <div class="content">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1583.8185306095959!2d23.250366453474165!3d42.68603595385592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa9b20fa501a25%3A0x9afb3ddb6f64ad3c!2zZy5rLiBPdmNoYSBrdXBlbCAxLCDQti7Qui4g0J7QstGH0LAg0LrRg9C_0LXQuyAxIDQwOdCQINCRLCAxNjMyIFNvZmlh!5e0!3m2!1sen!2sbg!4v1748363247477!5m2!1sen!2sbg" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <div class="contact-info">
-        <ul>
-          <li>
-            <a href="https://maps.app.goo.gl/uk4FodQeaMtQuz9G6" target="_blank">
-              <svg style="padding: 5px 0; margin-right: 20px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="45px" height="45px" viewBox="0,0,255.99055,255.99055"><g fill="#e2f099" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M24,1c-8.8,0 -17.985,6.988 -18,17c-0.018,11.981 18,30 18,30c0,0 18.019,-17.994 18,-30c-0.016,-9.997 -9.2,-17 -18,-17zM24,26c-4.418,0 -8,-3.582 -8,-8c0,-4.418 3.582,-8 8,-8c4.418,0 8,3.582 8,8c0,4.418 -3.582,8 -8,8z"></path></g></g></svg>
-              ж.к. Овча Купел 1 бл. 409 София</a>
-          </li>
-          <li>
-            <a href="tel:+359876860602">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="40px" viewBox="0,0,255.99055,255.99055"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="none" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M6.995,8.853l0.038,3.744c0.135,13.188 17.049,28.249 28.365,28.365l3.745,0.038c1.034,0.01 1.863,-0.819 1.853,-1.853l-0.077,-7.488c-0.011,-1.034 -0.857,-1.88 -1.891,-1.891l-8.157,-0.168l-4.01,4.706c-2.642,-0.027 -13.145,-10.531 -13.172,-13.172l4.706,-4.284l-0.168,-7.882c-0.011,-1.034 -0.857,-1.88 -1.891,-1.891l-7.488,-0.077c-1.034,-0.01 -1.863,0.819 -1.853,1.853z" fill="#e2f099" stroke="none" stroke-width="1"></path><path d="M41,21h-2c0,-6.6 -5.4,-12 -12,-12v-2c7.7,0 14,6.3 14,14z" fill="#c6da5b" stroke="none" stroke-width="1"></path><path d="M35,21c0,-4.418 -3.582,-8 -8,-8M30,21c0,-1.657 -1.343,-3 -3,-3" fill="none" stroke="#c6da5b" stroke-width="2"></path></g></g></svg>
-              +359 876 860 602
-            </a>
-          </li>
-          <li>
-            <a href="mailto:logos-aziti@abv.bg">
-              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0,0,255.99055,255.99055"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.33333,5.33333)"><path d="M40,10h-32c-2.209,0 -4,1.791 -4,4v20c0,2.209 1.791,4 4,4h32c2.209,0 4,-1.791 4,-4v-20c0,-2.209 -1.791,-4 -4,-4z" fill="#e2f099"></path><path d="M44,14.025c0,-0.465 -0.095,-0.904 -0.24,-1.32l-19.76,14.32l-19.759,-14.32c-0.146,0.416 -0.241,0.856 -0.241,1.32v0.975l20,14.495l20,-14.495z" fill="#aebe5b"></path></g></g></svg>
-              logos-aziti@abv.bg
-            </a>
-          </li>
-        </ul>
+      <div class="info-content">
+        <div class="info-item">
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M12 12q.825 0 1.413-.587T14 10t-.587-1.412T12 8t-1.412.588T10 10t.588 1.413T12 12m0 7.35q3.05-2.8 4.525-5.087T18 10.2q0-2.725-1.737-4.462T12 4T7.738 5.738T6 10.2q0 1.775 1.475 4.063T12 19.35M12 22q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2t5.588 2.225T20 10.2q0 2.5-1.987 5.438T12 22m0-12"/>
+            </svg>
+          </div>
+          <div class="info-text">
+            <h3>Адрес</h3>
+            <p>ж.к. "Овча купел-1" - бл.409, вх."Б";</p>
+            <p> бл.411, вх."Г" - София, България</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3"/>
+            </svg>
+          </div>
+          <div class="info-text">
+            <h3>Телефон</h3>
+            <p><a href="tel:0876860602">087 686 0602</a></p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm8-7l8-5V6l-8 5l-8-5v2z"/>
+            </svg>
+          </div>
+          <div class="info-text">
+            <h3>Имейл</h3>
+            <p><a href="mailto:logos_aziti@abv.bg">logos_aziti@abv.bg</a></p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -352,44 +367,38 @@
     <div class="reviews-content">
       <div class="card">
         <div id="reviews-upper">
-          <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="50" fill="#9ECCF0"/>
-            </svg>
+          <img src="/pfps/reviews/natali_s.jpg" alt="Review 1">
           <div id="card-info">
-            <p>Анна<br>Генадиева</p>
+            <p>Натали <br>Славова</p>
             <div id="stars">★★★★★</div>
           </div>
         </div>
         <div id="reviews-lower">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error labore inventore, illum itaque fuga quisquam beatae libero magni ullam! Natus deleniti fugit repellat eius tempora id ea quasi quae nesciunt.</p>
+          <p>Човечност, грижа и страхотен професионализъм! Грижата, надграждането на знания и умения за децата е тяхната мисия. Бъдете здрави! Препоръчвам.</p>
         </div>
       </div>
       <div class="card">
         <div id="reviews-upper">
-          <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="50" fill="orange"/>
-            </svg>
+          <img src="/pfps/reviews/violeta_b.jpg" alt="Review 2">
           <div id="card-info">
-            <p>Анна<br>Генадиева</p>
+            <p>Виолета<br>Бакалова</p>
             <div id="stars">★★★★★</div>
           </div>
         </div>
-        <div id="reviews-lower">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error labore inventore, illum itaque fuga quisquam beatae libero magni ullam! Natus deleniti fugit repellat eius tempora id ea quasi quae nesciunt.</p>
+        <div id="reviews-lower" style="margin-bottom: 24px;">
+          <p>Страхотен специалист! Радвам се, че срещнах г-жа Игнатова. Тя е точният човек от който има нужда детето ми.</p>
         </div>
       </div>
       <div class="card">
         <div id="reviews-upper">
-          <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="50" fill="green"/>
-            </svg>
+          <img src="/pfps/reviews/violeta_bo.jpg" alt="Review 3">
           <div id="card-info">
-            <p>Анна<br>Генадиева</p>
+            <p>Виолета<br>Боянова</p>
             <div id="stars">★★★★★</div>
           </div>
         </div>
-        <div id="reviews-lower">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error labore inventore, illum itaque fuga quisquam beatae libero magni ullam! Natus deleniti fugit repellat eius tempora id ea quasi quae nesciunt.</p>
+        <div id="reviews-lower" style="margin-bottom: 24px;">
+          <p>Препоръчвам, защото познавам специлистите, които работят там -прекрасни професионалисти и чудесни хора!</p>
         </div>
       </div>
     </div>
@@ -753,11 +762,12 @@ img{max-width:100%;display:block}
   font-size: 1.5rem;
   line-height: 1.6;
   color: #333;
+  margin: 0 !important;
 }
 
 #mission-content img {
   flex: 1 1 30%;
-  max-width: 165px;
+  max-width: 185px;
   height: auto;
 }
 
@@ -805,7 +815,7 @@ img{max-width:100%;display:block}
   width: 230px;
   margin: 0.6rem;
   border-radius: 10px;
-  background-color: var(--orange);
+  background-color: var(--orange-light);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -819,7 +829,7 @@ img{max-width:100%;display:block}
   font-size: 1rem;
   font-weight: 500;
   color: black;
-  background-color: var(--green-button);
+  background-color: var(--orange);
   border: 2px solid black;
   padding: 0.4rem 0.8rem;
   border-radius: 20px;
@@ -828,7 +838,7 @@ img{max-width:100%;display:block}
   text-decoration: none;
 }
 .more-btn:hover {
-  background-color: var(--green-secondory);
+  background-color: var(--orange-dark);
   color: white;
 }
 
@@ -837,7 +847,7 @@ img{max-width:100%;display:block}
   font-size: 1rem;
   font-weight: 500;
   color: white;
-  background-color: var(--green-secondory);
+  background-color: var(--orange-dark);
   border: 2px solid black;
   padding: 0.4rem 0.8rem;
   border-radius: 20px;
@@ -846,7 +856,7 @@ img{max-width:100%;display:block}
   text-decoration: none;
 }
 .less-btn:hover {
-  background-color: var(--green-button);
+  background-color: var(--orange);
   color: black;
 }
 
@@ -882,64 +892,79 @@ img{max-width:100%;display:block}
 }
 
 iframe {
-  width: 450px;
-  height: 300px;
+  width: 500px;
+  height: 400px;
   border: none;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.contact-info {
-  flex: 1 1 40%;
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-}
 
-.contact-info ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
+.info-content {
+        background: var(--orange-light);
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        border: 1px solid #f0f0f0;
+    }
 
-.contact-info li {
-  border: 1px solid black;
-  border-radius: 15px;
-  background-color: var(--orange);
-  margin-bottom: 1.8rem;
-  padding: 0.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    .info-item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 30px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid #f5f5f5;
+    }
 
-.contact-info li:hover {
-  background-color: #f8c097;
-  transition: background-color 0.5s ease;
-}
+    .info-item:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
 
-.contact-info a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: inherit;
-  font-size: 1.4rem;
-}
+     .info-item .icon {
+        background: var(--orange);
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        flex-shrink: 0;
+    }
 
-.contact-info a svg {
-  margin-right: 3rem;
-}
+    .info-text h3 {
+        color: var(--orange);
+        margin-bottom: 8px;
+        font-size: 1.1rem;
+        font-weight: bold;
+     }
 
-.contact-info a svg:hover {
-  fill: #94cd53;
-  transition: fill 0.3s ease;
-}
+    .info-text p {
+        margin: 0;
+        color: var(--green-dark);
+        line-height: 1.5;
+    }
+
+    .info-text a {
+        color: var(--green-dark);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    .info-text a:hover {
+        color: #4a7c59;
+    }
 
 /* ---------- 6 REVIEWS ---------- */
 .reviews {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2rem;
+  margin: 2rem 0;
   width: 100%;
 }
 
@@ -952,6 +977,7 @@ iframe {
   font-size: 2.4rem;
   line-height: 1.2;
   font-weight: 700;
+  margin-bottom: 1rem !important;
   color: #000;
   text-align: left;
 }
@@ -964,12 +990,12 @@ iframe {
 }
 
 .card {
-  width: 278px;
+  width: 270px;
   margin: 0 0.7rem;
+  background: var(--orange-light);
+  border-radius: 10px;
+  border: 2px solid var(--orange);
   padding: 1rem;
-  border-radius: 5px;
-  /* background-color: var(--orange);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
 #reviews-upper {
@@ -979,7 +1005,7 @@ iframe {
   margin-bottom: 1rem;
 }
 
-#reviews-upper svg {
+#reviews-upper img {
   width: 80px;
   height: 80px;
   margin-right: 1rem;
@@ -1003,10 +1029,6 @@ iframe {
 
 @media screen and (max-width: 955px) {
   /* ---------- 5 CONTACTS ---------- */
-  iframe {
-    width: 100%;
-    height: 250px;
-  }
   .contacts {
     flex-direction: column;
     align-items: center;
@@ -1016,23 +1038,15 @@ iframe {
     width: 75%;
     height: 350px;
     margin-bottom: 1rem;
-    border: 2px solid black;
   }
   .content {
     flex-direction: column;
     align-items: center;
   }
 
-  .contact-info {
-    flex: 1 1 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1rem;
-  }
-
-  .contact-info li {
-    margin-right: 1rem;
+  .info-content {
+    width: 67%;
+    margin-top: 1.5rem;
   }
 
 
@@ -1047,16 +1061,6 @@ iframe {
     margin: 0.5rem 0;
     padding: 1rem;
     border-radius: 5px;
-  }
-
-  #reviews-upper svg {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 0.5rem;
-    border: 3px solid var(--orange);
-    border-radius: 50%;
-    border-right-color: transparent;
-    border-top-color: transparent;
   }
 
   #card-info {
@@ -1098,12 +1102,13 @@ iframe {
     margin-bottom: 1rem;
     border: 2px solid black;
   }
-  .contact-info {
-    flex: 1 1 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1rem;
+  .info-content {
+    width: 76%;
+    font-size: larger;
+  }
+
+  .info-content h3 {
+    font-size: larger;
   }
 
   /* ---------- 6 REVIEWS ----------- */
@@ -1113,7 +1118,7 @@ iframe {
   }
 
   .card {
-    width: 90%;
+    width: 67%;
     margin: 0.5rem 0;
     padding: 1rem;
     border-radius: 5px;

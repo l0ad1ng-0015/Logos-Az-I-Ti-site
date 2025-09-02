@@ -6,9 +6,10 @@
                 <h2>Логос "Аз и Ти"</h2>
             </div>
             <ul>
-                <li><a href="https://maps.app.goo.gl/uk4FodQeaMtQuz9G6">ж.к. Овча Купел 1 бл. 409 София</a></li>
+                <li style="margin-top: 0 !important;"><a href="https://maps.app.goo.gl/uk4FodQeaMtQuz9G6" target="_blank">ж.к. "Овча купел-1" - бл.409, вх."Б";</a></li>
+                <li style="margin-top: 0 !important"><a href="https://maps.app.goo.gl/Bocn4jwKVaSc9Lj18">бл.411, вх."Г" - София</a></li>
                 <li><a href="tel:+359876860602">+359 876 860 602</a></li>
-                <li><a href="mailto:logos-aziti@abv.bg">logos-aziti@abv.bg</a></li>
+                <li><a href="mailto:logos_aziti@abv.bg" target="_blank">logos_aziti@abv.bg</a></li>
             </ul>
         </div>
         <div class="column">
@@ -17,14 +18,14 @@
                 <li><a href="/">Начало</a></li>
                 <li><a href="/za-nas">За нас</a></li>
                 <li><a href="#">Услуги</a></li>
-                <li><a href="#">Контакти</a></li>
+                <li><a href="/contacts">Контакти</a></li>
             </ul>
         </div>
         <div class="column">
             <h2>Полезно</h2>
             <ul>
                 <li><a href="#">За вас</a></li>
-                <li><a href="#">Блог</a></li>
+                <li><a href="/blog">Блог</a></li>
                 <li><a href="/terms-and-conditions" target="_blank">Условия за ползване</a></li>
                 <li><a href="/privacy-policy" target="_blank">Политика за поверителност</a></li>
             </ul>
@@ -47,7 +48,7 @@
                     </a>
                 </div>
                 <button id="green-button">
-                    <a href="#">Свържете се с нас</a>
+                    <a href="/kontakti">Свържете се с нас</a>
                 </button>
             </div>
         </div>

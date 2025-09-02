@@ -136,7 +136,7 @@
                 </svg>
                 <p>Даде идеи и насоки</p>
                 {#if showAdditionalSection2}
-                    <p class="info" style="margin: 10px 15px; padding: 10px; background-color: var(--orange-light); border: 1px solid black; border-radius: 8px">Конкретни предложения за игри, книги за езиково-говорно стимулиране вкъщи</p>
+                    <p class="info" style="margin: 10px 15px; padding: 10px;background-color: var(--orange-dark);; border: 1px solid black; border-radius: 8px">Конкретни предложения за игри, книги за езиково-говорно стимулиране вкъщи</p>
                     <button class="less-btn" on:click={toggleSection2}>Покажи по-малко</button>
                 {:else}
                 <button class="more-btn" on:click={toggleSection2}>Покажи повече</button>

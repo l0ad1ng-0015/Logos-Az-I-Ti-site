@@ -60,7 +60,7 @@
         <!-- Sonia Ignatova -->
         <div class="team-content" style="margin-bottom: 5rem;">
             <div class="member-stats">
-                <img src="/team/sonia.png" alt="Sonia" class="team-member">
+                <img src="/pfps/team/sonia.png" alt="Sonia" class="team-member">
                 <h3 class="team-member-name">Соня Игнатова</h3>
                 <p class="team-member-role">логопед, специален педагог</p>
                 <p class="team-member-contacts">example@example.com</p>
@@ -105,7 +105,7 @@
         <!-- Maria Tuputi -->
         <div class="team-content">
             <div class="member-stats">
-                <img src="/team/maria.png" alt="Maria" class="team-member">
+                <img src="/pfps/team/maria.png" alt="Maria" class="team-member">
                 <h3 class="team-member-name">Мария-Паола Тупути</h3>
                 <p class="team-member-role">логопед</p>
                 <p class="team-member-contacts">example@example.com</p>

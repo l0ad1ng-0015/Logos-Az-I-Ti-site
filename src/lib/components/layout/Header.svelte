@@ -56,9 +56,8 @@
         </a>
         <div class="dropdown-menu" class:show={activeDropdown === 'about'} on:mouseenter={() => activeDropdown = 'about'} on:mouseleave={() => activeDropdown = null}>
           <a href="/za-nas" on:click={handleLinkClick}>За нас</a>
-          <a href="#" on:click={handleLinkClick}>Семинари</a>
-          <a href="#" on:click={handleLinkClick}>Галерия</a>
-          <a href="#" on:click={handleLinkClick}>Мисия и визия</a>
+          <a href="/seminari" on:click={handleLinkClick}>Семинари</a>
+          <a href="/galeriya" on:click={handleLinkClick}>Галерия</a>
         </div>
       </li>
 
@@ -71,13 +70,13 @@
           </svg>
         </a>
         <div class="dropdown-menu" class:show={activeDropdown === 'services'} on:mouseenter={() => activeDropdown = 'services'} on:mouseleave={() => activeDropdown = null}>
-          <a href="#" on:click={handleLinkClick}>Всички услуги</a>
-          <a href="/uslugi/ranna-prevenciq" on:click={handleLinkClick}>Ранна превенция</a>
-          <a href="/uslugi/konsultaciq" on:click={handleLinkClick}>Консултация и диагностика</a>
-          <a href="/uslugi/logopedichna-terapiq" on:click={handleLinkClick}>Логопедична терапия</a>
+          <a href="/uslugi" on:click={handleLinkClick}>Всички услуги</a>
+          <a href="/uslugi/ranna-prevenciya" on:click={handleLinkClick}>Ранна превенция</a>
+          <a href="/uslugi/konsultaciya-i-diagnostika" on:click={handleLinkClick}>Консултация и диагностика</a>
+          <a href="/uslugi/logopedichna-terapiya" on:click={handleLinkClick}>Логопедична терапия</a>
           <a href="/uslugi/omt" on:click={handleLinkClick}>Орофациална миофункционална терапия (ОМТ)</a>
-          <a href="#" on:click={handleLinkClick}>Подпомагане и обучения</a>
-          <a href="#" on:click={handleLinkClick}>Логопедична вдъхновителница</a>
+          <a href="/uslugi/podpomagane-i-obucheniya" on:click={handleLinkClick}>Подпомагане и обучения</a>
+          <a href="/uslugi/logopedichna-vdahnovitelnica" on:click={handleLinkClick}>Логопедична вдъхновителница</a>
       </li>
 
       <li><a href="/blog" on:click={handleLinkClick}>Блог</a></li>
@@ -91,9 +90,9 @@
           </svg>
         </a>
         <div class="dropdown-menu" class:show={activeDropdown === 'clients'} on:mouseenter={() => activeDropdown = 'clients'} on:mouseleave={() => activeDropdown = null}>
-          <a href="#" on:click={handleLinkClick}>Полезни ресурси</a>
-          <a href="#" on:click={handleLinkClick}>ЧЗВ</a>
-          <a href="#" on:click={handleLinkClick}>Отзиви</a>
+          <a href="/polezni-resursi" on:click={handleLinkClick}>Полезни ресурси</a>
+          <a href="/chesto-zadavani-vuprosi" on:click={handleLinkClick}>ЧЗВ</a>
+          <a href="/otzivi" on:click={handleLinkClick}>Отзиви</a>
         </div>
       </li>
 
@@ -133,9 +132,8 @@
         </div>
         <div class="mobile-submenu" class:show={activeDropdown === 'mobile-about'}>
           <a href="/za-nas" on:click={handleLinkClick}>За нас</a>
-          <a href="#" on:click={handleLinkClick}>Семинари</a>
-          <a href="#" on:click={handleLinkClick}>Галерия</a>
-          <a href="#" on:click={handleLinkClick}>Мисия и визия</a>
+          <a href="/seminari" on:click={handleLinkClick}>Семинари</a>
+          <a href="/galeriya" on:click={handleLinkClick}>Галерия</a>
         </div>
         <hr>
       </li>
@@ -156,13 +154,13 @@
           </span>
         </div>
         <div class="mobile-submenu" class:show={activeDropdown === 'mobile-services'}>
-          <a href="#" on:click={handleLinkClick}>Всички услуги</a>
-          <a href="/uslugi/ranna-prevenciq" on:click={handleLinkClick}>Ранна превенция</a>
-          <a href="/uslugi/konsultaciq" on:click={handleLinkClick}>Консултация и диагностика</a>
-          <a href="/uslugi/logopedichna-terapiq" on:click={handleLinkClick}>Логопедична терапия</a>
+          <a href="/uslugi" on:click={handleLinkClick}>Всички услуги</a>
+          <a href="/uslugi/ranna-prevenciya" on:click={handleLinkClick}>Ранна превенция</a>
+          <a href="/uslugi/konsultaciya-i-diagnostika" on:click={handleLinkClick}>Консултация и диагностика</a>
+          <a href="/uslugi/logopedichna-terapiya" on:click={handleLinkClick}>Логопедична терапия</a>
           <a href="/uslugi/omt" on:click={handleLinkClick}>Орофациална миофункционална терапия (ОМТ)</a>
-          <a href="#" on:click={handleLinkClick}>Подпомагане и обучения</a>
-          <a href="#" on:click={handleLinkClick}>Логопедична вдъхновителница</a>
+          <a href="/uslugi/podpomagane-i-obucheniya" on:click={handleLinkClick}>Подпомагане и обучения</a>
+          <a href="/uslugi/logopedichna-vdahnovitelnica" on:click={handleLinkClick}>Логопедична вдъхновителница</a>
         </div>
         <hr>
       </li>
@@ -195,9 +193,9 @@
           </span>
         </div>
         <div class="mobile-submenu" class:show={activeDropdown === 'mobile-clients'}>
-          <a href="#" on:click={handleLinkClick}>Полезни ресурси</a>
-          <a href="#" on:click={handleLinkClick}>ЧЗВ</a>
-          <a href="#" on:click={handleLinkClick}>Отзиви</a>
+          <a href="/polezni-resursi" on:click={handleLinkClick}>Полезни ресурси</a>
+          <a href="/chesto-zadavani-vuprosi" on:click={handleLinkClick}>ЧЗВ</a>
+          <a href="/otzivi" on:click={handleLinkClick}>Отзиви</a>
         </div>
         <hr>
       </li>
@@ -573,11 +571,11 @@
     }
 
     .nav-links ul {
-      gap: 30px;
+      gap: 40px;
     }
 
     nav.scrolled .nav-links ul {
-      gap: 20px;
+      gap: 30px;
     }
 
     .green-button {
