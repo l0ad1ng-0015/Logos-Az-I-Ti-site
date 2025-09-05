@@ -804,7 +804,6 @@
     }
 
     .form-group input.error,
-    .form-group select.error,
     .form-group textarea.error {
         border-color: #dc2626;
         box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
