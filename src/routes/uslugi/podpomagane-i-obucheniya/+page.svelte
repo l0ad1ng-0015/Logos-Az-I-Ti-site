@@ -318,7 +318,7 @@
                             on:change={() => clearError('subject')}
                             >
                             <option value="">Изберете тема</option>
-                            <option value="програма">Програма</option>
+                            <option value="за-програмата">За програмата</option>
                             <option value="график">График</option>
                             <option value="ценова-листа">Ценова листа</option>
                             <option value="тест">Тест</option>
@@ -765,7 +765,7 @@
         color: black;
         font-weight: 600;
         margin-bottom: 8px;
-        font-size: 0.95rem;
+        font-size: 1.2rem !important;
     }
 
     .form-group input,
@@ -775,7 +775,7 @@
         border: 1px solid var(--orange);
         background: var(--background);
         border-radius: 8px;
-        font-size: 1rem;
+        font-size: 1.2rem;
         transition: border-color 0.3s ease, box-shadow 0.3s ease;
         font-family: inherit;
         width: 100%; /* Ensure full width usage */

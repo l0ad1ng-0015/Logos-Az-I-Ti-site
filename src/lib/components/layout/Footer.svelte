@@ -24,7 +24,7 @@
         <div class="column">
             <h2>Полезно</h2>
             <ul>
-                <li><a href="#">За вас</a></li>
+                <li><a href="/chesto-zadavani-vuprosi">ЧЗВ</a></li>
                 <li><a href="/blog">Блог</a></li>
                 <li><a href="/terms-and-conditions" target="_blank">Условия за ползване</a></li>
                 <li><a href="/privacy-policy" target="_blank">Политика за поверителност</a></li>
