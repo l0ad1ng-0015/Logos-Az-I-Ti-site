@@ -42,6 +42,7 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
-		"hamburger-react": "^2.5.2"
+		"hamburger-react": "^2.5.2",
+		"photoswipe": "^5.4.4"
 	}
 }

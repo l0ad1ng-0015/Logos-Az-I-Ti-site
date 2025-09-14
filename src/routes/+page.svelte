@@ -839,14 +839,14 @@ img{max-width:100%;display:block}
 }
 .more-btn:hover {
   background-color: var(--orange-dark);
-  color: white;
+  color: black;
 }
 
 .less-btn {
   margin: 0.5rem 0;
   font-size: 1rem;
   font-weight: 500;
-  color: white;
+  color: black;
   background-color: var(--orange-dark);
   border: 2px solid black;
   padding: 0.4rem 0.8rem;

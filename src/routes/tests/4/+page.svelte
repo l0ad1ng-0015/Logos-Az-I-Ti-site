@@ -1,346 +1,344 @@
 <script>
-  // You can add any reactive logic here if needed
-  let isVisible = true;
+	export let title = 'Галерия | MP Clima';
+	export let description =
+		'Разгледайте нашата галерия с реални проекти монтажи на климатици. Тук ще откриете примери за качественото обслужване и монтажи, които извършваме, както и различни типове климатични системи, които предлагаме за вашия дом или офис.';
+
+	import { onMount } from 'svelte';
+	import PhotoSwipeLightbox from 'photoswipe/lightbox';
+	import 'photoswipe/style.css';
+	export let galleryID = 'gallery-01';
+
+	let images = [
+		//ВЪТРЕШНИ МОНТАЖИ --->
+		{
+		  largeURL: '/others/who-are-we.png',
+			thumbnailURL: '/others/who-are-we.png',
+			galleryClass: 'card',
+			width: 500,
+			height: 333,
+			caption: 'Вътрешен монтаж 1',
+			category: 'семинари'
+		},
+		{
+			largeURL: '/others/who-are-we.png',
+			thumbnailURL: '/others/who-are-we.png',
+			galleryClass: 'card',
+			width: 500,
+			height: 333,
+			caption: 'Вътрешен монтаж 2',
+			category: 'in'
+		}
+	];
+
+	// Categories for filtering
+	let categories = [
+		{ id: 'all', name: 'Всички', count: images.length },
+		{ id: 'семинари', name: 'Семинари', count: images.filter(i => i.category === 'семинари').length },
+		{ id: 'кабинет', name: 'Кабинет', count: images.filter(i => i.category === 'кабинет').length }
+	];
+
+	let selectedCategory = 'all';
+
+	// Filtered images based on selected category
+	$: filteredImages = selectedCategory === 'all'
+		? images
+		: images.filter(img => img.category === selectedCategory);
+
+	// Split filtered images into 3 columns for masonry layout
+	$: column1Images = filteredImages.filter((_, i) => i % 3 === 0);
+	$: column2Images = filteredImages.filter((_, i) => i % 3 === 1);
+	$: column3Images = filteredImages.filter((_, i) => i % 3 === 2);
+
+	let showLightbox = false;
+	let currentImageIndex = 0;
+
+	function openLightbox(index) {
+		currentImageIndex = index;
+		showLightbox = true;
+	}
+
+	function closeLightbox() {
+		showLightbox = false;
+	}
+
+	function prevImage() {
+		currentImageIndex = (currentImageIndex - 1 + filteredImages.length) % filteredImages.length;
+	}
+
+	function nextImage() {
+		currentImageIndex = (currentImageIndex + 1) % filteredImages.length;
+	}
+
+	function handleImageLoad(image, event) {
+		// Optional: handle image load
+	}
+
+	onMount(() => {
+		let lightbox = new PhotoSwipeLightbox({
+			gallery: '#' + galleryID,
+			children: 'a',
+			pswpModule: () => import('photoswipe')
+		});
+		lightbox.init();
+	});
 </script>
 
-<div class="page">
-  <div class="header-section">
-    <div class="header-content">
-      <h1>Ранна превенция</h1>
-      <p>Защо е важна ранната превенция? Ранната превенция е първата и най-важна крачка в подкрепата на детето още преди да се появят сериозни езиково-говорни трудности.</p>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="main-content">
-      <div class="intro-section">
-        <h2>
-          <span class="icon">🌱</span>
-          Какво е ранната превенция?
-        </h2>
-        <p>Ранната превенция не е диагноза, не е терапия – а навременна грижа и насока към правилното развитие. Това е възможност да подкрепим детето в най-важния период на неговото развитие.</p>
-        
-        <div class="age-info">
-          <strong>Важен период:</strong> В периода до 5 години мозъкът се развива интензивно. Това е времето, когато децата започват да разбират, да говорят, да общуват и изграждат когнитивни умения.
-        </div>
-      </div>
-
-      <div class="benefits-grid">
-        <div class="benefit-card">
-          <h3>
-            <span class="number">1</span>
-            Ранното развитие е ключово
-          </h3>
-          <p>В периода до 5 години децата:</p>
-          <ul class="key-points">
-            <li>Започват да разбират, да говорят, да общуват</li>
-            <li>Изграждат когнитивни умения (внимание, памет, мислене)</li>
-            <li>„Попиват" езика чрез игра, общуване и близост</li>
-          </ul>
-        </div>
-
-        <div class="benefit-card">
-          <h3>
-            <span class="number">2</span>
-            Не е диагноза, а подкрепа
-          </h3>
-          <p>Чрез наблюдение, игрови задачи и консултация логопедът може да:</p>
-          <ul class="key-points">
-            <li>Оцени нивото на развитие</li>
-            <li>Даде идеи за игри и езиково стимулиране</li>
-            <li>Предложи насоки за подкрепа</li>
-            <li>При нужда – препоръча допълнителна оценка</li>
-          </ul>
-        </div>
-
-        <div class="benefit-card">
-          <h3>
-            <span class="number">3</span>
-            Подкрепя цялото семейство
-          </h3>
-          <p>Родителят получава:</p>
-          <ul class="key-points">
-            <li>Спокойствие чрез експертна оценка</li>
-            <li>Отговори на въпросите си</li>
-            <li>Индивидуални препоръки за дома</li>
-            <li>Усещане, че не е сам в грижата за детето</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="highlight-section">
-        <h3>Защо превенцията е толкова важна?</h3>
-        <p>Превенцията дава яснота и възможност за реакция. Тя ще Ви помогне да избегнете колебанията си и ще Ви даде отговор на въпроси като: „Да изчакам ли?", „Дали това е нормално?"</p>
-        
-        <div class="benefits-explanation">
-          <strong>Превенцията помага да:</strong>
-          <ul class="key-points">
-            <li>Се избегне натрупване на трудности, които често водят до сериозни проблеми</li>
-            <li>Не се губи време, което е ценно за развитието на детето</li>
-            <li>Се изгради увереност в общуването и самочувствие</li>
-            <li>Се осигури успешна адаптация в детска градина и училище</li>
-            <li>Се развият езиково-говорни, когнитивни и социални умения</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="cta-section">
-        <h3>Готови за първата крачка?</h3>
-        <p>Превенцията е ключът към навременната подкрепа на детското развитие. Колкото по-рано се открият и насочат особеностите в развитието, толкова по-лесно и уверено детето ще изгради своите комуникативни умения.</p>
-        <button class="cta-button" on:click={() => alert('Записване на консултация')}>
-          Запишете консултация
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-
 <style>
-  .page {
-    font-family: 'Arial', sans-serif;
-    background-color: #faf8f6;
-    color: #333;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-  }
-
-  .header-section {
-    background: linear-gradient(135deg, #ff9d6b, #ffb380);
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .header-section::before {
-    content: '';
-    position: absolute;
-    top: -50px;
-    right: -50px;
-    width: 200px;
-    height: 200px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-  }
-
-  .header-section::after {
-    content: '';
-    position: absolute;
-    bottom: -30px;
-    left: -30px;
-    width: 150px;
-    height: 150px;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 50%;
-  }
-
-  .header-content {
-    max-width: 800px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
-  }
-
-  .header-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-  }
-
-  .header-content p {
-    font-size: 1.1rem;
-    opacity: 0.95;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
   .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #fff5f0 0%, #ffeee6 100%);
+    min-height: 100vh;
   }
 
-  .main-content {
-    padding: 60px 0;
-  }
-
-  .intro-section {
+  .filters {
     background: white;
-    border-radius: 15px;
-    padding: 40px;
-    margin-bottom: 40px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
   }
 
-  .intro-section h2 {
-    color: #ff9d6b;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+  .filter-buttons {
     display: flex;
-    align-items: center;
     gap: 15px;
-  }
-
-  .icon {
-    width: 40px;
-    height: 40px;
-    background: #ff9d6b;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    color: white;
-    font-size: 1.2rem;
-    flex-shrink: 0;
+    flex-wrap: wrap;
   }
 
-  .benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-    margin: 40px 0;
-  }
-
-  .benefit-card {
-    background: white;
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .benefit-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  }
-
-  .benefit-card h3 {
-    color: #ff9d6b;
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .benefit-card .number {
-    background: #ff9d6b;
-    color: white;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 0.9rem;
-  }
-
-  .highlight-section {
-    background: linear-gradient(135deg, #fff5f0, #ffe8d9);
-    border-radius: 15px;
-    padding: 40px;
-    margin: 40px 0;
-    border-left: 5px solid #ff9d6b;
-  }
-
-  .highlight-section h3 {
-    color: #ff9d6b;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
-
-  .benefits-explanation {
-    margin-top: 20px;
-  }
-
-  .key-points {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 15px;
-  }
-
-  .key-points li {
-    margin-bottom: 15px;
-    padding-left: 30px;
+  .filter-btn {
+    background: linear-gradient(135deg, #fff8f5 0%, #fff2ee 100%);
+    border: 2px solid #ffeee6;
+    color: #666;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
     position: relative;
   }
 
-  .key-points li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: #ff9d6b;
-    font-weight: bold;
-    font-size: 1.2rem;
+  .filter-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 154, 115, 0.2);
   }
 
-  .cta-section {
-    background: #ff9d6b;
+  .filter-btn.active {
+    background: linear-gradient(135deg, #ff9a73 0%, #ff7f50 100%);
     color: white;
+    border-color: #ff7f50;
+  }
+
+  .filter-count {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    margin-left: 8px;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .gallery-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .image-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .gallery-item {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+    position: relative;
+    overflow: hidden;
     border-radius: 15px;
-    padding: 40px;
-    text-align: center;
-    margin-top: 50px;
-  }
-
-  .cta-section h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-  }
-
-  .cta-section p {
-    margin-bottom: 25px;
-    font-size: 1.1rem;
-    opacity: 0.95;
-  }
-
-  .cta-button {
-    display: inline-block;
-    background: white;
-    color: #ff9d6b;
-    padding: 15px 30px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    border: 2px solid white;
     cursor: pointer;
   }
 
-  .cta-button:hover {
-    background: transparent;
-    color: white;
-    transform: translateY(-2px);
+  .gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 154, 115, 0.3);
   }
 
-  .age-info {
-    background: #f8f9fa;
-    border-radius: 10px;
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.05);
+  }
+
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
     padding: 20px;
-    margin: 20px 0;
-    border-left: 4px solid #ff9d6b;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .gallery-item:hover .image-overlay {
+    opacity: 1;
+  }
+
+  .zoom-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: white;
+    background: rgba(255, 154, 115, 0.8);
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+
+  .zoom-icon:hover {
+    background: rgba(255, 154, 115, 1);
+    transform: scale(1.1);
+  }
+
+  .image-caption {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: auto;
   }
 
   @media (max-width: 768px) {
-    .header-content h1 {
+    .container {
+      padding: 15px;
+    }
+
+    .header {
+      padding: 30px 20px;
+    }
+
+    .header h1 {
       font-size: 2rem;
     }
-    
-    .benefits-grid {
+
+    .gallery {
       grid-template-columns: 1fr;
-      gap: 20px;
+      gap: 15px;
     }
-    
-    .intro-section, .benefit-card, .highlight-section, .cta-section {
-      padding: 25px;
+
+    .filter-buttons {
+      gap: 10px;
     }
-    
-    .header-section {
-      padding: 40px 20px;
+
+    .filter-btn {
+      padding: 10px 18px;
+      font-size: 0.9rem;
+    }
+
+    .lightbox-nav {
+      display: none;
     }
   }
 </style>
+
+
+  <div class="filters">
+    <div class="filter-buttons">
+      {#each categories as category}
+        <button 
+          class="filter-btn" 
+          class:active={selectedCategory === category.id}
+          on:click={() => selectedCategory = category.id}
+        >
+          {category.name}
+          <span class="filter-count">{category.count}</span>
+        </button>
+      {/each}
+    </div>
+  </div>
+
+  <div class="gallery" id={galleryID}>
+    <div class="gallery-column">
+      {#each column1Images as image, index (image.largeURL)}
+        <a 
+          href={image.largeURL} 
+          class="gallery-item" 
+          data-pswp-width={image.width} 
+          data-pswp-height={image.height}
+          on:click|preventDefault={() => openLightbox(index * 3)}
+        >
+          <img 
+            src={image.thumbnailURL} 
+            alt={image.caption}
+            loading="lazy"
+            on:load={(e) => handleImageLoad(image, e)}
+          />
+          <div class="image-overlay">
+            <div class="image-caption">{image.caption}</div>
+          </div>
+        </a>
+      {/each}
+    </div>
+    <div class="gallery-column">
+      {#each column2Images as image, index (image.largeURL)}
+        <a 
+          href={image.largeURL} 
+          class="gallery-item" 
+          data-pswp-width={image.width} 
+          data-pswp-height={image.height}
+        >
+          <img 
+            src={image.thumbnailURL} 
+            alt={image.caption}
+            loading="lazy"
+            on:load={(e) => handleImageLoad(image, e)}
+          />
+          <div class="image-overlay">
+            <div class="image-caption">{image.caption}</div>
+          </div>
+        </a>
+      {/each}
+    </div>
+    <div class="gallery-column">
+      {#each column3Images as image, index (image.largeURL)}
+        <a 
+          href={image.largeURL} 
+          class="gallery-item" 
+          data-pswp-width={image.width} 
+          data-pswp-height={image.height}
+          on:click|preventDefault={() => openLightbox(index * 3 + 2)}
+        >
+          <img 
+            src={image.thumbnailURL} 
+            alt={image.caption}
+            loading="lazy"
+            on:load={(e) => handleImageLoad(image, e)}
+          />
+          <div class="image-overlay">
+            <div class="image-caption">{image.caption}</div>
+          </div>
+        </a>
+      {/each}
+    </div>
+  </div>

@@ -91,7 +91,7 @@
         </a>
         <div class="dropdown-menu" class:show={activeDropdown === 'clients'} on:mouseenter={() => activeDropdown = 'clients'} on:mouseleave={() => activeDropdown = null}>
           <a href="/polezni-resursi" on:click={handleLinkClick}>Полезни ресурси</a>
-          <a href="/chesto-zadavani-vuprosi" on:click={handleLinkClick}>ЧЗВ</a>
+          <a href="/chesto-zadavani-vuprosi" on:click={handleLinkClick}>Често задавани въпроси (ЧЗВ)</a>
           <a href="/otzivi" on:click={handleLinkClick}>Отзиви</a>
         </div>
       </li>
@@ -194,7 +194,7 @@
         </div>
         <div class="mobile-submenu" class:show={activeDropdown === 'mobile-clients'}>
           <a href="/polezni-resursi" on:click={handleLinkClick}>Полезни ресурси</a>
-          <a href="/chesto-zadavani-vuprosi" on:click={handleLinkClick}>ЧЗВ</a>
+          <a href="/chesto-zadavani-vuprosi" on:click={handleLinkClick}>Често задавани въпроси (ЧЗВ)</a>
           <a href="/otzivi" on:click={handleLinkClick}>Отзиви</a>
         </div>
         <hr>

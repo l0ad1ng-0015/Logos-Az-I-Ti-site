@@ -300,6 +300,10 @@
         .heading {
             margin: 30px 30px 40px 30px;
         }
+
+        .first-svg {
+            transform: translateY(-145%);
+        }
     }
 
     /* ---- Media query - 755 ---- */
@@ -373,7 +377,7 @@
     @media screen and (max-width: 425px) {
         .cta-button {
             width: 250px;
-            height: 100px;
+            /* height: 100px; */
         }
     }
 </style>

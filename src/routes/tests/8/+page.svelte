@@ -1,10 +1,4 @@
 <script>
-  import { onMount } from 'svelte';
-  
-  let currentTestimonial = 0;
-  let isAutoPlay = true;
-  let autoPlayInterval;
-  
   const testimonials = [
     {
       id: 1,
@@ -68,34 +62,6 @@
     }
   ];
   
-  const nextTestimonial = () => {
-    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-  };
-  
-  const prevTestimonial = () => {
-    currentTestimonial = currentTestimonial === 0 ? testimonials.length - 1 : currentTestimonial - 1;
-  };
-  
-  const goToTestimonial = (index) => {
-    currentTestimonial = index;
-    isAutoPlay = false;
-    clearInterval(autoPlayInterval);
-  };
-  
-  const startAutoPlay = () => {
-    if (isAutoPlay) {
-      autoPlayInterval = setInterval(nextTestimonial, 5000);
-    }
-  };
-  
-  onMount(() => {
-    startAutoPlay();
-    
-    return () => {
-      clearInterval(autoPlayInterval);
-    };
-  });
-  
   const renderStars = (rating) => {
     return Array.from({length: 5}, (_, i) => i < rating ? '★' : '☆').join('');
   };
@@ -103,7 +69,7 @@
 
 <style>
   .container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     font-family: 'Arial', sans-serif;
@@ -162,40 +128,50 @@
     z-index: 1;
   }
 
-  .testimonials-container {
-    background: white;
-    border-radius: 20px;
-    padding: 40px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-    margin-bottom: 30px;
-    position: relative;
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
   }
 
   .testimonial-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #fff2ee;
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(255, 154, 115, 0.15);
+    border-color: #ff9a73;
+  }
+
+  .client-header {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto;
+    margin-bottom: 20px;
   }
 
   .client-photo {
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #ff9a73;
-    margin-bottom: 20px;
-    box-shadow: 0 8px 25px rgba(255, 154, 115, 0.3);
+    border: 3px solid #ff9a73;
+    margin-right: 20px;
+    box-shadow: 0 4px 15px rgba(255, 154, 115, 0.3);
   }
 
   .client-info {
-    margin-bottom: 25px;
+    flex: 1;
   }
 
   .client-name {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: #333;
     margin-bottom: 5px;
@@ -203,131 +179,99 @@
 
   .client-age {
     color: #666;
-    font-size: 1rem;
-    margin-bottom: 10px;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
   }
 
   .rating {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #ffd700;
-    margin-bottom: 15px;
   }
 
   .problem-info {
     background: linear-gradient(135deg, #fff8f5 0%, #fff2ee 100%);
-    padding: 15px 20px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    border: 2px solid #ffeee6;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ffeee6;
   }
 
   .problem-title {
     font-weight: 600;
     color: #ff7f50;
     margin-bottom: 5px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
 
   .problem-text {
     color: #666;
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .sessions-info {
     color: #999;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     margin-bottom: 20px;
+    text-align: center;
+    padding: 8px 15px;
+    background: #f8f8f8;
+    border-radius: 20px;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .testimonial-text {
-    font-size: 1.2rem;
-    line-height: 1.7;
+    font-size: 1.05rem;
+    line-height: 1.6;
     color: #444;
     font-style: italic;
     position: relative;
-    padding: 0 30px;
+    padding: 0 15px;
   }
 
   .testimonial-text::before {
     content: '"';
-    font-size: 4rem;
+    font-size: 2.5rem;
     color: #ff9a73;
     position: absolute;
-    top: -20px;
-    left: 0;
+    top: -15px;
+    left: -5px;
     line-height: 1;
   }
 
   .testimonial-text::after {
     content: '"';
-    font-size: 4rem;
+    font-size: 2.5rem;
     color: #ff9a73;
     position: absolute;
-    bottom: -40px;
-    right: 0;
+    bottom: -25px;
+    right: -5px;
     line-height: 1;
   }
 
-  .navigation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-    gap: 20px;
-  }
-
-  .nav-button {
-    background: linear-gradient(135deg, #ff9a73 0%, #ff7f50 100%);
-    color: white;
-    border: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .nav-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 127, 80, 0.3);
-  }
-
-  .nav-button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    transform: none;
-  }
-
-  .dots-container {
-    display: flex;
-    gap: 10px;
-  }
-
-  .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #ddd;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-
-  .dot.active {
-    background: linear-gradient(135deg, #ff9a73 0%, #ff7f50 100%);
-    transform: scale(1.2);
-  }
-
   .stats-section {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    margin-top: 40px;
+  }
+
+  .stats-title {
+    text-align: center;
+    color: #ff7f50;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin-top: 40px;
+    gap: 25px;
   }
 
   .stat-card {
@@ -336,6 +280,11 @@
     border-radius: 15px;
     text-align: center;
     border: 2px solid #ffeee6;
+    transition: transform 0.3s ease;
+  }
+
+  .stat-card:hover {
+    transform: translateY(-3px);
   }
 
   .stat-number {
@@ -364,28 +313,32 @@
       font-size: 2rem;
     }
 
-    .testimonials-container {
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .testimonial-card {
       padding: 25px;
     }
 
+    .client-header {
+      flex-direction: column;
+      text-align: center;
+    }
+
     .client-photo {
-      width: 100px;
-      height: 100px;
-    }
-
-    .testimonial-text {
-      font-size: 1.1rem;
-      padding: 0 20px;
-    }
-
-    .navigation {
-      flex-wrap: wrap;
-      gap: 15px;
+      margin-right: 0;
+      margin-bottom: 15px;
     }
 
     .stats-section {
+      padding: 30px 20px;
+    }
+
+    .stats-grid {
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 15px;
+      gap: 20px;
     }
 
     .stat-number {
@@ -394,79 +347,64 @@
   }
 </style>
 
-<div class="container">
+<!-- <div class="container">
   <div class="header">
     <h1>Отзиви на клиенти</h1>
     <p>Прочетете истински истории на хора, които промениха живота си с остеоманипулативна терапия</p>
-  </div>
+  </div> -->
 
-  <div class="testimonials-container">
-    {#if testimonials[currentTestimonial]}
+  <div class="testimonials-grid">
+    {#each testimonials as testimonial}
       <div class="testimonial-card">
-        <img 
-          src={testimonials[currentTestimonial].image} 
-          alt={testimonials[currentTestimonial].name}
-          class="client-photo"
-        />
-        
-        <div class="client-info">
-          <div class="client-name">{testimonials[currentTestimonial].name}</div>
-          <div class="client-age">{testimonials[currentTestimonial].age} години</div>
-          <div class="rating">{renderStars(testimonials[currentTestimonial].rating)}</div>
+        <div class="client-header">
+          <img 
+            src={testimonial.image} 
+            alt={testimonial.name}
+            class="client-photo"
+          />
+          
+          <div class="client-info">
+            <div class="client-name">{testimonial.name}</div>
+            <div class="client-age">{testimonial.age} години</div>
+            <div class="rating">{renderStars(testimonial.rating)}</div>
+          </div>
         </div>
 
         <div class="problem-info">
           <div class="problem-title">Проблем</div>
-          <div class="problem-text">{testimonials[currentTestimonial].problem}</div>
+          <div class="problem-text">{testimonial.problem}</div>
         </div>
 
         <div class="sessions-info">
-          Брой сеанси: {testimonials[currentTestimonial].sessions}
+          Брой сеанси: {testimonial.sessions}
         </div>
 
         <div class="testimonial-text">
-          {testimonials[currentTestimonial].text}
+          {testimonial.text}
         </div>
       </div>
-    {/if}
+    {/each}
+  </div>
 
-    <div class="navigation">
-      <button class="nav-button" on:click={prevTestimonial}>
-        ‹
-      </button>
-      
-      <div class="dots-container">
-        {#each testimonials as _, index}
-          <button 
-            class="dot" 
-            class:active={currentTestimonial === index}
-            on:click={() => goToTestimonial(index)}
-          ></button>
-        {/each}
+  <!-- <div class="stats-section">
+    <h2 class="stats-title">Нашите резултати</h2>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">150+</div>
+        <div class="stat-label">Доволни клиенти</div>
       </div>
-      
-      <button class="nav-button" on:click={nextTestimonial}>
-        ›
-      </button>
+      <div class="stat-card">
+        <div class="stat-number">95%</div>
+        <div class="stat-label">Процент на успех</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">5+</div>
+        <div class="stat-label">Години опит</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">1200+</div>
+        <div class="stat-label">Проведени сеанси</div>
+      </div>
     </div>
-  </div>
-
-  <div class="stats-section">
-    <div class="stat-card">
-      <div class="stat-number">150+</div>
-      <div class="stat-label">Доволни клиенти</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number">95%</div>
-      <div class="stat-label">Процент на успех</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number">5+</div>
-      <div class="stat-label">Години опит</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-number">1200+</div>
-      <div class="stat-label">Проведени сеанси</div>
-    </div>
-  </div>
 </div>
+</div> -->
