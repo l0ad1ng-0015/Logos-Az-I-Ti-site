@@ -802,7 +802,7 @@
     }
 
     .first-svg {
-      transform: translateY(-190%);
+      transform: translateY(-155%);
     }
 
     /* ---- 2. Filters ---- */
