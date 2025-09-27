@@ -1,464 +1,383 @@
 <script>
-  let selectedService = 'consultation';
-  let formData = {
-    name: '',
-    email: '',
-    phone: '',
-    age: '',
-    message: ''
-  };
+  // Данни за услугите
+  const services = [
+    {
+      id: 1,
+      title: "Ранна превенция",
+      icon: "🎈",
+      description:
+        "Превантивни мерки и ранно откриване на развойни затруднения при деца",
+      details: [
+        "Скрининг и оценка на развитието",
+        "Консултации за родители",
+        "Индивидуални програми за стимулация",
+      ],
+    },
+    {
+      id: 2,
+      title: "Консултация, диагностика и оценка",
+      icon: "✏️",
+      description:
+        "Професионална диагностика и комплексна оценка на речевото и езиковото развитие",
+      details: [
+        "Логопедична диагностика",
+        "Психологическа оценка",
+        "Изготвяне на терапевтичен план",
+      ],
+    },
+    {
+      id: 3,
+      title: "Логопедична терапия",
+      icon: "🤝",
+      description:
+        "Индивидуални и групови сесии за корекция на речевите и езиковите затруднения",
+      details: [
+        "Артикулационна терапия",
+        "Развитие на речника",
+        "Работа с гласа и дишането",
+      ],
+    },
+    {
+      id: 4,
+      title: "Орофациална терапия",
+      icon: "🦁",
+      description:
+        "Специализирана терапия за подобряване на орофациалните функции",
+      details: [
+        "Миофункционална терапия",
+        "Корекция на хранене и преглъщане",
+        "Орални двигателни упражнения",
+      ],
+    },
+    {
+      id: 5,
+      title: "Подпомагане и обучения",
+      icon: "🎒",
+      description: "Обучителни програми и подкрепа за специалисти и родители",
+      details: [
+        "Семинари за родители",
+        "Обучения за педагози",
+        "Методически материали",
+      ],
+    },
+    {
+      id: 6,
+      title: "Логопедична вдъхновителница",
+      icon: "📖",
+      description:
+        "Творчески подход към логопедичната работа чрез литература и изкуство",
+      details: ["Библиотерапия", "Творчески методи", "Интерактивни занимания"],
+    },
+  ];
+
+  let selectedService = null;
 
   function selectService(service) {
-    selectedService = service;
-  }
-
-  function handleSubmit() {
-    console.log('Form submitted:', formData);
-    // Тук ще добавите логиката за изпращане на формата
+    selectedService = selectedService?.id === service.id ? null : service;
   }
 </script>
+
+<div class="services-page">
+  <!-- Декорация с puzzle елементи -->
+  <div class="puzzle-decoration puzzle-1">🧩</div>
+  <div class="puzzle-decoration puzzle-2">🧩</div>
+  <div class="puzzle-decoration puzzle-3">🧩</div>
+
+  <!-- Header секция -->
+  <div class="header">
+    <h1>Услуги</h1>
+    <p>
+      Предлагаме широк спектър от специализирани услуги за подкрепа на речевото
+      и езиковото развитие. Всяка услуга е персонализирана според индивидуалните
+      нужди на всеки клиент.
+    </p>
+  </div>
+
+  <!-- Services Grid -->
+  <div class="services-grid">
+    {#each services as service}
+      <div
+        class="service-card {selectedService?.id === service.id
+          ? 'selected'
+          : ''}"
+        on:click={() => selectService(service)}
+        role="button"
+        tabindex="0"
+        on:keydown={(e) => e.key === "Enter" && selectService(service)}
+      >
+        <span class="service-icon">{service.icon}</span>
+        <h3 class="service-title">{service.title}</h3>
+        <p class="service-description">{service.description}</p>
+
+        {#if selectedService?.id === service.id}
+          <div class="service-details">
+            <ul>
+              {#each service.details as detail}
+                <li>{detail}</li>
+              {/each}
+            </ul>
+          </div>
+        {/if}
+      </div>
+    {/each}
+  </div>
+
+  <!-- Call to Action секция -->
+  <div class="cta-section">
+    <h2>Готови сте за първата стъпка?</h2>
+    <p>
+      Свържете се с нас за консултация и да обсъдим как можем да ви помогнем в
+      постигането на вашите цели за речево и езиково развитие.
+    </p>
+    <a href="/contact" class="cta-button">Запази консултация</a>
+  </div>
+</div>
 
 <style>
   :global(body) {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #fef7f0;
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    min-height: 100vh;
   }
 
-  .container {
+  .services-page {
+    padding: 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
   }
 
-  /* Hero Section */
-  .hero {
-    background: linear-gradient(135deg, #ff9a73, #ffc09f);
-    color: white;
-    padding: 60px 0;
+  .header {
     text-align: center;
-    position: relative;
-    overflow: hidden;
+    margin-bottom: 3rem;
   }
 
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -10%;
-    width: 300px;
-    height: 300px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
+  .header h1 {
+    font-size: 3rem;
+    color: #8b4513;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   }
 
-  .hero::after {
-    content: '';
-    position: absolute;
-    bottom: -30%;
-    left: -5%;
-    width: 200px;
-    height: 200px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-  }
-
-  .hero-content {
-    position: relative;
-    z-index: 1;
-  }
-
-  .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-  }
-
-  .hero p {
+  .header p {
     font-size: 1.2rem;
+    color: #a0522d;
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.6;
   }
 
-  /* Service Selection */
-  .service-tabs {
-    display: flex;
-    justify-content: center;
-    margin: 40px 0;
-    gap: 10px;
-    flex-wrap: wrap;
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
   }
 
-  .tab-button {
-    padding: 12px 24px;
-    border: 2px solid #ff9a73;
-    background: white;
-    color: #ff9a73;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: 500;
-  }
-
-  .tab-button:hover,
-  .tab-button.active {
-    background: #ff9a73;
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(255, 154, 115, 0.3);
-  }
-
-  /* Content Sections */
-  .content-section {
-    background: white;
-    margin: 30px 0;
-    padding: 40px;
+  .service-card {
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
   }
 
-  .section-title {
-    color: #ff9a73;
+  .service-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      45deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    );
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+    opacity: 0;
+  }
+
+  .service-card:hover::before {
+    animation: shine 0.6s ease-in-out;
+  }
+
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(31, 38, 135, 0.5);
+  }
+
+  .service-card.selected {
+    background: linear-gradient(135deg, #ff9a56, #ff7b39);
+    color: white;
+    transform: scale(1.02);
+  }
+
+  .service-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+    text-align: center;
+  }
+
+  .service-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: inherit;
+  }
+
+  .service-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: inherit;
+    opacity: 0.9;
+    text-align: center;
+  }
+
+  .service-details {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .service-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+  }
+
+  .service-details li {
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .service-details li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #4caf50;
+    font-weight: bold;
+  }
+
+  .service-card.selected .service-details li::before {
+    color: #fff;
+  }
+
+  .cta-section {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  }
+
+  .cta-section h2 {
     font-size: 2rem;
-    margin-bottom: 30px;
-    font-weight: 600;
+    color: #8b4513;
+    margin-bottom: 1rem;
   }
 
-  .subsection {
-    margin-bottom: 30px;
+  .cta-section p {
+    font-size: 1.1rem;
+    color: #a0522d;
+    margin-bottom: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .subsection h3 {
-    color: #333;
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    font-weight: 600;
-  }
-
-  .subsection p {
-    color: #666;
-    line-height: 1.7;
-    margin-bottom: 15px;
-  }
-
-  .subsection ul {
-    color: #666;
-    line-height: 1.7;
-    padding-left: 20px;
-  }
-
-  .subsection li {
-    margin-bottom: 8px;
-  }
-
-  /* Highlight Box */
-  .highlight-box {
-    background: linear-gradient(135deg, #fff5f0, #ffeee6);
-    border-left: 5px solid #ff9a73;
-    padding: 25px;
-    margin: 25px 0;
-    border-radius: 10px;
-  }
-
-  .highlight-box h4 {
-    color: #ff9a73;
-    margin-bottom: 15px;
-    font-weight: 600;
-  }
-
-  /* When to Visit Section */
-  .conditions-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin: 30px 0;
-  }
-
-  .condition-card {
-    background: #f8f9fa;
-    padding: 20px;
-    border-radius: 15px;
-    border: 1px solid #eee;
-    transition: all 0.3s ease;
-  }
-
-  .condition-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  }
-
-  .condition-card h4 {
-    color: #ff9a73;
-    margin-bottom: 10px;
-    font-weight: 600;
-  }
-
-  /* Contact Form */
-  .contact-form {
-    background: white;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    margin: 40px 0;
-  }
-
-  .form-group {
-    margin-bottom: 20px;
-  }
-
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-
-  .form-group label {
-    display: block;
-    margin-bottom: 8px;
-    color: #333;
-    font-weight: 500;
-  }
-
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
-    width: 100%;
-    padding: 12px 16px;
-    border: 2px solid #eee;
-    border-radius: 10px;
-    font-size: 16px;
-    transition: border-color 0.3s ease;
-  }
-
-  .form-group input:focus,
-  .form-group textarea:focus,
-  .form-group select:focus {
-    outline: none;
-    border-color: #ff9a73;
-  }
-
-  .form-group textarea {
-    resize: vertical;
-    height: 120px;
-  }
-
-  .submit-btn {
-    background: linear-gradient(135deg, #ff9a73, #ffc09f);
+  .cta-button {
+    background: linear-gradient(135deg, #ff9a56, #ff7b39);
     color: white;
-    padding: 15px 40px;
     border: none;
-    border-radius: 25px;
-    font-size: 16px;
-    font-weight: 600;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
-    display: block;
-    margin: 30px auto 0;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(255, 122, 57, 0.4);
   }
 
-  .submit-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 154, 115, 0.3);
+  .cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 122, 57, 0.6);
   }
 
-  /* Responsive Design */
+  .puzzle-decoration {
+    position: fixed;
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .puzzle-1 {
+    top: 10%;
+    left: 5%;
+    font-size: 8rem;
+    transform: rotate(-15deg);
+  }
+
+  .puzzle-2 {
+    bottom: 15%;
+    right: 8%;
+    font-size: 6rem;
+    transform: rotate(25deg);
+  }
+
+  .puzzle-3 {
+    top: 60%;
+    left: 2%;
+    font-size: 4rem;
+    transform: rotate(-45deg);
+  }
+
+  @keyframes shine {
+    0% {
+      transform: translateX(-100%) translateY(-100%) rotate(45deg);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(100%) translateY(100%) rotate(45deg);
+      opacity: 0;
+    }
+  }
+
   @media (max-width: 768px) {
-    .hero h1 {
+    .services-page {
+      padding: 1rem;
+    }
+
+    .header h1 {
       font-size: 2rem;
     }
 
-    .hero p {
-      font-size: 1.1rem;
-    }
-
-    .content-section {
-      padding: 20px;
-    }
-
-    .form-row {
+    .services-grid {
       grid-template-columns: 1fr;
+      gap: 1.5rem;
     }
 
-    .service-tabs {
-      flex-direction: column;
-      align-items: center;
+    .service-card {
+      padding: 1.5rem;
+    }
+
+    .cta-section {
+      padding: 2rem;
     }
   }
 </style>
-
-<main>
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <h1>Консултация, диагностика и оценка</h1>
-        <p>Професионална подкрепа и грижа за вашето дете. Започваме с усмивка и разбиране - заедно към успешното развитие!</p>
-      </div>
-    </div>
-  </section>
-
-  <div class="container">
-    <!-- Service Selection Tabs -->
-    <div class="service-tabs">
-      <button 
-        class="tab-button {selectedService === 'consultation' ? 'active' : ''}"
-        on:click={() => selectService('consultation')}
-      >
-        Логопедична консултация
-      </button>
-      <button 
-        class="tab-button {selectedService === 'diagnosis' ? 'active' : ''}"
-        on:click={() => selectService('diagnosis')}
-      >
-        Логопедична диагностика
-      </button>
-    </div>
-
-    <!-- Consultation Content -->
-    {#if selectedService === 'consultation'}
-      <div class="content-section">
-        <h2 class="section-title">Логопедична консултация</h2>
-        
-        <div class="subsection">
-          <h3>Какво е логопедична консултация?</h3>
-          <p>Логопедичната консултация е първата крачка към разбиране, подкрепа и уверен напредък. Силата е в ранната помощ. Започваме с усмивка и грижа – заедно!</p>
-          <p>Тя е първата среща, в която се запознаваме с Вашето дете и неговото езиково-говорно развитие. Провеждат се кратки наблюдения на детето и разговори с Вас, проследява се развитието на детето още по време на бремеността, раждането до актуалната му възраст.</p>
-        </div>
-
-        <div class="subsection">
-          <h3>Какво включва консултацията?</h3>
-          <ul>
-            <li><strong>Разговор с родителя</strong> за притеснения, тревожни моменти, наблюдения и история на развитието на детето</li>
-            <li><strong>Игрови задачи с детето</strong> с цел предразполагане в обстановката за наблюдение и проверка на разбиране, изразяване, внимание и др.</li>
-            <li><strong>Обсъждане и препоръки:</strong> необходимо ли е допълнително проследяване, терапия или допълнително подпомагане в домашна обстановка</li>
-          </ul>
-        </div>
-
-        <div class="highlight-box">
-          <h4>Каква е целта?</h4>
-          <p>Целта не е да се постави "диагноза" веднага, а да се получи ясна картина за най-доброто на детето: дали детето има нужда от логопедична подкрепа – и каква точно.</p>
-        </div>
-
-        <div class="subsection">
-          <h3>Как да се подготвим за консултацията?</h3>
-          <ul>
-            <li>Подгответе кратка информация за езиково-говорното развитие на детето в отделните възрастови периоди</li>
-            <li>Помислете и споделете с логопеда Вашата тревожност за детето</li>
-            <li>Ако имате документи (мнения от специалисти), доносете ги</li>
-            <li>Позволете на детето да вземе любимата си играчка - тя помага на детето да се отпусне</li>
-            <li>Детето не е нужно „да се представя добре" – ние сме тук да го разберем, не да го оценим</li>
-          </ul>
-        </div>
-      </div>
-    {/if}
-
-    <!-- Diagnosis Content -->
-    {#if selectedService === 'diagnosis'}
-      <div class="content-section">
-        <h2 class="section-title">Логопедична диагностика</h2>
-        
-        <div class="subsection">
-          <p>Логопедична диагностика е систематичен процес на оценка на езиково-говорното развитие и комуникативните умения на дете или възрастен, с цел да се установи:</p>
-          <ul>
-            <li>Дали е налице езиково-говорен дефицит</li>
-            <li>Каква е причината и степента на затруднението</li>
-            <li>Каква терапия или подкрепа е най-подходяща за детето/възрастния</li>
-          </ul>
-        </div>
-
-        <div class="subsection">
-          <h3>Кога да се обърнете към логопед за диагностика?</h3>
-          <div class="conditions-grid">
-            <div class="condition-card">
-              <h4>Езикови нарушения</h4>
-              <p>Общо недоразвитие на речта - детето не говори или говори малко за възрастта си. Речта е неразбираема.</p>
-            </div>
-            
-            <div class="condition-card">
-              <h4>Разбиране и комуникация</h4>
-              <p>Не разбира словесни инструкции и използва жестове, мимики вместо думи.</p>
-            </div>
-            
-            <div class="condition-card">
-              <h4>Артикулационни проблеми</h4>
-              <p>Затруднения при артикулация на звуковете – изопачава, заменя или пропуска звукове.</p>
-            </div>
-            
-            <div class="condition-card">
-              <h4>Плавност на говора</h4>
-              <p>Нарушена плавност и ритъм на говора (заекване, клътеринг).</p>
-            </div>
-            
-            <div class="condition-card">
-              <h4>Обучителни затруднения</h4>
-              <p>Дислексия, дисграфия, дискалкулия и други специфични обучителни затруднения.</p>
-            </div>
-            
-            <div class="condition-card">
-              <h4>ХАДВ</h4>
-              <p>Хиперактивност и дефицит на вниманието; неустойчива или слаба концентрация.</p>
-            </div>
-            
-            <div class="condition-card">
-              <h4>Неврологични състояния</h4>
-              <p>Разстройства от аутистичния спектър, ДЦП, дизатрии, апраксии, синдроми и др.</p>
-            </div>
-            
-            <div class="condition-card">
-              <h4>Билингвизъм</h4>
-              <p>Затруднения при деца, израстнали в билингвистична среда.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="highlight-box">
-          <h4>След диагностиката</h4>
-          <p>След логопедична диагностика се прави оценка на езиково-говорното развитие и се назначава персонализирана терапевтична програма за развитие на детето. Назначават се терапевтични сесии, включващи целите и задачите, посочени в терапевтичната програма.</p>
-        </div>
-      </div>
-    {/if}
-
-    <!-- Contact Form -->
-    <div class="contact-form">
-      <h2 class="section-title">Запазете час за консултация</h2>
-      <form on:submit|preventDefault={handleSubmit}>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">Име *</label>
-            <input type="text" id="name" bind:value={formData.name} required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email *</label>
-            <input type="email" id="email" bind:value={formData.email} required />
-          </div>
-        </div>
-        
-        <div class="form-row">
-          <div class="form-group">
-            <label for="phone">Телефон *</label>
-            <input type="tel" id="phone" bind:value={formData.phone} required />
-          </div>
-          <div class="form-group">
-            <label for="age">Възраст на детето</label>
-            <select id="age" bind:value={formData.age}>
-              <option value="">Изберете възраст</option>
-              <option value="0-2">0-2 години</option>
-              <option value="3-5">3-5 години</option>
-              <option value="6-8">6-8 години</option>
-              <option value="9-12">9-12 години</option>
-              <option value="13+">13+ години</option>
-            </select>
-          </div>
-        </div>
-        
-        <div class="form-group">
-          <label for="message">Опишете накратко притесненията или въпросите си</label>
-          <textarea id="message" bind:value={formData.message} placeholder="Споделете с нас какво Ви притеснява..."></textarea>
-        </div>
-        
-        <button type="submit" class="submit-btn">Изпрати заявка</button>
-      </form>
-    </div>
-  </div>
-</main>

@@ -1,6 +1,6 @@
 <script>
-  import { onMount } from 'svelte';
-  
+  import { onMount } from "svelte";
+
   let menuOpen = false;
   let activeDropdown = null;
   let isScrolled = false;
@@ -32,29 +32,51 @@
   }
 
   onMount(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   });
 </script>
 
-<nav class:scrolled={isScrolled}>  
+<nav class:scrolled={isScrolled}>
   <a href="/" on:click={handleLinkClick}>
-    <img class="logo" src="/logos/nav-logo.png" alt="Лого" width="100px" height="86px"/>
+    <img
+      class="logo"
+      src="/logos/nav-logo.png"
+      alt="Лого"
+      width="100px"
+      height="86px"
+    />
   </a>
-  
+
   <div class="nav-links">
     <ul>
       <!-- За нас dropdown -->
       <li class="dropdown">
-        <a href="" class="dropdown-toggle" on:mouseenter={() => toggleDropdown('about')} on:mouseleave={() => activeDropdown = null}>
+        <a
+          href=""
+          class="dropdown-toggle"
+          on:mouseenter={() => toggleDropdown("about")}
+          on:mouseleave={() => (activeDropdown = null)}
+        >
           За нас
-          <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-            <path fill="#2f4d19" d="m7 10l5 5l5-5z"/>
+          <svg
+            class="dropdown-arrow"
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 24 24"
+          >
+            <path fill="#2f4d19" d="m7 10l5 5l5-5z" />
           </svg>
         </a>
-        <div class="dropdown-menu" class:show={activeDropdown === 'about'} on:mouseenter={() => activeDropdown = 'about'} on:mouseleave={() => activeDropdown = null}>
+        <div
+          class="dropdown-menu"
+          class:show={activeDropdown === "about"}
+          on:mouseenter={() => (activeDropdown = "about")}
+          on:mouseleave={() => (activeDropdown = null)}
+        >
           <a href="/za-nas" on:click={handleLinkClick}>За нас</a>
           <a href="/seminari" on:click={handleLinkClick}>Семинари</a>
           <a href="/galeriya" on:click={handleLinkClick}>Галерия</a>
@@ -63,35 +85,86 @@
 
       <!-- Услуги dropdown -->
       <li class="dropdown">
-        <a href="" class="dropdown-toggle" on:mouseenter={() => toggleDropdown('services')} on:mouseleave={() => activeDropdown = null}>
+        <a
+          href=""
+          class="dropdown-toggle"
+          on:mouseenter={() => toggleDropdown("services")}
+          on:mouseleave={() => (activeDropdown = null)}
+        >
           Услуги
-          <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-            <path fill="#2f4d19" d="m7 10l5 5l5-5z"/>
+          <svg
+            class="dropdown-arrow"
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 24 24"
+          >
+            <path fill="#2f4d19" d="m7 10l5 5l5-5z" />
           </svg>
         </a>
-        <div class="dropdown-menu" class:show={activeDropdown === 'services'} on:mouseenter={() => activeDropdown = 'services'} on:mouseleave={() => activeDropdown = null}>
+        <div
+          class="dropdown-menu"
+          class:show={activeDropdown === "services"}
+          on:mouseenter={() => (activeDropdown = "services")}
+          on:mouseleave={() => (activeDropdown = null)}
+        >
           <a href="/uslugi" on:click={handleLinkClick}>Всички услуги</a>
-          <a href="/uslugi/ranna-prevenciya" on:click={handleLinkClick}>Ранна превенция</a>
-          <a href="/uslugi/konsultaciya-i-diagnostika" on:click={handleLinkClick}>Консултация и диагностика</a>
-          <a href="/uslugi/logopedichna-terapiya" on:click={handleLinkClick}>Логопедична терапия</a>
-          <a href="/uslugi/omt" on:click={handleLinkClick}>Орофациална миофункционална терапия (ОМТ)</a>
-          <a href="/uslugi/podpomagane-i-obucheniya" on:click={handleLinkClick}>Подпомагане и обучения</a>
-          <a href="/uslugi/logopedichna-vdahnovitelnica" on:click={handleLinkClick}>Логопедична вдъхновителница</a>
+          <a href="/uslugi/ranna-prevenciya" on:click={handleLinkClick}
+            >Ранна превенция</a
+          >
+          <a
+            href="/uslugi/konsultaciya-i-diagnostika"
+            on:click={handleLinkClick}>Консултация и диагностика</a
+          >
+          <a href="/uslugi/logopedichna-terapiya" on:click={handleLinkClick}
+            >Логопедична терапия</a
+          >
+          <a href="/uslugi/omt" on:click={handleLinkClick}
+            >Орофациална миофункционална терапия (ОМТ)</a
+          >
+          <a href="/uslugi/podpomagane-i-obucheniya" on:click={handleLinkClick}
+            >Подпомагане и обучения</a
+          >
+          <a
+            href="/uslugi/logopedichna-vdahnovitelnica"
+            on:click={handleLinkClick}>Логопедична вдъхновителница</a
+          >
+        </div>
       </li>
 
       <li><a href="/blog" on:click={handleLinkClick}>Блог</a></li>
 
       <!-- За вас dropdown -->
       <li class="dropdown">
-        <a href="" class="dropdown-toggle" on:mouseenter={() => toggleDropdown('clients')} on:mouseleave={() => activeDropdown = null}>
+        <a
+          href=""
+          class="dropdown-toggle"
+          on:mouseenter={() => toggleDropdown("clients")}
+          on:mouseleave={() => (activeDropdown = null)}
+        >
           За вас
-          <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-            <path fill="#2f4d19" d="m7 10l5 5l5-5z"/>
+          <svg
+            class="dropdown-arrow"
+            xmlns="http://www.w3.org/2000/svg"
+            width="1em"
+            height="1em"
+            viewBox="0 0 24 24"
+          >
+            <path fill="#2f4d19" d="m7 10l5 5l5-5z" />
           </svg>
         </a>
-        <div class="dropdown-menu" class:show={activeDropdown === 'clients'} on:mouseenter={() => activeDropdown = 'clients'} on:mouseleave={() => activeDropdown = null}>
-          <a href="/polezni-resursi" on:click={handleLinkClick}>Полезни ресурси</a>
-          <a href="/chesto-zadavani-vuprosi" on:click={handleLinkClick}>Често задавани въпроси (ЧЗВ)</a>
+        <div
+          class="dropdown-menu"
+          class:show={activeDropdown === "clients"}
+          on:mouseenter={() => (activeDropdown = "clients")}
+          on:mouseleave={() => (activeDropdown = null)}
+        >
+          <a href="/polezni-resursi" on:click={handleLinkClick}
+            >Полезни ресурси</a
+          >
+          <a href="/chesto-zadavani-vuprosi" on:click={handleLinkClick}
+            >Често задавани въпроси (ЧЗВ)</a
+          >
           <a href="/otzivi" on:click={handleLinkClick}>Отзиви</a>
         </div>
       </li>
@@ -106,110 +179,242 @@
       <li>
         <a href="/" on:click={handleLinkClick}>
           <span class="left-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-              <path fill="#2f4d19" stroke="#2f4d19" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 12l2-2m0 0l7-7l7 7M5 10v10a1 1 0 0 0 1 1h3m10-11l2 2m-2-2v10a1 1 0 0 1-1 1h-3m-6 0a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1m-6 0h6"/>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#2f4d19"
+                stroke="#2f4d19"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m3 12l2-2m0 0l7-7l7 7M5 10v10a1 1 0 0 0 1 1h3m10-11l2 2m-2-2v10a1 1 0 0 1-1 1h-3m-6 0a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1m-6 0h6"
+              />
             </svg>
           </span>
           <span class="text">Начало</span>
         </a>
-        <hr>
+        <hr />
       </li>
 
       <!-- Mobile За нас dropdown -->
       <li class="mobile-dropdown">
-        <div class="mobile-dropdown-header" on:click={() => toggleDropdown('mobile-about')}>
+        <div
+          class="mobile-dropdown-header"
+          on:click={() => toggleDropdown("mobile-about")}
+        >
           <span class="left-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48">
-              <path fill="#2f4d19" stroke="#2f4d19" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M24 20a7 7 0 1 0 0-14a7 7 0 0 0 0 14M12 7.255A6.99 6.99 0 0 0 9 13a7 7 0 0 0 3.392 6M36 7.255A6.99 6.99 0 0 1 39 13a6.99 6.99 0 0 1-3 5.746M12 40v2h24v-2c0-3.727 0-5.591-.609-7.062a8 8 0 0 0-4.33-4.329C29.592 28 27.728 28 24 28s-5.591 0-7.061.609a8 8 0 0 0-4.33 4.33C12 34.409 12 36.273 12 40m32 2v-1.2c0-4.48 0-6.72-.872-8.432a8 8 0 0 0-3.496-3.496M4 42v-1.2c0-4.48 0-6.72.872-8.432a8 8 0 0 1 3.496-3.496"/>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 48 48"
+            >
+              <path
+                fill="#2f4d19"
+                stroke="#2f4d19"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="4"
+                d="M24 20a7 7 0 1 0 0-14a7 7 0 0 0 0 14M12 7.255A6.99 6.99 0 0 0 9 13a7 7 0 0 0 3.392 6M36 7.255A6.99 6.99 0 0 1 39 13a6.99 6.99 0 0 1-3 5.746M12 40v2h24v-2c0-3.727 0-5.591-.609-7.062a8 8 0 0 0-4.33-4.329C29.592 28 27.728 28 24 28s-5.591 0-7.061.609a8 8 0 0 0-4.33 4.33C12 34.409 12 36.273 12 40m32 2v-1.2c0-4.48 0-6.72-.872-8.432a8 8 0 0 0-3.496-3.496M4 42v-1.2c0-4.48 0-6.72.872-8.432a8 8 0 0 1 3.496-3.496"
+              />
             </svg>
           </span>
           <span class="text">За нас</span>
-          <span class="arrow" class:rotated={activeDropdown === 'mobile-about'}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-              <path fill="#2f4d19" fill-rule="evenodd" d="M8.512 4.43a.75.75 0 0 1 1.057.082l6 7a.75.75 0 0 1 0 .976l-6 7a.75.75 0 0 1-1.138-.976L14.012 12L8.431 5.488a.75.75 0 0 1 .08-1.057" clip-rule="evenodd"/>
+          <span class="arrow" class:rotated={activeDropdown === "mobile-about"}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#2f4d19"
+                fill-rule="evenodd"
+                d="M8.512 4.43a.75.75 0 0 1 1.057.082l6 7a.75.75 0 0 1 0 .976l-6 7a.75.75 0 0 1-1.138-.976L14.012 12L8.431 5.488a.75.75 0 0 1 .08-1.057"
+                clip-rule="evenodd"
+              />
             </svg>
           </span>
         </div>
-        <div class="mobile-submenu" class:show={activeDropdown === 'mobile-about'}>
+        <div
+          class="mobile-submenu"
+          class:show={activeDropdown === "mobile-about"}
+        >
           <a href="/za-nas" on:click={handleLinkClick}>За нас</a>
           <a href="/seminari" on:click={handleLinkClick}>Семинари</a>
           <a href="/galeriya" on:click={handleLinkClick}>Галерия</a>
         </div>
-        <hr>
+        <hr />
       </li>
 
       <!-- Mobile Услуги dropdown -->
       <li class="mobile-dropdown">
-        <div class="mobile-dropdown-header" on:click={() => toggleDropdown('mobile-services')}>
+        <div
+          class="mobile-dropdown-header"
+          on:click={() => toggleDropdown("mobile-services")}
+        >
           <span class="left-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-              <path fill="#2f4d19" d="M20.5 11H19V7a2 2 0 0 0-2-2h-4V3.5A2.5 2.5 0 0 0 10.5 1A2.5 2.5 0 0 0 8 3.5V5H4a2 2 0 0 0-2 2v3.8h1.5c1.5 0 2.7 1.2 2.7 2.7S5 16.2 3.5 16.2H2V20a2 2 0 0 0 2 2h3.8v-1.5c0-1.5 1.2-2.7 2.7-2.7s2.7 1.2 2.7 2.7V22H17a2 2 0 0 0 2-2v-4h1.5a2.5 2.5 0 0 0 2.5-2.5a2.5 2.5 0 0 0-2.5-2.5"/>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#2f4d19"
+                d="M20.5 11H19V7a2 2 0 0 0-2-2h-4V3.5A2.5 2.5 0 0 0 10.5 1A2.5 2.5 0 0 0 8 3.5V5H4a2 2 0 0 0-2 2v3.8h1.5c1.5 0 2.7 1.2 2.7 2.7S5 16.2 3.5 16.2H2V20a2 2 0 0 0 2 2h3.8v-1.5c0-1.5 1.2-2.7 2.7-2.7s2.7 1.2 2.7 2.7V22H17a2 2 0 0 0 2-2v-4h1.5a2.5 2.5 0 0 0 2.5-2.5a2.5 2.5 0 0 0-2.5-2.5"
+              />
             </svg>
           </span>
           <span class="text">Услуги</span>
-          <span class="arrow" class:rotated={activeDropdown === 'mobile-services'}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-              <path fill="#2f4d19" fill-rule="evenodd" d="M8.512 4.43a.75.75 0 0 1 1.057.082l6 7a.75.75 0 0 1 0 .976l-6 7a.75.75 0 0 1-1.138-.976L14.012 12L8.431 5.488a.75.75 0 0 1 .08-1.057" clip-rule="evenodd"/>
+          <span
+            class="arrow"
+            class:rotated={activeDropdown === "mobile-services"}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#2f4d19"
+                fill-rule="evenodd"
+                d="M8.512 4.43a.75.75 0 0 1 1.057.082l6 7a.75.75 0 0 1 0 .976l-6 7a.75.75 0 0 1-1.138-.976L14.012 12L8.431 5.488a.75.75 0 0 1 .08-1.057"
+                clip-rule="evenodd"
+              />
             </svg>
           </span>
         </div>
-        <div class="mobile-submenu" class:show={activeDropdown === 'mobile-services'}>
+        <div
+          class="mobile-submenu"
+          class:show={activeDropdown === "mobile-services"}
+        >
           <a href="/uslugi" on:click={handleLinkClick}>Всички услуги</a>
-          <a href="/uslugi/ranna-prevenciya" on:click={handleLinkClick}>Ранна превенция</a>
-          <a href="/uslugi/konsultaciya-i-diagnostika" on:click={handleLinkClick}>Консултация и диагностика</a>
-          <a href="/uslugi/logopedichna-terapiya" on:click={handleLinkClick}>Логопедична терапия</a>
-          <a href="/uslugi/omt" on:click={handleLinkClick}>Орофациална миофункционална терапия (ОМТ)</a>
-          <a href="/uslugi/podpomagane-i-obucheniya" on:click={handleLinkClick}>Подпомагане и обучения</a>
-          <a href="/uslugi/logopedichna-vdahnovitelnica" on:click={handleLinkClick}>Логопедична вдъхновителница</a>
+          <a href="/uslugi/ranna-prevenciya" on:click={handleLinkClick}
+            >Ранна превенция</a
+          >
+          <a
+            href="/uslugi/konsultaciya-i-diagnostika"
+            on:click={handleLinkClick}>Консултация и диагностика</a
+          >
+          <a href="/uslugi/logopedichna-terapiya" on:click={handleLinkClick}
+            >Логопедична терапия</a
+          >
+          <a href="/uslugi/omt" on:click={handleLinkClick}
+            >Орофациална миофункционална терапия (ОМТ)</a
+          >
+          <a href="/uslugi/podpomagane-i-obucheniya" on:click={handleLinkClick}
+            >Подпомагане и обучения</a
+          >
+          <a
+            href="/uslugi/logopedichna-vdahnovitelnica"
+            on:click={handleLinkClick}>Логопедична вдъхновителница</a
+          >
         </div>
-        <hr>
+        <hr />
       </li>
 
       <li>
         <a href="/blog" on:click={handleLinkClick}>
           <span class="left-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-              <path fill="#2f4d19" d="M4 21q-.825 0-1.412-.587T2 19V3l1.675 1.675L5.325 3L7 4.675L8.675 3l1.65 1.675L12 3l1.675 1.675L15.325 3L17 4.675L18.675 3l1.65 1.675L22 3v16q0 .825-.587 1.413T20 21zm0-2h7v-6H4zm9 0h7v-2h-7zm0-4h7v-2h-7zm-9-4h16V8H4z"/>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#2f4d19"
+                d="M4 21q-.825 0-1.412-.587T2 19V3l1.675 1.675L5.325 3L7 4.675L8.675 3l1.65 1.675L12 3l1.675 1.675L15.325 3L17 4.675L18.675 3l1.65 1.675L22 3v16q0 .825-.587 1.413T20 21zm0-2h7v-6H4zm9 0h7v-2h-7zm0-4h7v-2h-7zm-9-4h16V8H4z"
+              />
             </svg>
           </span>
           <span class="text">Блог</span>
         </a>
-        <hr>
+        <hr />
       </li>
 
       <!-- Mobile За вас dropdown -->
       <li class="mobile-dropdown">
-        <div class="mobile-dropdown-header" on:click={() => toggleDropdown('mobile-clients')}>
+        <div
+          class="mobile-dropdown-header"
+          on:click={() => toggleDropdown("mobile-clients")}
+        >
           <span class="left-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48">
-              <path fill="#2f4d19" stroke="#2f4d19" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M19 20a7 7 0 1 0 0-14a7 7 0 0 0 0 14M32.608 7A7 7 0 0 1 36 13a7 7 0 0 1-3.392 6M4 40.8V42h30v-1.2c0-4.48 0-6.72-.872-8.432a8 8 0 0 0-3.496-3.496C27.92 28 25.68 28 21.2 28h-4.4c-4.48 0-6.72 0-8.432.872a8 8 0 0 0-3.496 3.496C4 34.08 4 36.32 4 40.8M44 42v-1.2c0-4.48 0-6.72-.872-8.432a8 8 0 0 0-3.496-3.496"/>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 48 48"
+            >
+              <path
+                fill="#2f4d19"
+                stroke="#2f4d19"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="4"
+                d="M19 20a7 7 0 1 0 0-14a7 7 0 0 0 0 14M32.608 7A7 7 0 0 1 36 13a7 7 0 0 1-3.392 6M4 40.8V42h30v-1.2c0-4.48 0-6.72-.872-8.432a8 8 0 0 0-3.496-3.496C27.92 28 25.68 28 21.2 28h-4.4c-4.48 0-6.72 0-8.432.872a8 8 0 0 0-3.496 3.496C4 34.08 4 36.32 4 40.8M44 42v-1.2c0-4.48 0-6.72-.872-8.432a8 8 0 0 0-3.496-3.496"
+              />
             </svg>
           </span>
           <span class="text">За вас</span>
-          <span class="arrow" class:rotated={activeDropdown === 'mobile-clients'}>
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-              <path fill="#2f4d19" fill-rule="evenodd" d="M8.512 4.43a.75.75 0 0 1 1.057.082l6 7a.75.75 0 0 1 0 .976l-6 7a.75.75 0 0 1-1.138-.976L14.012 12L8.431 5.488a.75.75 0 0 1 .08-1.057" clip-rule="evenodd"/>
+          <span
+            class="arrow"
+            class:rotated={activeDropdown === "mobile-clients"}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#2f4d19"
+                fill-rule="evenodd"
+                d="M8.512 4.43a.75.75 0 0 1 1.057.082l6 7a.75.75 0 0 1 0 .976l-6 7a.75.75 0 0 1-1.138-.976L14.012 12L8.431 5.488a.75.75 0 0 1 .08-1.057"
+                clip-rule="evenodd"
+              />
             </svg>
           </span>
         </div>
-        <div class="mobile-submenu" class:show={activeDropdown === 'mobile-clients'}>
-          <a href="/polezni-resursi" on:click={handleLinkClick}>Полезни ресурси</a>
-          <a href="/chesto-zadavani-vuprosi" on:click={handleLinkClick}>Често задавани въпроси (ЧЗВ)</a>
+        <div
+          class="mobile-submenu"
+          class:show={activeDropdown === "mobile-clients"}
+        >
+          <a href="/polezni-resursi" on:click={handleLinkClick}
+            >Полезни ресурси</a
+          >
+          <a href="/chesto-zadavani-vuprosi" on:click={handleLinkClick}
+            >Често задавани въпроси (ЧЗВ)</a
+          >
           <a href="/otzivi" on:click={handleLinkClick}>Отзиви</a>
         </div>
-        <hr>
+        <hr />
       </li>
 
       <li>
         <a href="/kontakti" on:click={handleLinkClick}>
           <span class="left-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-              <path fill="#2f4d19" d="M11.846 21H6q-.846 0-1.423-.577T4 19v-2.77h3V3h13v6.577l-1 1V4H8v12.23h5.346l-1.5 1.5zm2.385 0v-2.21l5.96-5.934l2.184 2.21L16.441 21zm-4.846-9.846v-1h8.23v1zm0-2.77v-1h8.23v1zm10.806 7.632l.925-.956l-.925-.944l-.95.95z"/>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#2f4d19"
+                d="M11.846 21H6q-.846 0-1.423-.577T4 19v-2.77h3V3h13v6.577l-1 1V4H8v12.23h5.346l-1.5 1.5zm2.385 0v-2.21l5.96-5.934l2.184 2.21L16.441 21zm-4.846-9.846v-1h8.23v1zm0-2.77v-1h8.23v1zm10.806 7.632l.925-.956l-.925-.944l-.95.95z"
+              />
             </svg>
           </span>
           <span class="text">Контакти</span>
         </a>
-        <hr>
+        <hr />
       </li>
     </ul>
   </div>
@@ -339,7 +544,7 @@
     left: 0;
     background-color: var(--orange-light);
     min-width: 200px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     z-index: 1000;
     opacity: 0;
@@ -484,7 +689,9 @@
     border-radius: 8px;
     border: 8px solid rgb(253, 218, 176);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition:
+      background-color 0.3s ease,
+      box-shadow 0.3s ease;
   }
 
   .hamburger:hover {
@@ -562,7 +769,6 @@
     }
 
     .nav-links a {
-      display: flex;
       font-size: 1.1em;
     }
 

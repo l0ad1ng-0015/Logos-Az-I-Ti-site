@@ -157,11 +157,106 @@
     <h2>Какво се случва в Логопедичната вдъхновителница?</h2>
     <div class="what-is-g-o-content">
       <div class="subsection">
-        <ul style="margin-bottom: 20px !important;">
+        <ul style="margin-bottom: 0 !important;">
           <li>Детето твори със сръчни ръчички</li>
           <li>Детето твори с въображение</li>
           <li>Детето изследва и развива езика си</li>
           <li>Детето се свързва с другите</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Why they love? -->
+<div class="why-they-love">
+  <div class="why-they-love-container">
+    <h2>Защо децата обичат Логопедичната вдъхновителница?</h2>
+    <div class="why-they-love-content">
+      <div class="subsection">
+        <ul style="margin-bottom: 0 !important;">
+          <li>Атмосфера на грижа, радост, уважение.</li>
+          <li>Всяка тема е магия</li>
+          <li>Темпо, съобразено с детето – с много насърчаване и подкрепа</li>
+          <li>
+            Пространство, където усоехът не се измерва в оценки, а в светнали
+            очи и усмивки
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- For specialists -->
+<div class="for-specialists">
+  <div class="for-specialists-container">
+    <h2>Логопедична вдъхновителница за специалисти</h2>
+    <div class="for-specialists-content">
+      <h3>
+        Професионална подкрепа, лична грижа и вдъхновение в добра компания
+      </h3>
+      <div class="subsection">
+        <p>
+          Логопедичната вдъхновителница не е само за деца. Тя е и пространство
+          за онези, които ежедневно вдъхновяват другите – логопеди, терапевти,
+          учители, психолози и специалисти, които работят с грижа, сърце и
+          мисия.
+        </p>
+      </div>
+      <h3 style="margin-top: 25px;">
+        Вярваме, че грижата за другите започва с грижа за себе си.
+      </h3>
+      <div class="subsection">
+        <p>
+          Затова създаваме работилници, обучения и срещи, в които се събираме не
+          просто да учим, а да се свържем, да си починем, да обменим опит и да
+          си напомним защо и какво ни води в нашата професия.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Повтарят се същите -->
+<div class="why-they-love">
+  <div class="why-they-love-container">
+    <h2>Какво ви очаква?</h2>
+    <div class="why-they-love-content">
+      <div class="subsection">
+        <ul style="margin-bottom: 0 !important;">
+          <li>
+            Темите, които вълнуват – практически насоки, съвременни подходи,
+            интердисциплинарни идеи
+          </li>
+          <li>
+            Среда за споделяне – отворен диалог, подкрепа и разбиране между хора
+            със сродни ценности
+          </li>
+          <li>
+            Креативни формати – включваме арт, движение, метафори, визуализация,
+            разказване на истории и творчество
+          </li>
+          <li>
+            Професионално и лично вдъхновение – през призмата на практиката и
+            човешкото присъствие
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="why-they-love">
+  <div class="why-they-love-container">
+    <h2>Какво прави нашата вдъхновителница специална?</h2>
+    <div class="why-they-love-content">
+      <div class="subsection">
+        <ul style="margin-bottom: 0 !important;">
+          <li>Тук няма конкуренция – има сътрудничество</li>
+          <li>Тук няма претенция – има топлина и разбиране</li>
+          <li>Тук няма „трябва“ – има „можеш“</li>
+          <li>Тук няма едностранност – има слушане, обогатяване и растеж</li>
         </ul>
       </div>
     </div>
@@ -284,6 +379,7 @@
     color: #666;
     line-height: 1.5;
     margin-bottom: 5px;
+    font-size: 1.2rem !important;
   }
 
   .subsection ul {
@@ -333,7 +429,53 @@
   .what-is-g-o-content {
     background: var(--orange-light);
     margin-bottom: 30px;
-    padding: 40px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  /* ---- 4. Why they love? ---- */
+  .why-they-love {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .why-they-love li {
+    font-size: 1.2rem !important;
+  }
+
+  .why-they-love-container {
+    width: 90%;
+    max-width: 1000px;
+  }
+
+  .why-they-love-content {
+    background: var(--orange-light);
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  /* ---- 5. For Specialists ---- */
+  .for-specialists {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .for-specialists-container {
+    width: 90%;
+    max-width: 1000px;
+  }
+
+  .for-specialists-content {
+    background: var(--orange-light);
+    margin-bottom: 30px;
+    padding: 30px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   }
@@ -343,6 +485,20 @@
     /* ---- 1. Heading ---- */
     .heading {
       margin: 30px 30px 40px 30px;
+    }
+
+    #h-right {
+      width: 32%;
+    }
+
+    /* ---- 2. For Kids ---- */
+    .for-kids p {
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+
+    .for-kids p:last-child {
+      margin-bottom: 0 !important;
     }
   }
 
@@ -389,6 +545,16 @@
     .second-svg {
       transform: translateY(10%);
       align-self: flex-start;
+    }
+
+    /* ---- 2. For Kids ---- */
+    .for-kids p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .for-kids p:last-child {
+      margin-bottom: 0 !important;
     }
   }
 
