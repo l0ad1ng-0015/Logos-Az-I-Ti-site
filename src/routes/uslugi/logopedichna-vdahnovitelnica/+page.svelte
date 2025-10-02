@@ -530,7 +530,7 @@
     }
 
     .heading h1 {
-      font-size: 2.5em;
+      font-size: 2.2em;
     }
 
     .heading p {

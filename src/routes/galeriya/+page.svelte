@@ -6,58 +6,272 @@
     id: string;
     src: string;
     full?: string;
+    thumb?: string;
     w: number;
     h: number;
     alt?: string;
-    category: "Всички" | "Семинари" | "Кабинет" | "Събития" | "Материали";
+    category:
+      | "Всички"
+      | "Великденска терапевтилница"
+      | "Коледна терапевтилница"
+      | "Коледни партита"
+      | "Сърцата терапевтилница";
   };
 
   // снимки
   const images: Img[] = [
+    // Великден
     {
-      id: "sem-01",
-      src: "/others/who-are-we.png",
-      full: "/others/who-are-we.png",
-      w: 1600,
-      h: 1067,
-      alt: "Семинар",
-      category: "Семинари",
+      id: "velik-01",
+      src: "/galeriya/src/velikden/1.jpg",
+      full: "/galeriya/src/velikden/1.jpg",
+      thumb: "/galeriya/thumbs/velikden/1.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Великденска терапевтилница 2025 г",
+      category: "Великденска терапевтилница",
     },
     {
-      id: "cab-01",
-      src: "/others/who-are-we.png",
-      full: "/others/who-are-we2.png",
-      w: 1600,
-      h: 1067,
-      alt: "Кабинет",
-      category: "Кабинет",
+      id: "velik-02",
+      src: "/galeriya/src/velikden/2.jpg",
+      full: "/galeriya/src/velikden/2.jpg",
+      thumb: "/galeriya/thumbs/velikden/2.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Великденска терапевтилница 2025 г",
+      category: "Великденска терапевтилница",
     },
     {
-      id: "cab-02",
-      src: "/others/who-are-we.png",
-      full: "/others/who-are-we.png",
-      w: 1400,
-      h: 933,
-      alt: "Упражнения",
-      category: "Кабинет",
+      id: "velik-03",
+      src: "/galeriya/src/velikden/3.jpg",
+      full: "/galeriya/src/velikden/3.jpg",
+      thumb: "/galeriya/thumbs/velikden/3.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Великденска терапевтилница 2025 г",
+      category: "Великденска терапевтилница",
     },
     {
-      id: "evt-01",
-      src: "/others/who-are-we.png",
-      full: "/others/who-are-we.png",
-      w: 1600,
-      h: 1067,
-      alt: "Събитие",
-      category: "Събития",
+      id: "velik-04",
+      src: "/galeriya/src/velikden/4.jpg",
+      full: "/galeriya/src/velikden/4.jpg",
+      thumb: "/galeriya/thumbs/velikden/4.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Великденска терапевтилница 2025 г",
+      category: "Великденска терапевтилница",
+    },
+    {
+      id: "velik-05",
+      src: "/galeriya/src/velikden/5.jpg",
+      full: "/galeriya/src/velikden/5.jpg",
+      thumb: "/galeriya/thumbs/velikden/5.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Великденска терапевтилница 2025 г",
+      category: "Великденска терапевтилница",
+    },
+    {
+      id: "velik-06",
+      src: "/galeriya/src/velikden/6.jpg",
+      full: "/galeriya/src/velikden/6.jpg",
+      thumb: "/galeriya/thumbs/velikden/6.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Великденска терапевтилница 2025 г",
+      category: "Великденска терапевтилница",
+    },
+    // Коледа
+    {
+      id: "koleda-01",
+      src: "/galeriya/src/koleda/1.jpg",
+      full: "/galeriya/src/koleda/1.jpg",
+      thumb: "/galeriya/thumbs/koleda/1.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Коледна терапевтилница 2024 г",
+      category: "Коледна терапевтилница",
+    },
+    {
+      id: "koleda-02",
+      src: "/galeriya/src/koleda/2.jpg",
+      full: "/galeriya/src/koleda/2.jpg",
+      thumb: "/galeriya/thumbs/koleda/2.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Коледна терапевтилница 2024 г",
+      category: "Коледна терапевтилница",
+    },
+    {
+      id: "koleda-03",
+      src: "/galeriya/src/koleda/3.jpg",
+      full: "/galeriya/src/koleda/3.jpg",
+      thumb: "/galeriya/thumbs/koleda/3.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Коледна терапевтилница 2024 г",
+      category: "Коледна терапевтилница",
+    },
+    {
+      id: "koleda-04",
+      src: "/galeriya/src/koleda/4.jpg",
+      full: "/galeriya/src/koleda/4.jpg",
+      thumb: "/galeriya/thumbs/koleda/4.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Коледна терапевтилница 2024 г",
+      category: "Коледна терапевтилница",
+    },
+    {
+      id: "koleda-05",
+      src: "/galeriya/src/koleda/5.jpg",
+      full: "/galeriya/src/koleda/5.jpg",
+      thumb: "/galeriya/thumbs/koleda/5.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Коледна терапевтилница 2024 г",
+      category: "Коледна терапевтилница",
+    },
+    {
+      id: "koleda-06",
+      src: "/galeriya/src/koleda/6.jpg",
+      full: "/galeriya/src/koleda/6.jpg",
+      thumb: "/galeriya/thumbs/koleda/6.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Коледна терапевтилница 2024 г",
+      category: "Коледна терапевтилница",
+    },
+    {
+      id: "koleda-07",
+      src: "/galeriya/src/koleda/7.jpg",
+      full: "/galeriya/src/koleda/7.jpg",
+      thumb: "/galeriya/thumbs/koleda/7.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Коледна терапевтилница 2024 г",
+      category: "Коледна терапевтилница",
+    },
+    // Коледа партита
+    {
+      id: "koleda-partita-01",
+      src: "/galeriya/src/koleda-partita/1.jpg",
+      full: "/galeriya/src/koleda-partita/1.jpg",
+      thumb: "/galeriya/thumbs/koleda-partita/1.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Коледни партита 2024 г",
+      category: "Коледни партита",
+    },
+    {
+      id: "koleda-partita-02",
+      src: "/galeriya/src/koleda-partita/2.jpg",
+      full: "/galeriya/src/koleda-partita/2.jpg",
+      thumb: "/galeriya/thumbs/koleda-partita/2.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Коледни партита 2024 г",
+      category: "Коледни партита",
+    },
+    {
+      id: "koleda-partita-03",
+      src: "/galeriya/src/koleda-partita/3.jpg",
+      full: "/galeriya/src/koleda-partita/3.jpg",
+      thumb: "/galeriya/thumbs/koleda-partita/3.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Коледни партита 2024 г",
+      category: "Коледни партита",
+    },
+    {
+      id: "koleda-partita-04",
+      src: "/galeriya/src/koleda-partita/4.jpg",
+      full: "/galeriya/src/koleda-partita/4.jpg",
+      thumb: "/galeriya/thumbs/koleda-partita/4.jpg",
+      w: 2048,
+      h: 1146,
+      alt: "Коледни партита 2024 г",
+      category: "Коледни партита",
+    },
+    {
+      id: "koleda-partita-05",
+      src: "/galeriya/src/koleda-partita/5.jpg",
+      full: "/galeriya/src/koleda-partita/5.jpg",
+      thumb: "/galeriya/thumbs/koleda-partita/5.jpg",
+      w: 2048,
+      h: 1536,
+      alt: "Коледни партита 2024 г",
+      category: "Коледни партита",
+    },
+    {
+      id: "koleda-partita-06",
+      src: "/galeriya/src/koleda-partita/6.jpg",
+      full: "/galeriya/src/koleda-partita/6.jpg",
+      thumb: "/galeriya/thumbs/koleda-partita/6.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Коледни партита 2024 г",
+      category: "Коледни партита",
+    },
+    {
+      id: "koleda-partita-07",
+      src: "/galeriya/src/koleda-partita/7.jpg",
+      full: "/galeriya/src/koleda-partita/7.jpg",
+      thumb: "/galeriya/thumbs/koleda-partita/7.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Коледни партита 2024 г",
+      category: "Коледни партита",
+    },
+    {
+      id: "koleda-partita-08",
+      src: "/galeriya/src/koleda-partita/8.jpg",
+      full: "/galeriya/src/koleda-partita/8.jpg",
+      thumb: "/galeriya/thumbs/koleda-partita/8.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Коледни партита 2024 г",
+      category: "Коледни партита",
+    },
+    // Терапевтилница
+    {
+      id: "terapevtilnica-01",
+      src: "/galeriya/src/terapevtilnica/1.jpg",
+      full: "/galeriya/src/terapevtilnica/1.jpg",
+      thumb: "/galeriya/thumbs/terapevtilnica/1.jpg",
+      w: 1200,
+      h: 1600,
+      alt: "Терапевтилница 2024 г",
+      category: "Сърцата терапевтилница",
+    },
+    {
+      id: "terapevtilnica-02",
+      src: "/galeriya/src/terapevtilnica/2.jpg",
+      full: "/galeriya/src/terapevtilnica/2.jpg",
+      thumb: "/galeriya/thumbs/terapevtilnica/2.jpg",
+      w: 1200,
+      h: 1600,
+      alt: "Терапевтилница 2024 г",
+      category: "Сърцата терапевтилница",
+    },
+    {
+      id: "terapevtilnica-03",
+      src: "/galeriya/src/terapevtilnica/3.jpg",
+      full: "/galeriya/src/terapevtilnica/3.jpg",
+      thumb: "/galeriya/thumbs/terapevtilnica/3.jpg",
+      w: 1200,
+      h: 1600,
+      alt: "Терапевтилница 2024 г",
+      category: "Сърцата терапевтилница",
     },
   ];
 
   const baseCats = [
     "Всички",
-    "Семинари",
-    "Кабинет",
-    "Събития",
-    "Материали",
+    "Великденска терапевтилница",
+    "Коледна терапевтилница",
+    "Коледни партита",
+    "Сърцата терапевтилница",
   ] as const;
   type Cat = (typeof baseCats)[number];
   let activeCat: Cat = "Всички";
@@ -355,10 +569,10 @@
           >
             <div class="media" style={`aspect-ratio:${img.w}/${img.h}`}>
               <img
-                src={img.src}
+                src={img.thumb ?? img.src}
                 alt={img.alt ?? "Снимка"}
                 loading="lazy"
-                sizes="(max-width: 700px) 48vw, (max-width: 1100px) 33vw, 280px"
+                sizes="280px"
                 on:load={() => markLoaded(img.id)}
               />
               <div class="overlay">
@@ -607,15 +821,18 @@
   }
   .media {
     position: relative;
-    width: 100%;
+    /* width: 350px; Fixed width */
+    height: 220px; /* Fixed height */
+    aspect-ratio: unset !important; /* Remove aspect-ratio */
+    overflow: hidden;
   }
   .media img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    opacity: 0;
-    filter: blur(8px) saturate(0.9);
+    /* opacity: 0;
+    filter: blur(8px) saturate(0.9); */
     transform: scale(1.04);
     transition:
       opacity 0.35s ease,

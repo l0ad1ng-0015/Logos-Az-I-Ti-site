@@ -2,7 +2,7 @@
   // Данни за услугите
   const services = [
     {
-      id: 1,
+      id: "ranna-prevenciya",
       title: "Ранна превенция",
       icon: "🎈",
       description:
@@ -14,7 +14,7 @@
       ],
     },
     {
-      id: 2,
+      id: "konsultaciya-i-diagnostika",
       title: "Консултация, диагностика и оценка",
       icon: "✏️",
       description:
@@ -26,7 +26,7 @@
       ],
     },
     {
-      id: 3,
+      id: "logopedichna-terapiya",
       title: "Логопедична терапия",
       icon: "🤝",
       description:
@@ -38,7 +38,7 @@
       ],
     },
     {
-      id: 4,
+      id: "omt",
       title: "Орофациална терапия",
       icon: "🦁",
       description:
@@ -50,7 +50,7 @@
       ],
     },
     {
-      id: 5,
+      id: "podpomagane-i-obucheniya",
       title: "Подпомагане и обучения",
       icon: "🎒",
       description: "Обучителни програми и подкрепа за специалисти и родители",
@@ -61,7 +61,7 @@
       ],
     },
     {
-      id: 6,
+      id: "logopedichna-vdahnovitelnica",
       title: "Логопедична вдъхновителница",
       icon: "📖",
       description:
@@ -72,9 +72,29 @@
 
   let selectedService = null;
 
-  function selectService(service) {
-    selectedService = selectedService?.id === service.id ? null : service;
-  }
+  // FAQ данни
+  let activeAccordion = null;
+
+  const toggleAccordion = (index) => {
+    activeAccordion = activeAccordion === index ? null : index;
+  };
+
+  const faqData = [
+    {
+      question: "На каква възраст детето може да посети логопед?",
+      answer: "Детето може да посети логопед още от най-ранна детска възраст.",
+    },
+    {
+      question: "Предлагате ли онлайн логопедични услуги?",
+      answer:
+        "Да. Онлайн сесиите са удобен и ефективен вариант за работа с по-големи деца, при които вече е работено в езиков, артикулационен и комуникативен план.",
+    },
+    {
+      question: "Колко е продължителността на една логопедична сесия?",
+      answer:
+        "От 3 до 6-годишна възраст – 30 минути; За деца в начална училищна възраст – 30-40 минути; Тийнейджъри – 40 минути.",
+    },
+  ];
 </script>
 
 <!-- Heading -->
@@ -200,36 +220,82 @@
   </div>
 </div>
 
+<!-- Services Container -->
 <div class="services">
   <div class="services-container">
     <h2>Услуги</h2>
     <div class="services-content">
       {#each services as service}
-        <div
-          class="service-card {selectedService?.id === service.id
-            ? 'selected'
+        <a
+          href={`/uslugi/${service.id}`}
+          class="service-card{selectedService?.id === service.id
+            ? ' selected'
             : ''}"
-          on:click={() => selectService(service)}
-          role="button"
-          tabindex="0"
-          on:keydown={(e) => e.key === "Enter" && selectService(service)}
+          aria-pressed={selectedService?.id === service.id}
+          style="text-decoration: none; color: inherit;"
         >
           <span class="service-icon">{service.icon}</span>
           <h3 class="service-title">{service.title}</h3>
           <p class="service-description">{service.description}</p>
-
-          {#if selectedService?.id === service.id}
-            <div class="service-details">
-              <ul>
-                {#each service.details as detail}
-                  <li>{detail}</li>
-                {/each}
-              </ul>
-            </div>
-          {/if}
-        </div>
+          <p class="service-more">Вижте повече</p>
+        </a>
       {/each}
     </div>
+  </div>
+</div>
+
+<!-- FAQ Container -->
+<div class="faq">
+  <div class="faq-container">
+    <h2>Често задавани въпроси</h2>
+    <div class="faq-content">
+      {#each faqData as faq, index}
+        <div class="faq-item" class:active={activeAccordion === index}>
+          <button class="faq-question" on:click={() => toggleAccordion(index)}>
+            <span>{faq.question}</span>
+            <svg
+              class="faq-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 9L12 15L18 9"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              {faq.answer}
+            </div>
+          </div>
+        </div>
+      {/each}
+      <!-- You can see more faq questions here -->
+      <div class="button-container">
+        <a href="/chesto-zadavani-vuprosi" class="see-more-button"
+          >Намерете още ЧЗВ тук</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Call to action -->
+<div class="cta-section-container">
+  <h2>Готови за консултация?</h2>
+  <div class="cta-section">
+    <h3 class="section-intro">
+      Свържете се с нас днес и направете първата стъпка към подобряване на
+      комуникационните умения.
+    </h3>
+    <a class="cta-button" href="/kontakti">
+      <h4>Свържете се с нас</h4>
+    </a>
   </div>
 </div>
 
@@ -318,51 +384,40 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
+    background: var(--orange-light);
     margin-top: 1.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   }
 
   .service-card {
-    background: var(--orange-light);
+    background: var(--background);
+    padding: 20px;
+    border: 2px solid var(--orange);
     border-radius: 20px;
-    padding: 2rem;
-    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4px);
     transition: all 0.3s ease;
-    cursor: pointer;
     position: relative;
     overflow: hidden;
   }
 
-  .service-card::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-      45deg,
-      transparent,
-      rgba(255, 255, 255, 0.3),
-      transparent
-    );
-    transform: rotate(45deg);
-    transition: all 0.6s ease;
-    opacity: 0;
-  }
-
-  .service-card:hover::before {
-    animation: shine 0.6s ease-in-out;
-  }
-
   .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(31, 38, 135, 0.5);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  .service-card .service-more {
+    margin-top: 15px;
+    font-weight: bold;
+    color: var(--orange);
+    text-align: center;
   }
 
   .service-card.selected {
-    background: linear-gradient(135deg, #ff9a56, #ff7b39);
+    background: var(--orange);
     color: white;
     transform: scale(1.02);
   }
@@ -390,34 +445,168 @@
     text-align: center;
   }
 
-  .service-details {
-    margin-top: 2rem;
-    padding-top: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
+  /* ---- 3. FAQ Container ---- */
+  .faq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 
-  .service-details ul {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
+  .faq-container {
+    width: 90%;
+    max-width: 1000px;
   }
 
-  .service-details li {
-    padding: 0.5rem 0;
-    position: relative;
-    padding-left: 1.5rem;
+  .faq-content {
+    background: var(--orange-light);
+    margin-bottom: 30px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   }
 
-  .service-details li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: #4caf50;
+  .faq-item {
+    margin-bottom: 15px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .faq-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .faq-item.active {
+    border-color: var(--orange);
+    box-shadow: 0 4px 15px rgba(255, 154, 115, 0.2);
+  }
+
+  .faq-question {
+    background: var(--background);
+    padding: 20px 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    border: 2px solid var(--orange);
+    border-radius: 15px;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .faq-question:hover {
+    background: var(--background-hover);
+  }
+
+  .faq-item.active .faq-question {
+    background: var(--orange);
+    color: white;
+  }
+
+  .faq-icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 15px;
+  }
+
+  .faq-item.active .faq-icon {
+    transform: rotate(180deg);
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: white;
+  }
+
+  .faq-item.active .faq-answer {
+    max-height: 300px;
+  }
+
+  .faq-answer-content {
+    padding: 25px;
+    color: #555;
+    line-height: 1.6;
+    font-size: 1rem;
+    font-family: "ABeeZee", sans-serif !important;
+  }
+
+  .button-container {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .see-more-button {
+    background-color: var(--orange);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: larger;
     font-weight: bold;
+    transition: background-color 0.3s ease;
   }
 
-  .service-card.selected .service-details li::before {
-    color: #fff;
+  .see-more-button:hover {
+    background-color: var(--orange-dark);
+  }
+
+  /* ---- 4. CTA Section ---- */
+  .cta-section {
+    max-width: 1000px;
+    background: var(--orange-light);
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border: 3px solid #ff9d6b;
+  }
+
+  .cta-section-container {
+    margin-top: 1rem;
+    width: 90%;
+    max-width: 1000px;
+    margin-bottom: 2.2rem;
+  }
+
+  .cta-section h3 {
+    color: black;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+
+  .cta-button {
+    display: inline-block;
+    width: 350px;
+    height: 65px;
+    line-height: 35px;
+    background: var(--orange);
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    border: 2px solid #ff9d6b;
+    cursor: pointer;
+  }
+
+  .cta-button:hover {
+    background: var(--orange-dark);
+    color: black;
+    transform: translateY(-2px);
+    border: black 2px solid;
+    box-shadow: 0 5px 15px rgba(255, 157, 107, 0.3);
   }
 
   /* ---- Media query - 955 ---- */
@@ -476,9 +665,45 @@
       transform: translateY(10%);
       align-self: flex-start;
     }
+
+    /* ---- 3. FAQ Container ---- */
+    .faq-content {
+      padding: 30px 20px;
+    }
+
+    .faq-question {
+      padding: 15px 20px;
+      font-size: 1rem;
+    }
+
+    .faq-answer-content {
+      padding: 20px;
+    }
+
+    /* ---- 3. CTA Section ---- */
+    .cta-section h3 {
+      font-size: 1.3rem;
+    }
+    .cta-button {
+      width: 315px;
+    }
+
+    /* ---- 2. Services ---- */
+    .services-content {
+      grid-template-columns: 1fr;
+      padding: 20px;
+      gap: 2rem;
+    }
+    .service-card {
+      padding: 12px;
+    }
   }
 
   /* ---- Media query - 425 ---- */
-  @media screen and (max-width: 475px) {
+  @media screen and (max-width: 425px) {
+    .cta-button {
+      width: 250px;
+      /* height: 100px; */
+    }
   }
 </style>

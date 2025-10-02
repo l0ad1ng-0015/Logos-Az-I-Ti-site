@@ -392,7 +392,7 @@
       <div class="member-stats">
         <img src="/pfps/team/maria.png" alt="Maria" class="team-member" />
         <h3 class="team-member-name">Мария-Паола Тупути</h3>
-        <p class="team-member-role">логопед</p>
+        <p class="team-member-role">логопед, ерготерапевт</p>
         <p class="team-member-contacts">example@example.com</p>
         <p class="team-member-contacts">+359 88 888 8888</p>
       </div>

@@ -420,7 +420,7 @@
   </div>
 
   <button class="green-button">
-    <a href="#" on:click={handleLinkClick}>Запиши Час</a>
+    <a href="/kontakti" on:click={handleLinkClick}>Запиши Час</a>
   </button>
 
   <!-- Hamburger Icon -->
