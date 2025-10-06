@@ -1,4 +1,8 @@
 <script>
+  export let title = "Услуги | Логос – Аз и Ти";
+  export let description =
+    "ОЦ Логос „Аз и ти“ предлага образователни и терапевтични услуги в София – диагностика, терапия, ранна превенция и орофациална миофункционална терапия за деца.";
+
   // Данни за услугите
   const services = [
     {
@@ -96,6 +100,31 @@
     },
   ];
 </script>
+
+<svelte:head>
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta property="og:description" content={description} />
+  <meta
+    name="keywords"
+    content="логос аз и ти, логос - аз и ти, оц логос аз и ти, ОЦ „Логос – Аз и Ти“, логопедичен център, ОЦ Логос Аз и ти, логопедичен център ОЦ Логос Аз и ти, образователни и терапевтични услуги София, логопедични услуги София, логопед София, логопедичен център София, логопедична терапия София, логопедична диагностика София, логопедична консултация София, ранна логопедична превенция, логопедичен кабинет Овча купел, орофациална миофункционална терапия София, ОМТ София, миофункционална терапия, логопед при заекване, логопед при артикулационни нарушения, логопед при езикови нарушения, логопед при забавено развитие, логопед за деца София, логопедична помощ за родители, образователни програми за деца София, терапевтични програми за деца София, индивидуални логопедични сесии, логопедична подкрепа за деца, логопедични обучения за родители, център за образователни и терапевтични услуги, logoped Sofia, detski logoped Sofia, obrazovatelni uslugi Sofia, terapevtichni uslugi Sofia, orofacialna miofunkcionalna terapiya Sofia"
+  />
+
+  <!-- Twitter Card тагове -->
+  <meta name="twitter:card" content="/logos/nav-logo.png" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content="/logos/nav-logo.png" />
+  <meta name="twitter:image:alt" content="Услуги" />
+
+  <!-- Open Graph тагове (за Facebook и другuslugiи) -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content="/logos/nav-logo.png" />
+  <meta property="og:image:alt" content="Услуги" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/uslugi" />
+</svelte:head>
 
 <!-- Heading -->
 <div class="heading">

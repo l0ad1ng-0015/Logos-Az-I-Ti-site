@@ -1,4 +1,8 @@
 <script>
+  export let title = "Контакти | Логос – Аз и Ти";
+  export let description =
+    "Свържете се с ОЦ Логос „Аз и ти“ – логопедичен център в София, ж.к. Овча купел-1. Телефон, имейл, адрес, карта и работно време за записване на консултация.";
+
   let formData = {
     name: "",
     email: "",
@@ -130,6 +134,31 @@
     console.log("apples", apples);
   }
 </script>
+
+<svelte:head>
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta property="og:description" content={description} />
+  <meta
+    name="keywords"
+    content="контакти логопед София, логопедичен център контакти, логопед Овча купел контакти, логопедичен,логопедичен център ОЦ Логос Аз и ти, логопедичен център София, логопедичен екип София, логопеди с опит София, сертифицирани логопеди София, логопедичен специалист София, екип логопеди Овча купел, логопедичен кабинет ОЦ Логос, логопедичен кабинет за деца София, контакти логопед София, логопед Овча купел контакти, логопедичен център София адрес, телефон логопед София, записване логопед София, логопедичен кабинет контакти, работно време логопед София, логопедична консултация контакти, карта логопед София, ОЦ Логос Аз и ти контакти, logoped Sofia contact, detski logoped Sofia address, logoped Ovtcha kupel contact, logopedicheski kabinet Sofia phone, logopedicheski konsultatsii Sofia email, logopedicheski specialist Sofia office hours"
+  />
+
+  <!-- Twitter Card тагове -->
+  <meta name="twitter:card" content="/logos/nav-logo.png" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content="/logos/nav-logo.png" />
+  <meta name="twitter:image:alt" content="Контакти" />
+
+  <!-- Open Graph тагове (за Facebook и други) -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content="/logos/nav-logo.png" />
+  <meta property="og:image:alt" content="Контакти" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/kontakti" />
+</svelte:head>
 
 <!-- Heading -->
 <div class="heading">

@@ -1,4 +1,8 @@
 <script>
+  export let title = "Често задавани въпроси | Логос – Аз и Ти";
+  export let description =
+    "В ЧЗВ на ОЦ Логос „Аз и ти“ ще откриете отговори на най-често задаваните въпроси за логопедичните услуги, терапиите и обученията ни за деца и родители в София.";
+
   import { onMount } from "svelte";
 
   let activeAccordion = null;
@@ -59,6 +63,31 @@
     },
   ];
 </script>
+
+<svelte:head>
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta property="og:description" content={description} />
+  <meta
+    name="keywords"
+    content="логопедичен център ОЦ Логос Аз и ти, логопедичен център София, логопедичен екип София, логопеди с опит София, сертифицирани логопеди София, логопедичен специалист София, екип логопеди Овча купел, логопедичен кабинет ОЦ Логос, логопедичен кабинет за деца София, често задавани въпроси логопед, логопедични въпроси и отговори, логопед София, логопедичен център София, логопедичен кабинет Овча купел, логопедична терапия въпроси, логопедична диагностика въпроси, логопед при деца София, логопедична помощ за родители, как протича логопедичната терапия, кога да посетя логопед, логопед при заекване, логопед при забавено говорно развитие, логопедични услуги София, образователни и терапевтични услуги, логопедични обучения за родители, логопедична консултация София, logoped Sofia, chesto zadavani vaprosi logopedia, detski logoped Sofia, logoped Ovtcha kupel, FAQ logoped Sofia"
+  />
+
+  <!-- Twitter Card тагове -->
+  <meta name="twitter:card" content="/logos/nav-logo.png" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content="/logos/nav-logo.png" />
+  <meta name="twitter:image:alt" content="ЧЗВ" />
+
+  <!-- Open Graph тагове (за Facebook и други) -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content="/logos/nav-logo.png" />
+  <meta property="og:image:alt" content="ЧЗВ" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/chesto-zadavani-vuprosi" />
+</svelte:head>
 
 <!-- Heading -->
 <div class="heading">

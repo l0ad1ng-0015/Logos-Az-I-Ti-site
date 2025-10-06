@@ -1,4 +1,8 @@
 <script>
+  export let title = "Ранна превенция | Логос – Аз и Ти";
+  export let description =
+    "ОЦ Логос „Аз и ти“ предлага програми за ранна превенция на речевото и езиковото развитие при деца. Индивидуален подход, логопедична подкрепа и насоки за родители в София.";
+
   let showAdditionalSection1 = false;
   let showAdditionalSection2 = false;
   let showAdditionalSection3 = false;
@@ -17,6 +21,31 @@
     showAdditionalSection4 = !showAdditionalSection4;
   }
 </script>
+
+<svelte:head>
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta property="og:description" content={description} />
+  <meta
+    name="keywords"
+    content="логос аз и ти, логос - аз и ти, оц логос аз и ти, ОЦ „Логос – Аз и Ти“, логопедичен център, ОЦ Логос Аз и ти, логопедичен център ОЦ Логос Аз и ти, образователни и терапевтични услуги София, логопедични услуги София, логопед София, логопедичен център София, ранна логопедична превенция, ранна превенция на речта, ранно езиково развитие, ранна диагностика на говорни затруднения, логопедична помощ за малки деца, логопед София, логопед Овча купел, ранна интервенция при забавено развитие, развитие на речта при бебета и деца, етапи на говорното развитие, логопедична консултация за родители, логопедична терапия София, логопедична диагностика при малки деца, логопедична подкрепа за ранно детство, образователни и терапевтични програми София, логопедичен център София, логопед за деца 1–3 години, логопед при забавено проговаряне, насоки за родители логопед, център за ранна превенция София, logoped Sofia, ranna prevenziya, ranno ezikovo razvitie, detski logoped Sofia, logoped Ovtcha kupel, logopedichen centar Sofia, logopedichni uslugi Sofia, logoped za deca 1-3 godini, logoped pri zabaveno progovarqne, nasoki za roditeli logoped, centrŭr za ranna prevenziya Sofia"
+  />
+
+  <!-- Twitter Card тагове -->
+  <meta name="twitter:card" content="/logos/nav-logo.png" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content="/logos/nav-logo.png" />
+  <meta name="twitter:image:alt" content="Ранна превенция" />
+
+  <!-- Open Graph тагове (за Facebook и други) -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content="/logos/nav-logo.png" />
+  <meta property="og:image:alt" content="Ранна превенция" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/uslugi/ranna-prevenciya" />
+</svelte:head>
 
 <!-- Heading -->
 <div class="heading">

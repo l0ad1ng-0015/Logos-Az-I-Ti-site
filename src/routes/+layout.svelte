@@ -3,146 +3,52 @@
   import Header from "../lib/components/layout/Header.svelte";
   import Footer from "../lib/components/layout/Footer.svelte";
 
-  const SITE_URL = "https://logosaziti.netlify.app"; // напр. 'https://logos-aziti.bg'
-  const SITE_NAME = "ОЦ „Логос – Аз и Ти“";
-  const DEFAULT_IMAGE = "/logos/nav-logo.png"; // 1200×630px, ще го качиш в /static
-  const LOGO = "/logos/logo.png"; // прозрачно лого 512×512 (или 300×300)
-
-  export let data: {
-    seo?: {
-      title?: string;
-      description?: string;
-      path?: string; // напр. '/uslugi'
-      url?: string; // ако искаш да подадеш пълен URL
-      image?: string; // относителен път като '/og-uslugi.jpg'
-      type?: "website" | "article";
-      noindex?: boolean;
-      breadcrumbs?: Array<{
-        "@type": "ListItem";
-        position: number;
-        name: string;
-        item: string;
-      }>;
-    };
-  } = {};
-
-  const title = data.seo?.title ?? "ОЦ „Логос – Аз и Ти“";
-  const description =
-    data.seo?.description ??
-    "Център за образователни и терапевтични услуги и програми за цялостно развитие на детето в кв. Овча купел, София.";
-  const absoluteUrl = data.seo?.url ?? SITE_URL + (data.seo?.path ?? "/");
-  const imageAbs = data.seo?.image
-    ? SITE_URL + data.seo.image
-    : SITE_URL + DEFAULT_IMAGE;
-  const type = data.seo?.type ?? "website";
-  const noindex = data.seo?.noindex ?? false;
-
-  // ---- JSON-LD @graph (Google “graphs”) ----
-  const ldGraph = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": `${SITE_URL}#org`,
-        name: SITE_NAME,
-        url: SITE_URL,
-        logo: `${SITE_URL}${LOGO}`,
-        sameAs: [
-          "https://www.instagram.com/logosaziti/",
-          "https://www.facebook.com/people/%D0%9E%D0%A6-%D0%9B%D0%BE%D0%B3%D0%BE%D1%81-%D0%90%D0%B7-%D0%B8-%D0%A2%D0%B8/61564854236122/",
-        ],
-      },
-      {
-        "@type": "WebSite",
-        "@id": `${SITE_URL}#website`,
-        url: SITE_URL,
-        name: SITE_NAME,
-        publisher: { "@id": `${SITE_URL}#org` },
-        inLanguage: "bg-BG",
-        // Ако по-късно направиш вътрешно търсене, можем да добавим SearchAction
-      },
-      {
-        // Използваме MedicalClinic за логопедичен/терапевтичен център
-        "@type": "MedicalClinic",
-        "@id": `${SITE_URL}#clinic`,
-        name: SITE_NAME,
-        url: SITE_URL,
-        image: imageAbs,
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: "ж.к. „Овча купел-1“, бл. 409, вх. Б",
-          addressLocality: "София",
-          addressCountry: "BG",
-        },
-        areaServed: "София",
-        medicalSpecialty: "SpeechTherapy",
-        priceRange: "По запитване",
-        telephone: "087 686 0602",
-        email: "logos_aziti@abv.bg",
-      },
-    ],
-  };
-
-  // Ако дадена страница подаде breadcrumbs, ще генерираме и BreadcrumbList
-  const ldBreadcrumbs = data.seo?.breadcrumbs
-    ? {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: data.seo.breadcrumbs,
-      }
-    : null;
+  export const title = "ОЦ „Логос – Аз и Ти“";
+  export const description =
+    "ОЦ „Логос – Аз и Ти“ е център за образователни и терапевтични услуги и програми за цялостно развитие на детето в кв. Овча купел, София.";
 </script>
 
 <svelte:head>
-  <!-- Основни -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-WZT9NVM8");
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <meta name="author" content="Логос - Аз и Ти" />
+  <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon" />
+
   <title>{title}</title>
   <meta name="description" content={description} />
-  <link rel="canonical" href={absoluteUrl} />
-  <meta
-    name="robots"
-    content={noindex ? "noindex, nofollow" : "index, follow"}
-  />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="generator" content="SvelteKit" />
-
-  <!-- Open Graph -->
-  <meta property="og:locale" content="bg_BG" />
-  <meta property="og:type" content={type} />
-  <meta property="og:site_name" content={SITE_NAME} />
-  <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
-  <meta property="og:url" content={absoluteUrl} />
-  <meta property="og:image" content={imageAbs} />
-  <meta property="og:image:alt" content="ОЦ „Логос – Аз и Ти“" />
+  <meta
+    name="keywords"
+    content="логопед София, логопед за деца София, детски логопед София, логопед Овча купел, логопедичен център София, логопедична терапия София, логопедична диагностика София, логопедична консултация София, ранна логопедична превенция, ранна превенция на речта, логопедични услуги София, логопедичен кабинет София, логопед за заекване, логопед при забавено говорно развитие, логопед при артикулационни нарушения, логопед при езикови нарушения, логопед при фонологични нарушения, логопед при дислалия, логопед при дисфазия, логопед при аутизъм, логопед при синдром на Даун, логопед за бебета и малки деца, логопедична диагностика и терапия, орофациална миофункционална терапия София, ОМТ София, миофункционална терапия София, терапия при орални навици, логопедична терапия след френулотомия, логопед след къса юздичка, логопедична терапия при дишане с уста, логопедична терапия при неправилно преглъщане, логопедична терапия при захапка, логопедична терапия за правилно дишане, логопедична рехабилитация София, логопедични занимания София, логопедични упражнения за деца, логопедични игри за родители, родителски обучения логопед София, семинари за родители София, обучение на родители за развитие на речта, логопедична вдъхновителница, логопедични ресурси за родители, логопед онлайн консултация, логопедичен специалист София, консултация с логопед София, логопедична помощ за деца, логопедични програми София, детско развитие и реч София, развитие на речта при деца, логопедичен преглед София, логопедична оценка София, логопедична диагностика деца, терапия при заекване София, логопедични упражнения за правилна артикулация, логопедична помощ при двуезични деца, логопедична помощ при слухови нарушения, логопедична помощ при забавено развитие, логопедична терапия след операции, логопедични уроци София, логопедична подкрепа София, логопедична терапия за деца 2-3 години, логопедична терапия за деца 4-6 години, логопедична терапия за ученици, логопедична помощ за родители, логопед Овча купел 1, логопед Овча купел 2, логопед Бъкстон, логопед Красно село, логопед Княжево, логопед Горна баня, логопед Манастирски ливади, logoped Sofia, detski logoped Sofia, logoped Ovtcha kupel, orofacialna miofunkcionalna terapiya Sofia, ranna prevenziya logopedia, OMT logoped Sofia"
+  />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <!-- По желание: @акаунти
-  <meta name="twitter:site" content="@ADD_TWITTER_SITE" />
-  <meta name="twitter:creator" content="@ADD_TWITTER_CREATOR" />
-  -->
+  <meta name="twitter:card" content="/logos/nav-logo.png" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content={imageAbs} />
+  <meta name="twitter:image" content="/logos/nav-logo.png" />
+  <meta name="twitter:image:alt" content="ОЦ „Логос – Аз и Ти“" />
 
-  <!-- JSON-LD @graph (Organization, WebSite, MedicalClinic) -->
-  <script type="application/ld+json">
-{JSON.stringify(ldGraph)}
-  </script>
-
-  {#if ldBreadcrumbs}
-    <script type="application/ld+json">
-{JSON.stringify(ldBreadcrumbs)}
-    </script>
-  {/if}
-
-  <link rel="icon" href="/favicon.png" />
-  <!-- Favicons / PWA (по желание) -->
-  <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" /> -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content="/logos/nav-logo.png" />
+  <meta property="og:image:alt" content="ОЦ „Логос – Аз и Ти“" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/" />
 </svelte:head>
-
-<!-- <slot /> -->
 
 <Header />
 

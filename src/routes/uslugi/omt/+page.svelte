@@ -1,4 +1,8 @@
 <script>
+  export let title = "ОМТ | Логос – Аз и Ти";
+  export let description =
+    "ОЦ Логос „Аз и ти“ предлага орофациална миофункционална терапия (ОМТ) в София – специализирана програма за корекция на неправилно дишане, преглъщане и мускулен тонус на лицето.";
+
   let formData = {
     name: "",
     email: "",
@@ -126,6 +130,31 @@
     console.log("apples", apples);
   }
 </script>
+
+<svelte:head>
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta property="og:description" content={description} />
+  <meta
+    name="keywords"
+    content="логопедичен център ОЦ Логос Аз и ти, логопедичен център София, логопедичен екип София, логопеди с опит София, сертифицирани логопеди София, логопедичен специалист София, екип логопеди Овча купел, логопедичен кабинет ОЦ Логос, логопедичен кабинет за деца София, орофациална миофункционална терапия София, омт, ОМТ, ОМТ София, орофициална миофункционална терапия, логопедична терапия София, терапия при неправилно преглъщане, терапия при дишане с уста, терапия при слаба орална моторика, терапия при орални навици, логопедична рехабилитация София, логопедична помощ при неправилна захапка, логопед при проблеми с говора и дишането, логопедична терапия след френулотомия, миофункционални упражнения за деца, орофациална терапия за правилно дишане, логопедичен кабинет Овча купел, логопедичен център София, логопедични и терапевтични услуги София, детски логопед София, logoped Sofia, orofacialna miofunkcionalna terapiya Sofia, OMT logopedia, miofunkcionalna terapiya detsa, logoped Ovtcha kupel, terapiya na orofacialni narusheniya"
+  />
+
+  <!-- Twitter Card тагове -->
+  <meta name="twitter:card" content="/logos/nav-logo.png" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content="/logos/nav-logo.png" />
+  <meta name="twitter:image:alt" content="ОМТ" />
+
+  <!-- Open Graph тагове (за Facebook и други) -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content="/logos/nav-logo.png" />
+  <meta property="og:image:alt" content="ОМТ" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/uslugi/omt" />
+</svelte:head>
 
 <!-- Heading -->
 <div class="heading">

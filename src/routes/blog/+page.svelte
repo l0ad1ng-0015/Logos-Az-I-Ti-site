@@ -1,4 +1,14 @@
-<script></script>
+<script>
+  export let title = "Блог | Логос – Аз и Ти";
+  export let description =
+    "Блогът на ОЦ Логос „Аз и ти“ скоро ще споделя полезни статии, логопедични съвети и насоки за родители относно развитието на речта, езика и комуникацията при децата.";
+</script>
+
+<svelte:head>
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta property="og:description" content={description} />
+</svelte:head>
 
 <!-- Heading -->
 <div class="heading">

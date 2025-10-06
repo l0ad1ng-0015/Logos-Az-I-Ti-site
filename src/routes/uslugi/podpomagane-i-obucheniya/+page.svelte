@@ -1,4 +1,8 @@
 <script>
+  export let title = "Подпомагане и обучения | Логос – Аз и Ти";
+  export let description =
+    "ОЦ Логос „Аз и ти“ предлага образователни и терапевтични програми в София – логопедични занимания, обучения за родители и уроци по английски за деца в подкрепяща среда.";
+
   let formData = {
     name: "",
     email: "",
@@ -130,6 +134,31 @@
     console.log("apples", apples);
   }
 </script>
+
+<svelte:head>
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta property="og:description" content={description} />
+  <meta
+    name="keywords"
+    content="логопедичен център ОЦ Логос Аз и ти, логопедичен център София, логопедичен екип София, логопеди с опит София, сертифицирани логопеди София, логопедичен специалист София, екип логопеди Овча купел, логопедичен кабинет ОЦ Логос, логопедичен кабинет за деца София, подпомагане и обучения София, образователни и терапевтични програми София, уроци по английски за деца София, логопедични обучения, обучение за родители София, логопед София, логопедичен център София, логопедичен кабинет Овча купел, логопедична помощ за деца, логопедични и образователни дейности, развитие на речта и езика, ранна езикова подкрепа, обучение по английски език, индивидуални уроци по английски, образователни игри за деца, програми за училищна готовност, логопедична подкрепа и обучение, консултации и обучения за родители, терапевтични и езикови услуги София, логопедични занимания и английски, logoped Sofia, uroci po angliyski za deca Sofia, obucheniya Sofia, obrazovatelni uslugi Sofia, detski logoped Sofia, logoped Ovtcha kupel, logopedichen kabinet Sofia, logopedicheski uslugi Sofia, logopedicheski zanyatiya Sofia, logopedicheski konsultatsii Sofia, logopedicheski terapii Sofia, logopedicheski programi Sofia, logopedicheska podkrepa Sofia, logopedicheska otsenka Sofia, logopedichesko obuchenie Sofia, logopedichesko razvitie Sofia, logopedi s opit Sofia"
+  />
+
+  <!-- Twitter Card тагове -->
+  <meta name="twitter:card" content="/logos/nav-logo.png" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content="/logos/nav-logo.png" />
+  <meta name="twitter:image:alt" content="Подпомагане и обучения" />
+
+  <!-- Open Graph тагове (за Faceboousk и други) -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content="/logos/nav-logo.png" />
+  <meta property="og:image:alt" content="Подпомагане и обучения" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/uslugi/podpomagane-i-obucheniya" />
+</svelte:head>
 
 <!-- Heading -->
 <div class="heading">

@@ -1,4 +1,8 @@
 <script lang="ts">
+  export let title = "Галерия | Логос – Аз и Ти";
+  export let description =
+    "Разгледайте галерията на ОЦ Логос „Аз и ти“ – логопедичен център в София. Снимки от нашата среда, занимания, обучения и моменти на развитие и усмивки на децата.";
+
   import { cubicOut } from "svelte/easing";
   import { onMount } from "svelte";
 
@@ -418,6 +422,31 @@
     };
   }
 </script>
+
+<svelte:head>
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta property="og:description" content={description} />
+  <meta
+    name="keywords"
+    content="логопедичен център ОЦ Логос Аз и ти, логопедичен център София, логопедичен екип София, логопеди с опит София, сертифицирани логопеди София, логопедичен специалист София, екип логопеди Овча купел, логопедичен кабинет ОЦ Логос, логопедичен кабинет за деца София, галерия логопедичен център София, логопедични занимания снимки, логопед София, логопедичен кабинет Овча купел, логопедичен център ОЦ Логос Аз и ти, снимки от логопедични дейности, логопедична терапия снимки, логопедични игри и упражнения, образователни занимания София, детски логопед София, логопедичен екип София, среда за детско развитие, терапевтични дейности София, логопедични обучения и уъркшопи, логопедична среда за деца, образователни и терапевтични услуги София, logoped Sofia, logopedichen centar Sofia, detski logoped Sofia, galeriya logopedia, logoped Ovtcha kupel, logopedicheski zanyatiya snimki, logopedicheska terapiya snimki, logopedicheski igri i uprazhneniya, obrazovatelni zanyatiya Sofia, detski logoped Sofia, logopedichen ekip Sofia, sreda za detsko razvitie, terapevtichni deynosti Sofia, logopedicheski obuchenia i uarkshopi, logopedicheska sreda za detsa, obrazovatelni i terapevtichni uslugi Sofia"
+  />
+
+  <!-- Twitter Card тагове -->
+  <meta name="twitter:card" content="/logos/nav-logo.png" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content="/logos/nav-logo.png" />
+  <meta name="twitter:image:alt" content="Галерия" />
+
+  <!-- Open Graph тагове (за Facebook и други) -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content="/logos/nav-logo.png" />
+  <meta property="og:image:alt" content="Галерия" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/galeriya" />
+</svelte:head>
 
 <!-- Heading -->
 <div class="heading">

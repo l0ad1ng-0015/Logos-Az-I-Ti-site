@@ -1,4 +1,33 @@
-<script></script>
+<script>
+  export let title = "Логопедична терапия | Логос – Аз и Ти";
+  export let description =
+    "ОЦ Логос „Аз и ти“ предлага логопедична терапия за деца в София – индивидуален подход при артикулационни, езикови и фонологични нарушения, заекване и забавено развитие на речта.";
+</script>
+
+<svelte:head>
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta property="og:description" content={description} />
+  <meta
+    name="keywords"
+    content="логопедичен център ОЦ Логос Аз и ти, логопедичен център София, логопедичен екип София, логопеди с опит София, сертифицирани логопеди София, логопедичен специалист София, екип логопеди Овча купел, логопедичен кабинет ОЦ Логос, логопедичен кабинет за деца София, логопедична терапия София, логопед София, логопед за деца София, индивидуална логопедична терапия, терапия при заекване, терапия при артикулационни нарушения, терапия при езикови нарушения, терапия при фонологични нарушения, логопедична помощ при забавено проговаряне, логопедична подкрепа за деца, логопедична рехабилитация, логопедичен кабинет Овча купел, логопедична терапия за малки деца, логопедична терапия за ученици, терапия на речеви нарушения, логопедична работа с родители, образователни и терапевтични услуги София, логопедичен център София, индивидуален подход логопед, logoped Sofia, detski logoped Sofia, logopedichna terapiya, logoped Ovtcha kupel, terapiya pri govor, logopedi Sofia, logopedichna pomosht, logopedichna podkrepa, logopedichna reabilitatsiya, logopedichen kabinet Sofia, logopedichen kabinet Ovtcha kupel, logopedichna terapiya za detsa, logopedichna terapiya za malki detsa, logopedichna terapiya za uchenitsi, terapiya na rechevi narusheniya, logopedichen ekip Sofia"
+  />
+
+  <!-- Twitter Card тагове -->
+  <meta name="twitter:card" content="/logos/nav-logo.png" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content="/logos/nav-logo.png" />
+  <meta name="twitter:image:alt" content="Логопедична терапия" />
+
+  <!-- Open Graph тагове (за Facebook и други) -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content="/logos/nav-logo.png" />
+  <meta property="og:image:alt" content="Логопедична терапия" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/uslugi/logopedichna-terapiya" />
+</svelte:head>
 
 <!-- Heading -->
 <div class="heading">

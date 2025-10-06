@@ -1,3 +1,15 @@
+<script>
+  export let title = "Политика за поверителност | Логос – Аз и Ти";
+  export let description =
+    "Политика за поверителност на ОЦ Логос „Аз и ти“. Научете как събираме, използваме и защитаваме личните ви данни при използване на нашия сайт и услуги.";
+</script>
+
+<svelte:head>
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta property="og:description" content={description} />
+</svelte:head>
+
 <div class="bg-gray-100">
   <div class="container">
     <div class="content">

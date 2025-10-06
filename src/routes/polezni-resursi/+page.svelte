@@ -1,4 +1,14 @@
-<script></script>
+<script>
+  export let title = "Полезни ресурси | Логос – Аз и Ти";
+  export let description =
+    "Тук ще намерите различни ресурси, които могат да ви помогнат в постигането на вашите цели. Независимо дали търсите информация, инструменти или вдъхновение, ние сме тук, за да ви подкрепим.";
+</script>
+
+<svelte:head>
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta property="og:description" content={description} />
+</svelte:head>
 
 <!-- Heading -->
 <div class="heading">

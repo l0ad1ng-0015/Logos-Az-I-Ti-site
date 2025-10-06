@@ -1,4 +1,33 @@
-<script></script>
+<script>
+  export let title = "Консултация и диагностика | Логос – Аз и Ти";
+  export let description =
+    "ОЦ Логос „Аз и ти“ предлага логопедична консултация и диагностика на речевото и езиковото развитие при деца в София. Оценка, насоки и индивидуален план за терапия.";
+</script>
+
+<svelte:head>
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta property="og:description" content={description} />
+  <meta
+    name="keywords"
+    content="логопедичен център ОЦ Логос Аз и ти, логопедичен център София, логопедичен екип София, логопеди с опит София, сертифицирани логопеди София, логопедичен специалист София, екип логопеди Овча купел, логопедичен кабинет ОЦ Логос, логопедичен кабинет за деца София, нашият екип логопеди, логопедична консултация София, логопедична диагностика София, логопед София, логопедична оценка на речта, диагностика на говорни нарушения, диагностика на езикови затруднения, логопед при забавено проговаряне, оценка на езиково развитие при деца, логопедична консултация за родители, логопед за деца София, диагностика при артикулационни нарушения, диагностика на фонологични нарушения, диагностика при заекване, ранна диагностика на речта, логопедичен център София, логопедичен кабинет Овча купел, индивидуална логопедична консултация, образователни и терапевтични услуги София, програми за речево развитие, логопедичен специалист София, logoped Sofia, diagnostika logopedia, konsultaciya logoped Sofia, detski logoped Sofia, logoped Ovtcha kupel, logopedichen centar Sofia, logopedichen kabinet Sofia, logopedichen kabinet Ovtcha kupel, logoped za deca Sofia, diagnostika na govorni narushenia, diagnostika na ezikovi zatrudnenia, logoped pri zabaveno progovarqne, ocenka na ezikovo razvitie pri deca, logopedichen konsultaciya za roditeli, diagnostika pri artikulacionni narushenia, diagnostika na fonologichni narushenia, diagnostika pri zaekvane, ranna diagnostika na redata"
+  />
+
+  <!-- Twitter Card тагове -->
+  <meta name="twitter:card" content="/logos/nav-logo.png" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content="/logos/nav-logo.png" />
+  <meta name="twitter:image:alt" content="Консултация и диагностика" />
+
+  <!-- Open Graph тагове (за Facebook и други) -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content="/logos/nav-logo.png" />
+  <meta property="og:image:alt" content="Консултация и диагностика" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/uslugi/konsultaciya-i-diagnostika" />
+</svelte:head>
 
 <!-- Heading -->
 <div class="heading">

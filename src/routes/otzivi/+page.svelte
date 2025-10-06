@@ -1,4 +1,8 @@
 <script>
+  export let title = "Отзиви на клиенти | Логос – Аз и Ти";
+  export let description =
+    "Прочетете отзиви от родители за ОЦ Логос „Аз и ти“. Логопедичен център в София с индивидуален подход, видими резултати и подкрепа за развитието на всяко дете.";
+
   const reviews = [
     {
       id: 1,
@@ -77,15 +81,39 @@
   };
 </script>
 
+<svelte:head>
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta property="og:description" content={description} />
+  <meta
+    name="keywords"
+    content="логопедичен център ОЦ Логос Аз и ти, логопедичен център София, логопедичен екип София, логопеди с опит София, сертифицирани логопеди София, логопедичен специалист София, екип логопеди Овча купел, логопедичен кабинет ОЦ Логос, логопедичен кабинет за деца София, нашият екип логопеди, логопедичен опит и квалификация, мисия на логопедичния център, логопедични специалисти за деца, методики за логопедична терапия, ОЦ Логос Аз и ти екип, професионални логопеди София, логопедична грижа за деца, логопедичен опит над 10 години, логопедична помощ и развитие, логопедична подкрепа за родители, обучение и квалификация на логопеди, логопедичен център с индивидуален подход, логопедичен център за цялостно развитие на детето, логопедичен център в Овча купел, детски логопедичен център София, логопедична грижа и внимание, logopedichen centar Sofia, logopedichen ekip Sofia, detski logoped Sofia, logoped Ovtcha kupel"
+  />
+
+  <!-- Twitter Card тагове -->
+  <meta name="twitter:card" content="/logos/nav-logo.png" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content="/logos/nav-logo.png" />
+  <meta name="twitter:image:alt" content="Отзиви" />
+
+  <!-- Open Graph тагове (за Facebook и други) -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content="/logos/nav-logo.png" />
+  <meta property="og:image:alt" content="Отзиви" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/otzivi" />
+</svelte:head>
+
 <!-- Heading -->
 <div class="heading">
   <div class="heading-container">
     <div id="h-left">
-      <h1>Отзиви на клиенти</h1>
+      <h1>Отзиви за нас</h1>
       <p>
-        Тук ще откриете споделени впечатления и отзиви от нашите клиенти –
-        родители, деца и възрастни, които са преминали през нашите терапии и
-        услуги.
+        Тук ще откриете споделени впечатления и отзиви от нашите родители, чиито
+        деца са преминали през нашите услуги.
       </p>
       <!-- Прочетете техните истории и мнения за постигнатите резултати и положителната промяна в ежедневието им. -->
     </div>
@@ -203,7 +231,7 @@
 <!-- Reviews Grid -->
 <div class="reviews">
   <div class="reviews-container">
-    <h2>Какво казват нашите клиенти</h2>
+    <h2>Какво казват за нас?</h2>
     <div class="reviews-grid">
       {#each reviews as review}
         <div class="review-card">
@@ -278,7 +306,7 @@
   }
 
   .first-svg {
-    transform: translateY(-150%);
+    transform: translateY(-75%);
   }
 
   .second-svg {

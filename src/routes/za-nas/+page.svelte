@@ -1,4 +1,8 @@
 <script>
+  export let title = "За нас | Логос – Аз и Ти";
+  export let description =
+    "Ние сме логопедичен център в София, където с грижа и внимание помагаме на децата да развият своята реч и увереност.";
+
   let showAdditionalSection1 = false;
   let showAdditionalSection2 = false;
   let showAdditionalSection3 = false;
@@ -17,6 +21,31 @@
     showAdditionalSection4 = !showAdditionalSection4;
   }
 </script>
+
+<svelte:head>
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta property="og:description" content={description} />
+  <meta
+    name="keywords"
+    content="логопедичен център ОЦ Логос Аз и ти, логопедичен център София, логопедичен екип София, логопеди с опит София, сертифицирани логопеди София, логопедичен специалист София, екип логопеди Овча купел, логопедичен кабинет ОЦ Логос, логопедичен кабинет за деца София, нашият екип логопеди, логопедичен опит и квалификация, мисия на логопедичния център, логопедични специалисти за деца, методики за логопедична терапия, ОЦ Логос Аз и ти екип, професионални логопеди София, логопедична грижа за деца, логопедичен опит над 10 години, логопедична помощ и развитие, логопедична подкрепа за родители, обучение и квалификация на логопеди, логопедичен център с индивидуален подход, логопедичен център за цялостно развитие на детето, логопедичен център в Овча купел, детски логопедичен център София, логопедична грижа и внимание, logopedichen centar Sofia, logopedichen ekip Sofia, detski logoped Sofia, logoped Ovtcha kupel"
+  />
+
+  <!-- Twitter Card тагове -->
+  <meta name="twitter:card" content="/logos/nav-logo.png" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content="/logos/nav-logo.png" />
+  <meta name="twitter:image:alt" content="За нас" />
+
+  <!-- Open Graph тагове (за Facebook и други) -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content="/logos/nav-logo.png" />
+  <meta property="og:image:alt" content="За нас" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/za-nas" />
+</svelte:head>
 
 <!-- Heading - za nas first one like design -->
 <div class="heading">
