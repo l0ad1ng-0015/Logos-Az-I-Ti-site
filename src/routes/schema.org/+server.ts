@@ -8,7 +8,7 @@ export async function GET() {
       "https://logosaziti.bg/za-nas",
       "https://logosaziti.bg/uslugi",
       "https://logosaziti.bg/blog",
-      "https://logosaziti.bg/za-vas",
+      "https://logosaziti.bg/polezni-resursi",
       "https://logosaziti.bg/kontakti",
     ],
   };

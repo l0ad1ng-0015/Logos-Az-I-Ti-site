@@ -49,7 +49,8 @@ export async function GET() {
   links.forEach((link) => sitemap.write(link));
   sitemap.end();
 
-  const xml = await streamToPromise(sitemap);
+  const xmlBuffer = await streamToPromise(sitemap);
+  const xml = xmlBuffer.toString();
   return new Response(xml, {
     headers: { "Content-Type": "application/xml" },
   });
