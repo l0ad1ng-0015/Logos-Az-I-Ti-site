@@ -1156,6 +1156,14 @@
     }
   }
 
+  /* ---- Media query - 755 ---- */
+  @media screen and (max-width: 755px) {
+    .conditions-grid {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+  }
+
   /* ---- Media query - 425 ---- */
   @media screen and (max-width: 425px) {
     .cta-button {
