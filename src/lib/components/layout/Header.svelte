@@ -162,7 +162,7 @@
           <a href="/polezni-resursi" on:click={handleLinkClick}
             >Полезни ресурси</a
           >
-          <a href="/chesto-zadavani-vuprosi" on:click={handleLinkClick}
+          <a href="/chesto-zadavani-vaprosi" on:click={handleLinkClick}
             >Често задавани въпроси (ЧЗВ)</a
           >
           <a href="/otzivi" on:click={handleLinkClick}>Отзиви</a>
@@ -389,7 +389,7 @@
           <a href="/polezni-resursi" on:click={handleLinkClick}
             >Полезни ресурси</a
           >
-          <a href="/chesto-zadavani-vuprosi" on:click={handleLinkClick}
+          <a href="/chesto-zadavani-vaprosi" on:click={handleLinkClick}
             >Често задавани въпроси (ЧЗВ)</a
           >
           <a href="/otzivi" on:click={handleLinkClick}>Отзиви</a>

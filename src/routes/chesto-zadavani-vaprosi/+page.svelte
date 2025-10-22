@@ -86,7 +86,7 @@
   <meta property="og:image" content="/logos/nav-logo.png" />
   <meta property="og:image:alt" content="ЧЗВ" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/chesto-zadavani-vuprosi" />
+  <meta property="og:url" content="/chesto-zadavani-vaprosi" />
 </svelte:head>
 
 <!-- Heading -->

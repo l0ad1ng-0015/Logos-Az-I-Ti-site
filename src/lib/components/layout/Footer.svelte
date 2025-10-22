@@ -43,7 +43,7 @@
     <div class="column">
       <h2>Полезно</h2>
       <ul>
-        <li><a href="/chesto-zadavani-vuprosi">ЧЗВ</a></li>
+        <li><a href="/chesto-zadavani-vaprosichesto-zadavani-vaprosi">ЧЗВ</a></li>
         <li><a href="/blog">Блог</a></li>
         <li>
           <a href="/terms-and-conditions" target="_blank">Условия за ползване</a

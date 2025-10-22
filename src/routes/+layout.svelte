@@ -26,7 +26,7 @@
   <!-- End Google Tag Manager -->
 
   <meta name="author" content="Логос - Аз и Ти" />
-  <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
   <title>{title}</title>
   <meta name="description" content={description} />

@@ -288,7 +288,7 @@
           ></g
         >
       </svg>
-      <img src="/others/who-are-we.png" alt="Who are we" />
+      <img src="/pages/prevenciya.jpg" alt="Ранна превенция" />
     </div>
   </div>
 </div>
@@ -679,6 +679,7 @@
     max-width: 100%;
     height: auto;
     border-radius: 16px;
+    filter: saturate(1.1);
   }
 
   /* ---- 3. Main section ---- */

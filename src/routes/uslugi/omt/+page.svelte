@@ -396,7 +396,7 @@
           ></g
         >
       </svg>
-      <img src="/others/who-are-we.png" alt="Who are we" />
+      <img src="/pages/omt.jpg" alt="ОМТ" />
     </div>
   </div>
 </div>
