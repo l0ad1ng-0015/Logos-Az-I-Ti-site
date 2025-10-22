@@ -666,6 +666,7 @@
     top: 0;
     left: 0;
     transform: translateY(-50%);
+    z-index: 2; /* keep this SVG above the image */
   }
 
   .second-svg-w {
@@ -673,6 +674,7 @@
     right: 0;
     bottom: 0;
     transform: translateY(50%);
+    z-index: 2; /* keep this SVG above the image */
   }
 
   .w-right img {
@@ -680,6 +682,8 @@
     height: auto;
     border-radius: 16px;
     filter: saturate(1.1);
+    position: relative;
+    z-index: 1;
   }
 
   /* ---- 3. Main section ---- */
