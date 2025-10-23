@@ -269,7 +269,10 @@
           ></g
         >
       </svg>
-      <img src="/pages/terapiya.jpg" alt="Логопедична терапия" />
+      <picture>
+        <source srcset="/pages/terapiya.webp" type="image/webp" loading="lazy"/>
+        <img src="/pages/terapiya.jpg" alt="Логопедична терапия" loading="lazy"/>
+      </picture>
     </div>
   </div>
 </div>

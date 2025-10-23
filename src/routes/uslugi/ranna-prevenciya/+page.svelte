@@ -288,7 +288,10 @@
           ></g
         >
       </svg>
-      <img src="/pages/prevenciya.jpg" alt="Ранна превенция" />
+      <picture>
+        <source srcset="/pages/prevenciya.webp" type="image/webp" loading="lazy"/>
+        <img src="/pages/prevenciya.jpg" alt="Ранна превенция" loading="lazy"/>
+      </picture>
     </div>
   </div>
 </div>

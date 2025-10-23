@@ -396,7 +396,10 @@
           ></g
         >
       </svg>
-      <img src="/pages/omt.jpg" alt="ОМТ" />
+      <picture>
+        <source srcset="/pages/omt.webp" type="image/webp" loading="lazy"/>
+        <img src="/pages/omt.jpg" alt="ОМТ" loading="lazy"/>
+      </picture>
     </div>
   </div>
 </div>
