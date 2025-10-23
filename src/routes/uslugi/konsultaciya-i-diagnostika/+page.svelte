@@ -270,7 +270,7 @@
           ></g
         >
       </svg>
-      <img src="/others/who-are-we.png" alt="Who are we" />
+      <img src="/pages/konsultaciya.jpg" alt="Консултация и диагностика" />
     </div>
   </div>
 </div>
@@ -625,6 +625,7 @@
     top: 0;
     left: 0;
     transform: translateY(-50%);
+    z-index: 2; /* keep this SVG above the image */
   }
 
   .second-svg-w {
@@ -632,12 +633,16 @@
     right: 0;
     bottom: 0;
     transform: translateY(50%);
+    z-index: 2; /* keep this SVG above the image */
   }
 
   .w-right img {
     max-width: 100%;
     height: auto;
     border-radius: 16px;
+    filter: saturate(1.2);
+    position: relative;
+    z-index: 1;
   }
 
   /* ---- 3. Consultation ---- */
@@ -1153,6 +1158,14 @@
       transform: translateY(-2px);
       border: black 2px solid;
       box-shadow: 0 5px 15px rgba(255, 157, 107, 0.3);
+    }
+  }
+
+  /* ---- Media query - 755 ---- */
+  @media screen and (max-width: 755px) {
+    .conditions-grid {
+      grid-template-columns: 1fr;
+      gap: 18px;
     }
   }
 

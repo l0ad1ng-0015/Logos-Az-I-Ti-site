@@ -43,7 +43,7 @@ export async function GET() {
 
     // Политики
     { url: "/privacy-policy", changefreq: "yearly", priority: 0.3 },
-    { url: "/terms", changefreq: "yearly", priority: 0.3 },
+    { url: "/terms-and-conditions", changefreq: "yearly", priority: 0.3 },
   ];
 
   links.forEach((link) => sitemap.write(link));

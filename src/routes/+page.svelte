@@ -868,7 +868,7 @@
         {#if showAdditionalSection4}
           <p
             class="info"
-            style="margin: 10px 15px; padding: 10px; background-color: background-color: var(); border: 1px solid black; border-radius: 8px"
+            style="margin: 10px 15px; padding: 10px; background-color: border: 1px solid black; border-radius: 8px"
           >
             Работим с ясен план в изпълнение на поставените задачи за постигане
             на цели и очаквани резултати. Следим напредъка и го превръщаме в
@@ -893,7 +893,7 @@
     <h1 id="contacts-h">Контакти</h1>
     <div class="content">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1583.8185306095959!2d23.250366453474165!3d42.68603595385592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa9b20fa501a25%3A0x9afb3ddb6f64ad3c!2zZy5rLiBPdmNoYSBrdXBlbCAxLCDQti7Qui4g0J7QstGH0LAg0LrRg9C_0LXQuyAxIDQwOdCQINCRLCAxNjMyIFNvZmlh!5e0!3m2!1sen!2sbg!4v1748363247477!5m2!1sen!2sbg"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2932.8367206548787!2d23.251006944237616!3d42.68600090930964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa9b20fa558ddd%3A0x7c1a857d75a46b42!2z0JvQvtCz0L7RgSDQkNCXINC4INCi0Jg!5e0!3m2!1sbg!2sbg!4v1761170720965!5m2!1sbg!2sbg"
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"

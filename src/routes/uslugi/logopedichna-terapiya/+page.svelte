@@ -269,7 +269,7 @@
           ></g
         >
       </svg>
-      <img src="/others/who-are-we.png" alt="Who are we" />
+      <img src="/pages/terapiya.jpg" alt="Логопедична терапия" />
     </div>
   </div>
 </div>

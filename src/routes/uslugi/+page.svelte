@@ -282,7 +282,7 @@
       {/each}
       <!-- You can see more faq questions here -->
       <div class="button-container">
-        <a href="/chesto-zadavani-vuprosi" class="see-more-button"
+        <a href="/chesto-zadavani-vaprosi" class="see-more-button"
           >Намерете още ЧЗВ тук</a
         >
       </div>
