@@ -45,8 +45,6 @@
   <meta property="og:url" content="/" />
 </svelte:head>
 
-<!-- <div style="border: 2px solid black; padding: 200px">asdas</div> -->
-
 <!-- Hero section  -->
 <!-- <div class="hero-wrapper">
   <div class="hero-bg">
