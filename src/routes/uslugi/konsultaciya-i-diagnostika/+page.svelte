@@ -270,7 +270,10 @@
           ></g
         >
       </svg>
-      <img src="/pages/konsultaciya.jpg" alt="Консултация и диагностика" />
+      <picture>
+        <source srcset="/pages/konsultaciya.webp" type="image/webp" loading="lazy"/>
+        <img src="/pages/konsultaciya.jpg" alt="Консултация и диагностика" loading="lazy"/>
+      </picture>
     </div>
   </div>
 </div>
