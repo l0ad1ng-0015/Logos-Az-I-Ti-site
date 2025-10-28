@@ -7,7 +7,6 @@
       <h1 class="hero-title">
         „Логос - <span class="az-i-ti">
           Аз и Ти
-          <!-- underline само под „Аз и Ти“ -->
           <span class="underline" aria-hidden="true">
             <svg
               width="291"
@@ -46,7 +45,7 @@
         на детето.
       </p>
 
-      <a class="btn-hero" href="/about">За Нас</a>
+      <a class="btn-hero" href="/za-nas">За Нас</a>
     </div>
     <div class="hero-right">
       <img src="/others/puzzle.svg" alt="Пъзел и икони" class="puzzle-img" />
@@ -134,7 +133,7 @@
     max-width: 100%;
     text-align: center;
     align-self: flex-start;
-    background: #8ac99a; /* нежно зелено като в примера */
+    background: var(--green-main);
     color: #1c1c1c;
     padding: 10px 18px;
     border-radius: 999px;
@@ -143,8 +142,11 @@
     transition:
       transform 0.15s ease,
       opacity 0.15s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   .btn-hero:hover {
+    background: var(--green-button);
+    transition: 0.5s;
     transform: translateY(-1px);
     opacity: 0.95;
   }
@@ -271,7 +273,7 @@
     }
 
     .puzzle-img {
-      width: 90%;
+      width: 95%;
     }
   }
 
