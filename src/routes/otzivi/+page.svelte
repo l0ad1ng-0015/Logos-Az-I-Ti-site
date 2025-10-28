@@ -383,6 +383,7 @@
   }
 
   .client-name {
+    font-family: var(--font);
     font-size: 1.3rem;
     font-weight: 700;
     color: #333;
@@ -390,6 +391,7 @@
   }
 
   .client-age {
+    font-family: var(--font);
     color: #666;
     font-size: 0.9rem;
     margin-bottom: 8px;

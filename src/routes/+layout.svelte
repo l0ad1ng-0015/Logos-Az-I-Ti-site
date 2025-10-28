@@ -61,6 +61,7 @@
 <style>
   :global(body) {
     margin: 0 !important;
+    --font: "ABeeZee", sans-serif;
     --background: rgb(255, 249, 238);
     --background-hover: rgb(247, 236, 218);
     --orange: rgb(255, 172, 113);
