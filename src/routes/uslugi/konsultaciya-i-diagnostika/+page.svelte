@@ -155,7 +155,7 @@
 <div class="what-i-t" style="margin-bottom: 1rem;">
   <div class="what-i-t-container">
     <div class="w-left">
-      <h2>Какво е това?</h2>
+      <h2>Какво е консултация?</h2>
       <p>
         Логопедичната консултация е първата крачка към разбиране и подкрепа в
         развитието на детето. Тя е възможност за открит разговор, наблюдение
@@ -271,8 +271,16 @@
         >
       </svg>
       <picture>
-        <source srcset="/pages/konsultaciya.webp" type="image/webp" loading="lazy"/>
-        <img src="/pages/konsultaciya.jpg" alt="Консултация и диагностика" loading="lazy"/>
+        <source
+          srcset="/pages/konsultaciya.webp"
+          type="image/webp"
+          loading="lazy"
+        />
+        <img
+          src="/pages/konsultaciya.jpg"
+          alt="Консултация и диагностика"
+          loading="lazy"
+        />
       </picture>
     </div>
   </div>
@@ -411,7 +419,7 @@
             <h4>Плавност и ритъм на говора</h4>
             <ul>
               <li>Заекване</li>
-              <li>Клътеринг</li>
+              <li>Клътъринг</li>
               <li>Нарушена плавност на говора</li>
             </ul>
           </div>

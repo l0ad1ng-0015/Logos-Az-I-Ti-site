@@ -397,8 +397,8 @@
         >
       </svg>
       <picture>
-        <source srcset="/pages/omt.webp" type="image/webp" loading="lazy"/>
-        <img src="/pages/omt.jpg" alt="ОМТ" loading="lazy"/>
+        <source srcset="/pages/omt.webp" type="image/webp" loading="lazy" />
+        <img src="/pages/omt.jpg" alt="ОМТ" loading="lazy" />
       </picture>
     </div>
   </div>
@@ -518,7 +518,7 @@
         <div class="subsection" style="margin-bottom: 1.5rem;">
           <p style="font-size: larger;">
             Свържете се с нас, за да определим дали орофациалната терапия е
-            подходяща за вашето дете или за вас.
+            подходяща за Вашето дете или за Вас.
           </p>
           <ul
             style="margin-bottom: 0 !important; list-style: none; padding-left: 0;"

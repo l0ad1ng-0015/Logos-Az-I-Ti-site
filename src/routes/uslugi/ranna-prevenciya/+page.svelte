@@ -54,7 +54,7 @@
       <h1>Ранна превенция</h1>
       <p>
         Открийте защо <strong>ранната превенция</strong> е ключът към уверено развитие
-        на вашето дете. Чрез наблюдение, игри и експертни насоки заедно подкрепяме
+        на Вашето дете. Чрез наблюдение, игри и експертни насоки заедно подкрепяме
         езиково-говорните, когнитивните и социалните умения от най-ранна възраст.
       </p>
     </div>
@@ -289,8 +289,12 @@
         >
       </svg>
       <picture>
-        <source srcset="/pages/prevenciya.webp" type="image/webp" loading="lazy"/>
-        <img src="/pages/prevenciya.jpg" alt="Ранна превенция" loading="lazy"/>
+        <source
+          srcset="/pages/prevenciya.webp"
+          type="image/webp"
+          loading="lazy"
+        />
+        <img src="/pages/prevenciya.jpg" alt="Ранна превенция" loading="lazy" />
       </picture>
     </div>
   </div>
@@ -422,7 +426,7 @@
         {#if showAdditionalSection2}
           <p
             class="info"
-            style="margin: 10px 15px; padding: 10px;background-color: var(--orange-dark);; border: 1px solid black; border-radius: 8px"
+            style="margin: 10px 15px; padding: 10px;background-color: var(--orange-light); border: 1px solid black; border-radius: 8px"
           >
             Конкретни предложения за игри, книги за езиково-говорно стимулиране
             вкъщи

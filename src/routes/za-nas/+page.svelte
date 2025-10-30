@@ -300,8 +300,8 @@
         <img src="/pfps/team/sonia.png" alt="Sonia" class="team-member" />
         <h3 class="team-member-name">Соня Игнатова</h3>
         <p class="team-member-role">логопед, специален педагог</p>
-        <p class="team-member-contacts">example@example.com</p>
-        <p class="team-member-contacts">+359 88 888 8888</p>
+        <p class="team-member-contacts">logos_aziti@abv.bg</p>
+        <p class="team-member-contacts">+359 876 860 602</p>
       </div>
       <div class="member-info">
         <p>
@@ -422,8 +422,8 @@
         <img src="/pfps/team/maria.png" alt="Maria" class="team-member" />
         <h3 class="team-member-name">Мария-Паола Тупути</h3>
         <p class="team-member-role">логопед, ерготерапевт</p>
-        <p class="team-member-contacts">example@example.com</p>
-        <p class="team-member-contacts">+359 88 888 8888</p>
+        <p class="team-member-contacts">logos_aziti@abv.bg</p>
+        <p class="team-member-contacts">+359 876 860 602</p>
       </div>
       <div class="member-info">
         <p>

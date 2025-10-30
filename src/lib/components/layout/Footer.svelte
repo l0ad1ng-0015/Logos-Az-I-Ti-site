@@ -15,7 +15,7 @@
       <ul>
         <li style="margin-top: 0 !important;">
           <a href="https://maps.app.goo.gl/uk4FodQeaMtQuz9G6" target="_blank"
-            >ж.к. "Овча купел-1" - бл.409, вх."Б";</a
+            >ж.к. "Овча купел-1" - бл.409А, вх."А";</a
           >
         </li>
         <li style="margin-top: 0 !important">
@@ -43,7 +43,9 @@
     <div class="column">
       <h2>Полезно</h2>
       <ul>
-        <li><a href="/chesto-zadavani-vaprosichesto-zadavani-vaprosi">ЧЗВ</a></li>
+        <li>
+          <a href="/chesto-zadavani-vaprosichesto-zadavani-vaprosi">ЧЗВ</a>
+        </li>
         <li><a href="/blog">Блог</a></li>
         <li>
           <a href="/terms-and-conditions" target="_blank">Условия за ползване</a

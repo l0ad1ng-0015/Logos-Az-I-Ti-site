@@ -767,7 +767,7 @@
         {#if showAdditionalSection4}
           <p
             class="info"
-            style="margin: 10px 15px; padding: 10px; background-color: border: 1px solid black; border-radius: 8px"
+            style="margin: 10px 15px; padding: 10px; background-color: var(--background); border: 1px solid black; border-radius: 8px"
           >
             Работим с ясен план в изпълнение на поставените задачи за постигане
             на цели и очаквани резултати. Следим напредъка и го превръщаме в
@@ -814,7 +814,7 @@
           </div>
           <div class="info-text">
             <h3>Адрес</h3>
-            <p>ж.к. "Овча купел-1" - бл.409, вх."Б";</p>
+            <p>ж.к. "Овча купел-1" - бл.409A, вх."A";</p>
             <p>бл.411, вх."Г" - София, България</p>
           </div>
         </div>
@@ -1645,12 +1645,12 @@
       padding: 35px 20px;
     }
 
+    .heading-container {
+      gap: 1rem;
+    }
+
     .hero-title {
-      font-size: clamp(
-        24px,
-        7vw,
-        36px
-      ); /* ДА СЕ ПРЕПРАВИ РАЗНЕРА НА СНИМКАТА И ПО ВЪЗМОЖНОСТ ДА СЕ ОГОЛЕМИ ИЛИ ЗАМЕНИ */
+      font-size: 3.2rem !important;
     }
 
     .hero-subtitle {
