@@ -6,12 +6,12 @@
 {#if !item}
   <section class="wrap">
     <h1>Ресурсът не е намерен</h1>
-    <p><a class="back" href="/resources">← Обратно към всички ресурси</a></p>
+    <p><a class="back" href="/polezni-resursi">← Обратно към всички ресурси</a></p>
   </section>
 {:else}
   <section class="wrap">
     <nav class="crumbs">
-      <a class="back" href="/resources">← Всички ресурси</a>
+      <a class="back" href="/polezni-resursi">← Всички ресурси</a>
       <h2>{item.title}</h2>
     </nav>
     
@@ -51,7 +51,6 @@
   /* ---- Shared design tokens (aligned with other pages) ---- */
   :root {
     --orange-dark: #ff7f50;
-    --dark-gray: #333333;
     --muted: #6b6b6b;
     --font: "ABeeZee", sans-serif;
     --max-width: 1000px;
