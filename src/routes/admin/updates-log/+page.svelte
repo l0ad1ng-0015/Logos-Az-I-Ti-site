@@ -31,7 +31,7 @@
   });
 
   let commits = [];
-  const MAX_COMMITS = 50;
+  const MAX_COMMITS = 30; // само до толко се показват, не се знае защо
 
   async function fetchCommits() {
     const response = await fetch(

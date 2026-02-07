@@ -183,6 +183,7 @@
   </select>
 </div>
 
+<!-- Списък с ресурси -->
 {#if !items.length}
   <div class="empty"><h3>Все още няма публикувани ресурси.</h3></div>
 {:else}
@@ -195,9 +196,9 @@
         </div>
 
         <!-- заглавието води към детайлната страница -->
-        <a class="title" href={`/resources/${item.id}`}>{item.title}</a>
-
-        <p class="desc">{item.description}</p>
+         <a class="title" href={`/resources/${item.id}`}>{item.title}
+          <p class="desc">{item.description}</p>
+        </a>
 
         {#if item.tags?.length}
           <div class="tags">
@@ -219,16 +220,7 @@
     padding: 0;
   }
 
-  h2 {
-    font-size: 2.4rem;
-    line-height: 1.2;
-    font-weight: 700;
-    color: var(--orange);
-    margin-bottom: 1rem;
-    text-align: left;
-  }
-
-  /* ---- 1. Heading ---- */
+  /* ---- 1. Heading (kept mostly as before) ---- */
   .heading {
     background-color: var(--orange);
     text-align: left;
@@ -243,6 +235,7 @@
     justify-content: space-between;
     width: 97%;
     max-width: 1000px;
+    margin: 0 auto;
   }
 
   #h-left {
@@ -284,7 +277,7 @@
     display: flex;
     align-items: center;
     width: 97%;
-    max-width: 1000px;
+    max-width: 1030px;
     margin-bottom: 24px;
     gap: 12px;
   }
@@ -295,6 +288,7 @@
     border-radius: 10px;
     font-size: 1.25rem;
     outline: none;
+    background: #fff;
   }
   .controls input[type="search"]:focus {
     border-color: var(--orange-light);
@@ -308,68 +302,127 @@
     background: #fff;
   }
 
-  /* ---- 3. Grid ---- */
+  /* ---- 3. Improved Grid & Cards ---- */
   .grid {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 16px;
-    max-width: 1000px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    max-width: 1030px;
     width: 97%;
+    margin: 0 auto 40px auto;
+    padding: 0;
   }
+
   .card {
-    background: #fff;
-    border: 1px solid #f0f0f0;
-    border-radius: 14px;
-    padding: 14px;
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    padding: 14px;
+    gap: 10px;
+    min-height: 160px;
+    border: 1px solid var(--orange);
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(22, 22, 22, 0.04);
+    transition: transform 180ms ease, box-shadow 180ms ease;
   }
-  .card-head {
+  .card:focus-within,
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(22, 22, 22, 0.07);
+  }
+
+  .card-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 6px;
+    gap: 8px;
+    font-size: 1.25rem !important;
   }
+
   .badge {
     display: inline-block;
     font-size: 12px;
-    padding: 4px 8px;
+    padding: 6px 10px;
     border-radius: 999px;
     background: #eef7d8;
     color: #577a0a;
     border: 1px solid #e2f099;
-    font-weight: 600;
+    font-weight: 700;
+    letter-spacing: 0.02em;
   }
-  .download {
+
+  .btn {
     text-decoration: none;
-    background: #8ac99a;
-    color: #1c1c1c;
+    background: var(--orange);
+    color: #fff;
     border-radius: 999px;
-    padding: 6px 10px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition:
-      transform 0.15s ease,
-      opacity 0.15s ease;
+    padding: 8px 12px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    display: inline-block;
+    transition: transform 140ms ease, opacity 140ms ease;
   }
-  .download:hover {
-    transform: translateY(-1px);
+  .btn:hover,
+  .btn:focus {
+    background: var(--orange-dark);
+    border: 1px solid var(--orange-light);
+    transition: 0.3s;
+    transform: translateY(-2px);
     opacity: 0.95;
   }
-  .card-title {
-    font-size: 1.05rem;
-    line-height: 1.35;
-    color: #2a2a2a;
+
+  .title {
+    color: #1f2937;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 1.3;
+    transition: color 120ms ease;
   }
-  .filename {
-    color: #7a7a7a;
-    font-size: 0.85rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  .title:hover,
+  .title:focus {
+    color: var(--orange);
+    text-decoration: underline;
+  }
+
+  .desc {
+    color: #626262;
+    font-size: 1rem;
+    line-height: 1.45;
+    margin-top: 4px;
+    flex: 1 0 auto;
+  }
+
+  .tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+  .tag {
+    background: #f2f4f7;
+    color: #334155;
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+  }
+
+  /* focus-visible (keyboard) */
+  .btn:focus,
+  .title:focus {
+    outline: 3px solid rgba(255, 161, 64, 0.18);
+    outline-offset: 3px;
+  }
+
+  /* Empty state */
+  .empty {
+    max-width: 1000px;
+    width: 97%;
+    margin: 0 auto 40px auto;
+    padding: 20px;
+    text-align: center;
+    color: #555;
   }
 
   /* ---- Media query - 955 ---- */
@@ -386,6 +439,25 @@
     .second-svg {
       transform: translateY(285%);
       align-self: flex-start;
+    }
+
+    /* prefer two columns on medium screens */
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      max-width: 900px;
+      width: 93%;
+    }
+
+    /* keep controls inline but tighten spacing */
+    .controls {
+      gap: 10px;
+      margin-top: 8px;
+      width: 93%;
+    }
+    .controls input[type="search"],
+    .controls select {
+      font-size: 1rem;
     }
   }
 
@@ -432,6 +504,35 @@
     .second-svg {
       transform: translateY(10%);
       align-self: flex-start;
+    }
+
+    /* single-column grid */
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 14px;
+      width: 95%;
+      max-width: 700px;
+    }
+
+    .desc{
+      font-size: 1rem !important;
+    font-weight: 500;
+    line-height: 1.45 !important;
+    }
+
+    /* controls stack vertically and stretch to full width */
+    .controls {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+      width: 95%;
+      max-width: 700px;
+      margin: 12px auto 20px auto;
+    }
+    .controls input[type="search"],
+    .controls select {
+      width: 100%;
+      font-size: 1rem;
     }
   }
 </style>
