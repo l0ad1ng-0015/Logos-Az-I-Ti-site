@@ -652,7 +652,7 @@
     <h1 id="whyus-h">Защо да изберете нас?</h1>
     <div id="whyus-items">
       <div id="square">
-        <img src="/whyus-icons/kid.svg" alt="Игрови подход">
+        <img src="/svgs/whyus/kid.svg" alt="Игрови подход">
         <p>Игрови подход</p>
         {#if showAdditionalSection1}
           <p
@@ -675,7 +675,7 @@
       </div>
 
       <div id="square">
-        <img src="/whyus-icons/support.svg" alt="Подкрепа">
+        <img src="/svgs/whyus/support.svg" alt="Подкрепа">
         <p>Подкрепа</p>
         {#if showAdditionalSection2}
           <p
@@ -697,7 +697,7 @@
         {/if}
       </div>
       <div id="square">
-        <img src="/whyus-icons/trust.svg" alt="Доверие и индивидуалност">
+        <img src="/svgs/whyus/trust.svg" alt="Доверие и индивидуалност">
         <p>Доверие и индивидуалност</p>
         {#if showAdditionalSection3}
           <p
@@ -718,7 +718,7 @@
         {/if}
       </div>
       <div id="square">
-        <img src="/whyus-icons/goals.svg" alt="Постигане на цели">
+        <img src="/svgs/whyus/goals.svg" alt="Постигане на цели">
         <p>Постигане на цели</p>
         {#if showAdditionalSection4}
           <p
@@ -1179,7 +1179,7 @@
       transform 0.3s,
       box-shadow 0.3s;
   }
-  #square svg, img {
+  #square img {
     margin-top: 16px;
     width: 110px;
     height: 110px;
