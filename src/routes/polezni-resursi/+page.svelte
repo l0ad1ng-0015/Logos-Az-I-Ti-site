@@ -1,7 +1,25 @@
 <script>
+  // SEO
   export let title = "Полезни ресурси | Логос – Аз и Ти";
   export let description =
     "Тук ще намерите различни ресурси, които могат да ви помогнат в постигането на вашите цели. Независимо дали търсите информация, инструменти или вдъхновение, ние сме тук, за да ви подкрепим.";
+
+  export let data;
+  const items = data.items || [];
+  // филтри
+  let q = "";
+  let type = "all";
+  const exts = Array.from(new Set(data.items.map((i) => i.ext))).sort();
+
+  $: filtered = (data.items || []).filter((i) => {
+    const t = q.trim().toLowerCase();
+    const matchText = t
+      ? i.title.toLowerCase().includes(t) ||
+        i.filename.toLowerCase().includes(t)
+      : true;
+    const matchType = type === "all" ? true : i.ext === type;
+    return matchText && matchType;
+  });
 </script>
 
 <svelte:head>
@@ -24,13 +42,10 @@
     <div id="h-right">
       <svg
         class="first-svg"
-        style="top: 0; position:static"
-        version="1.1"
         xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="110.8419 122.2011 248.1 248.1"
         width="70px"
         height="70px"
-        viewBox="0,0,255.99055,255.99055"
       >
         <g
           fill="none"
@@ -47,33 +62,53 @@
           font-size="none"
           text-anchor="none"
           style="mix-blend-mode: normal"
-          ><g transform="scale(0.5,0.5)"
-            ><path
+          transform="matrix(1, 0, 0, 1, 106.89191866905466, 118.25107206295286)"
+        >
+          <g transform="scale(0.5,0.5)">
+            <path
               d="M256,7.9c-137,0 -248.1,111.1 -248.1,248.1c0,137 111.1,248.1 248.1,248.1c137,0 248.1,-111.1 248.1,-248.1c0,-137 -111.1,-248.1 -248.1,-248.1z"
               fill="#feecd3"
-            ></path><path
-              d="M323,88.1h-132.9c-4.9,0 -8.9,4 -8.9,8.9v132.9c0,4.9 4,8.9 8.9,8.9h132.9c4.9,0 8.9,-4 8.9,-8.9v-132.9c0,-4.9 -4,-8.9 -8.9,-8.9z"
-              fill="#ffac71"
-            ></path><path
-              d="M303.2,192.6l-27.6,-68.1c-1.3,-3.4 -2.4,-6.1 -3.2,-8.2c-0.8,-2 -1.9,-3.9 -3.1,-5.7c-1.2,-1.8 -2.8,-3.2 -4.8,-4.4c-2,-1.1 -4.5,-1.7 -7.5,-1.7c-2.9,0 -5.4,0.6 -7.4,1.7c-2,1.1 -3.6,2.6 -4.8,4.4c-1.2,1.8 -2.4,4.1 -3.5,6.9c-1.1,2.8 -2,5.1 -2.8,7.1l-27,68.6c-1.1,2.7 -1.9,4.9 -2.4,6.4c-0.5,1.5 -0.7,3 -0.7,4.5c0,2.5 1,4.7 3.1,6.7c2.1,2 4.4,3 7.1,3c3.2,0 5.4,-0.9 6.8,-2.8c1.4,-1.8 3.1,-5.4 5,-10.7l5,-13.5h42.9l5,13.2c0.7,1.6 1.5,3.5 2.4,5.7c0.9,2.1 1.8,3.7 2.6,4.8c0.8,1 1.8,1.9 3,2.4c1.2,0.6 2.6,0.9 4.3,0.9c2.9,0 5.3,-1 7.4,-3.1c2,-2 3.1,-4.3 3.1,-6.7c0.4,-2.5 -0.7,-6.2 -2.9,-11.4zM241.3,170.6l15.6,-43.6l15.9,43.6z"
-              fill="#ecedea"
-            ></path><path
-              d="M243.6,245.5h-133c-4.9,0 -8.9,4 -8.9,8.9v132.9c0,4.9 4,8.9 8.9,8.9h132.9c4.9,0 8.9,-4 8.9,-8.9v-132.8c0.1,-5 -3.9,-9 -8.8,-9z"
-              fill="#eb9783"
-            ></path><path
-              d="M203.4,316.7c10.6,-4.9 15.8,-12.6 15.8,-23.2c0,-3.1 -0.5,-6 -1.5,-8.8c-1,-2.8 -2.5,-5.3 -4.4,-7.6c-1.9,-2.3 -4.1,-4.2 -6.6,-5.7c-2.9,-1.8 -6.2,-3 -9.9,-3.6c-3.7,-0.6 -8.1,-0.9 -13.1,-0.9h-34.2c-4.6,0 -7.9,1 -9.9,3.1c-2,2 -3.1,5.4 -3.1,10v79.4c0,4.6 1,7.9 3,10c2,2.1 5.3,3.1 10,3.1h32.3c5.6,0 10.4,-0.3 14.6,-0.8c4.2,-0.6 7.9,-1.5 11.1,-2.8c5.1,-2.3 9.2,-5.8 12.2,-10.5c3,-4.7 4.5,-10 4.5,-16c0,-12.7 -6.9,-21.3 -20.8,-25.7zM157.9,283h17.4c7.8,0 13.6,0.9 17.4,2.6c3.8,1.8 5.7,5.3 5.7,10.6c0,2.5 -0.6,4.8 -1.8,6.8c-1.5,2.8 -3.8,4.8 -6.7,5.8c-2.9,1 -7,1.5 -12.4,1.5h-19.6zM180.9,356.5h-23v-30.8h22.3c7.4,0 13,1.2 16.8,3.6c3.7,2.4 5.6,6.3 5.6,11.6c0,10.4 -7.3,15.6 -21.7,15.6z"
-              fill="#ecedea"
-            ></path><g
-              ><path
-                d="M402.4,245.5h-132.9c-4.9,0 -8.9,4 -8.9,8.9v132.9c0,4.9 4,8.9 8.9,8.9h132.9c4.9,0 8.9,-4 8.9,-8.9v-132.8c0,-5 -4,-9 -8.9,-9z"
-                fill="#edc92f"
-              ></path><path
-                d="M380.1,337c-1.8,-1.8 -4,-2.7 -6.5,-2.7c-3,0 -5.1,0.9 -6.5,2.6c-1.3,1.8 -2.5,4 -3.4,6.8c-2.2,5.9 -5.4,10.4 -9.6,13.4c-4.2,3 -9.4,4.6 -15.6,4.6c-5.7,0 -10.6,-1.3 -14.8,-4c-4.2,-2.7 -7.5,-6.8 -9.8,-12.2c-2.3,-5.4 -3.5,-12.3 -3.5,-20.5c0,-12.3 2.6,-21.8 7.8,-28.4c5.2,-6.7 12.2,-10 21,-10c5.5,0 10.2,1.3 13.9,3.9c3.8,2.6 7,6.5 9.8,11.7c1.7,3.2 3.2,5.4 4.6,6.7c1.4,1.3 3.4,1.9 6.2,1.9c2.4,0 4.5,-0.9 6.3,-2.8c1.7,-1.9 2.6,-4 2.6,-6.5c0,-4.5 -1.8,-9.2 -5.3,-14.2c-3.6,-5 -8.7,-9.2 -15.3,-12.6c-6.7,-3.4 -14.3,-5.1 -22.8,-5.1c-7,0 -13.6,1.3 -19.8,3.7c-6.2,2.5 -11.6,6.1 -16.2,10.9c-4.6,4.8 -8.1,10.5 -10.6,17.2c-2.5,6.7 -3.7,14.3 -3.7,22.8c0,5.2 0.5,10.2 1.5,14.8c1,4.7 2.5,9 4.4,13.1c2,4.1 4.3,7.8 7.1,11.1c3.1,3.6 6.5,6.6 10.3,8.8c3.7,2.2 7.9,3.9 12.4,4.9c4.6,1.1 9.6,1.6 15.2,1.6c7.3,0 13.8,-1.2 19.3,-3.5c5.5,-2.4 10.1,-5.4 13.6,-9.2c3.6,-3.8 6.2,-7.6 7.8,-11.5c1.7,-3.9 2.5,-7.5 2.5,-10.9c-0.2,-2.4 -1.1,-4.7 -2.9,-6.4z"
-                fill="#ecedea"
-              ></path></g
-            ></g
-          ></g
-        >
+            />
+            <g>
+              <path
+                d="M323,88.1h-132.9c-4.9,0 -8.9,4 -8.9,8.9v132.9c0,4.9 4,8.9 8.9,8.9h132.9c4.9,0 8.9,-4 8.9,-8.9v-132.9c0,-4.9 -4,-8.9 -8.9,-8.9z"
+                fill="#ffac71"
+              />
+              <text
+                style="fill: rgb(241, 230, 230); font-family: Bahnschrift; font-size: 41px; white-space: pre;"
+                transform="matrix(3.565438, 0, 0, 3.140884, -423.405016, -705.154641)"
+                x="177.985"
+                y="290.296">A</text
+              >
+            </g>
+            <g>
+              <path
+                d="M243.6,245.5h-133c-4.9,0 -8.9,4 -8.9,8.9v132.9c0,4.9 4,8.9 8.9,8.9h132.9c4.9,0 8.9,-4 8.9,-8.9v-132.8c0.1,-5 -3.9,-9 -8.8,-9z"
+                fill="#eb9783"
+              />
+              <text
+                style="fill: rgb(241, 230, 230); font-family: Bahnschrift; font-size: 41px; white-space: pre;"
+                transform="matrix(3.62775, 0, 0, 3.157958, -515.098067, -551.446882)"
+                x="177.985"
+                y="290.296">Б</text
+              >
+            </g>
+            <g>
+              <g>
+                <path
+                  d="M402.4,245.5h-132.9c-4.9,0 -8.9,4 -8.9,8.9v132.9c0,4.9 4,8.9 8.9,8.9h132.9c4.9,0 8.9,-4 8.9,-8.9v-132.8c0,-5 -4,-9 -8.9,-9z"
+                  fill="#edc92f"
+                />
+                <text
+                  style="fill: rgb(241, 230, 230); font-family: Bahnschrift; font-size: 41px; white-space: pre;"
+                  transform="matrix(3.581682, 0, 0, 3.157822, -347.678975, -552.280256)"
+                  x="177.985"
+                  y="290.296">B</text
+                >
+              </g>
+            </g>
+          </g>
+        </g>
       </svg>
       <svg
         class="second-svg"
@@ -132,11 +167,51 @@
   </div>
 </div>
 
-<div class="blog">
-  <h3 style="font-size: 1.3rem; margin-top: 40px; margin-bottom: 20px">
-    Все още няма публикувани ресурси. Моля, върнете се по-късно.
-  </h3>
-</div>
+
+<!-- Списък с ресурси -->
+{#if !items.length}
+<div class="empty"><h3>Все още няма публикувани ресурси. Моля, върнете се по-късно.</h3></div>
+{:else}
+  <!-- Контроли -->
+  <div class="controls">
+    <input
+      type="search"
+      placeholder="Търсене по име или файл..."
+      bind:value={q}
+      aria-label="Търсене"
+    />
+    <select bind:value={type} aria-label="Филтър по тип">
+      <option value="all">Всички типове</option>
+      {#each exts as e}
+        <option value={e}>{e.toUpperCase()}</option>
+      {/each}
+    </select>
+  </div>
+
+  <ul class="grid">
+    {#each filtered as item}
+      <li class="card">
+        <div class="card-top">
+          <span class="badge">{item.ext.toUpperCase()}</span>
+          <a class="btn" href={item.href} download>Свали</a>
+        </div>
+
+        <!-- заглавието води към детайлната страница -->
+         <a class="title" href={`/polezni-resursi/${item.id}`}>{item.title}
+          <p class="desc">{item.description}</p>
+        </a>
+
+        {#if item.tags?.length}
+          <div class="tags">
+            {#each item.tags as tag}
+              <span class="tag">#{tag}</span>
+            {/each}
+          </div>
+        {/if}
+      </li>
+    {/each}
+  </ul>
+{/if}
 
 <style>
   /* ---- 0. Global ---- */
@@ -146,16 +221,7 @@
     padding: 0;
   }
 
-  h2 {
-    font-size: 2.4rem;
-    line-height: 1.2;
-    font-weight: 700;
-    color: var(--orange);
-    margin-bottom: 1rem;
-    text-align: left;
-  }
-
-  /* ---- 1. Heading ---- */
+  /* ---- 1. Heading (kept mostly as before) ---- */
   .heading {
     background-color: var(--orange);
     text-align: left;
@@ -170,6 +236,7 @@
     justify-content: space-between;
     width: 97%;
     max-width: 1000px;
+    margin: 0 auto;
   }
 
   #h-left {
@@ -206,6 +273,160 @@
     color: var(--dark-gray);
   }
 
+  /* ---- 2. Controls ---- */
+  .controls {
+    display: flex;
+    align-items: center;
+    width: 97%;
+    max-width: 1030px;
+    margin-bottom: 24px;
+    gap: 12px;
+  }
+  .controls input[type="search"] {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    outline: none;
+    background: #fff;
+  }
+  .controls input[type="search"]:focus {
+    border-color: var(--orange-light);
+    box-shadow: 0 0 0 3px var(--orange-light);
+  }
+  .controls select {
+    padding: 10px 12px;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    background: #fff;
+  }
+
+  /* ---- 3. Improved Grid & Cards ---- */
+  .grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    max-width: 1030px;
+    width: 97%;
+    margin: 0 auto 40px auto;
+    padding: 0;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+    gap: 10px;
+    min-height: 160px;
+    border: 1px solid var(--orange);
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(22, 22, 22, 0.04);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+  }
+  .card:focus-within,
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(22, 22, 22, 0.07);
+  }
+
+  .card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 1.25rem !important;
+  }
+
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: #eef7d8;
+    color: #577a0a;
+    border: 1px solid #e2f099;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  .btn {
+    text-decoration: none;
+    background: var(--orange);
+    color: #fff;
+    border-radius: 999px;
+    padding: 8px 12px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    display: inline-block;
+    transition: transform 140ms ease, opacity 140ms ease;
+  }
+  .btn:hover,
+  .btn:focus {
+    background: var(--orange-dark);
+    border: 1px solid var(--orange-light);
+    transition: 0.3s;
+    transform: translateY(-2px);
+    opacity: 0.95;
+  }
+
+  .title {
+    color: #1f2937;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 1.3;
+    transition: color 120ms ease;
+  }
+  .title:hover,
+  .title:focus {
+    color: var(--orange);
+    text-decoration: underline;
+  }
+
+  .desc {
+    color: #626262;
+    font-size: 1rem;
+    line-height: 1.45;
+    margin-top: 4px;
+    flex: 1 0 auto;
+  }
+
+  .tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+  .tag {
+    background: #f2f4f7;
+    color: #334155;
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+  }
+
+  /* focus-visible (keyboard) */
+  .btn:focus,
+  .title:focus {
+    outline: 3px solid rgba(255, 161, 64, 0.18);
+    outline-offset: 3px;
+  }
+
+  /* Empty state */
+  .empty {
+    max-width: 1000px;
+    width: 97%;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.3rem; 
+    margin-top: 40px; 
+    margin-bottom: 20px
+  }
+
   /* ---- Media query - 955 ---- */
   @media screen and (max-width: 955px) {
     /* ---- 1. Heading ---- */
@@ -220,6 +441,25 @@
     .second-svg {
       transform: translateY(285%);
       align-self: flex-start;
+    }
+
+    /* prefer two columns on medium screens */
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      max-width: 900px;
+      width: 93%;
+    }
+
+    /* keep controls inline but tighten spacing */
+    .controls {
+      gap: 10px;
+      margin-top: 8px;
+      width: 93%;
+    }
+    .controls input[type="search"],
+    .controls select {
+      font-size: 1rem;
     }
   }
 
@@ -266,6 +506,35 @@
     .second-svg {
       transform: translateY(10%);
       align-self: flex-start;
+    }
+
+    /* single-column grid */
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 14px;
+      width: 95%;
+      max-width: 700px;
+    }
+
+    .desc{
+      font-size: 1rem !important;
+    font-weight: 500;
+    line-height: 1.45 !important;
+    }
+
+    /* controls stack vertically and stretch to full width */
+    .controls {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+      width: 95%;
+      max-width: 700px;
+      margin: 12px auto 20px auto;
+    }
+    .controls input[type="search"],
+    .controls select {
+      width: 100%;
+      font-size: 1rem;
     }
   }
 </style>

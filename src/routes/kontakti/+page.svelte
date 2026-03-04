@@ -524,10 +524,10 @@
                   required
                 />
                 <span class="checkmark"></span>
-                Съгласявам се с условията за
+                <p>Съгласявам се с условията за
                 <a href="/privacy-policy" target="_blank"
                   >защита на личните данни</a
-                > *
+                > *</p> 
               </label>
               {#if formErrors.agree}
                 <span class="error-message">{formErrors.agree}</span>
@@ -836,7 +836,7 @@
   }
 
   .checkbox-group {
-    margin-bottom: 30px;
+    margin: 15px 0;
   }
 
   .checkbox-label {
@@ -844,8 +844,7 @@
     align-items: center;
     cursor: pointer;
     font-size: 0.87rem !important;
-    color: #333;
-    margin-top: 1rem;
+    color: #333;  
     line-height: 1.4;
   }
 

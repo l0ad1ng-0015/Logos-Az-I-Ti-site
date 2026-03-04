@@ -536,6 +536,30 @@
   </div>
 </div>
 
+<div class="believe">
+  <div class="believe-container">
+    <h2>Ние вярваме, че:</h2>
+    <div class="believe-content" style="margin-bottom: 5rem;">
+        <div class="bubble">
+        <img src="/svgs/za-nas/evaluate.svg" alt="Оцени нивото на развитие">
+        <p>...всяко дете заслужава да бъде чуто.</p>
+      </div>
+
+      <div class="bubble">
+         <img src="/svgs/za-nas/collective.svg" alt="Оцени нивото на развитие">
+        <p>...заедно можем повече.</p>
+      </div>
+
+      <div class="bubble">
+         <img src="/svgs/za-nas/success.svg" alt="Оцени нивото на развитие">
+        <p>
+          ...успехът е път, който се изминава с доверие, търпение и постоянство.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <style>
   * {
     box-sizing: border-box;
@@ -847,6 +871,64 @@
     animation: fadeIn 0.5s ease-in-out;
   }
 
+  /* ---- 3. We believe that ---- */
+  .believe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  .believe-container {
+    width: 90%;
+    max-width: 1000px;
+  }
+
+ .believe-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  background: var(--orange-light);
+    margin-bottom: 30px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Балонче */
+.bubble {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.8rem;
+  gap: 1.2rem;
+  background: var(--background);
+  border: 3px solid var(--orange);
+  border-radius: 20px;
+}
+
+.bubble:hover {
+  transition: all 0.3s ease;
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* SVG иконка */
+.bubble img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.12));
+}
+
+/* Текст */
+.bubble p {
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
   @keyframes slideInLeft {
     from {
       opacity: 0;
@@ -1000,6 +1082,17 @@
     .more-less {
       padding: 0.9rem 1.3rem;
       font-size: 0.95rem;
+    }
+
+    /* 3. We believe that */
+    .believe-content {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      padding: 32px;
+    }
+
+    .believe-content :last-child {
+      grid-column: 1 / -1;
     }
   }
 
@@ -1209,6 +1302,26 @@
     .team-member:hover {
       transform: none;
     }
+
+    /* 3. We believe that */
+    .believe-content {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 28px;
+    }
+
+    .bubble {
+      padding: 1.6rem;
+    }
+
+    .bubble img {
+      width: 95px;
+      height: 95px;
+    }
+
+    .bubble p {
+      font-size: 1.05rem;
+    }
   }
 
   @media screen and (max-width: 480px) {
@@ -1274,6 +1387,31 @@
     .more-less {
       font-size: 0.85rem;
       padding: 0.7rem 0.8rem;
+    }
+
+    /* 3. We believe that */
+    .believe-container {
+      width: 100%;
+    }
+
+    .believe-content {
+      padding: 20px;
+      border-radius: 16px;
+    }
+
+    .bubble {
+      padding: 1.2rem;
+      border-radius: 16px;
+    }
+
+    .bubble img {
+      width: 80px;
+      height: 80px;
+    }
+
+    .bubble p {
+      font-size: 1rem;
+      line-height: 1.45;
     }
   }
 </style>
