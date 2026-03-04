@@ -5,6 +5,14 @@ export const load = async ({ params }) => {
 
   // симулираме "база данни" с ръчно описани ресурси
   const resources = [
+    {
+      id: "8mi-mart",
+      title: "Работни листове за 8-ми март",
+      description:
+        "Работни листове с упражнения и игри, посветени на празника 8-ми март - ден на мама. Подходящи за деца в предучилищна възраст.",
+      filename: "8mi-mart.pdf",
+      tags: ["работни листове", "8-ми март", "майка", "деца", "празник"],
+    },
     // {
     //   id: "primer",
     //   title: "Първи стъпки: Практически наръчник",
@@ -36,7 +44,7 @@ export const load = async ({ params }) => {
     as: "url",
   });
   const entry = Object.entries(files).find(([path]) =>
-    path.endsWith(item.filename)
+    path.endsWith(item.filename),
   );
   const href = entry ? entry[1] : "";
 

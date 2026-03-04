@@ -167,10 +167,11 @@
   </div>
 </div>
 
-
 <!-- Списък с ресурси -->
 {#if !items.length}
-<div class="empty"><h3>Все още няма публикувани ресурси. Моля, върнете се по-късно.</h3></div>
+  <div class="empty">
+    <h3>Все още няма публикувани ресурси. Моля, върнете се по-късно.</h3>
+  </div>
 {:else}
   <!-- Контроли -->
   <div class="controls">
@@ -197,7 +198,8 @@
         </div>
 
         <!-- заглавието води към детайлната страница -->
-         <a class="title" href={`/polezni-resursi/${item.id}`}>{item.title}
+        <a class="title" href={`/polezni-resursi/${item.id}`}
+          >{item.title}
           <p class="desc">{item.description}</p>
         </a>
 
@@ -325,7 +327,9 @@
     border-radius: 12px;
     background: #fff;
     box-shadow: 0 6px 18px rgba(22, 22, 22, 0.04);
-    transition: transform 180ms ease, box-shadow 180ms ease;
+    transition:
+      transform 180ms ease,
+      box-shadow 180ms ease;
   }
   .card:focus-within,
   .card:hover {
@@ -362,7 +366,9 @@
     font-size: 0.95rem;
     font-weight: 700;
     display: inline-block;
-    transition: transform 140ms ease, opacity 140ms ease;
+    transition:
+      transform 140ms ease,
+      opacity 140ms ease;
   }
   .btn:hover,
   .btn:focus {
@@ -422,9 +428,9 @@
     width: 97%;
     padding: 20px;
     text-align: center;
-    font-size: 1.3rem; 
-    margin-top: 40px; 
-    margin-bottom: 20px
+    font-size: 1.3rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
   }
 
   /* ---- Media query - 955 ---- */
@@ -445,7 +451,7 @@
 
     /* prefer two columns on medium screens */
     .grid {
-      grid-template-columns: repeat(2, 1fr);
+      /* grid-template-columns: repeat(2, 1fr); */
       gap: 16px;
       max-width: 900px;
       width: 93%;
@@ -516,10 +522,10 @@
       max-width: 700px;
     }
 
-    .desc{
+    .desc {
       font-size: 1rem !important;
-    font-weight: 500;
-    line-height: 1.45 !important;
+      font-weight: 500;
+      line-height: 1.45 !important;
     }
 
     /* controls stack vertically and stretch to full width */

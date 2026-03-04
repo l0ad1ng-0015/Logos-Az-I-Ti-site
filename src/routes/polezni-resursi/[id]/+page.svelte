@@ -6,7 +6,9 @@
 {#if !item}
   <section class="wrap">
     <h1>Ресурсът не е намерен</h1>
-    <p><a class="back" href="/polezni-resursi">← Обратно към всички ресурси</a></p>
+    <p>
+      <a class="back" href="/polezni-resursi">← Обратно към всички ресурси</a>
+    </p>
   </section>
 {:else}
   <section class="wrap">
@@ -14,7 +16,7 @@
       <a class="back" href="/polezni-resursi">← Всички ресурси</a>
       <h2>{item.title}</h2>
     </nav>
-    
+
     <header class="head">
       <div>
         {#if item.tags?.length}
@@ -110,9 +112,12 @@
     text-decoration: none;
     font-weight: 700;
     border: 2px solid var(--orange);
-    transition: background .15s ease, transform .12s ease, box-shadow .12s ease;
+    transition:
+      background 0.15s ease,
+      transform 0.12s ease,
+      box-shadow 0.12s ease;
   }
-  
+
   .back:hover {
     background: var(--background-hover);
     transition: 0.3s;
@@ -200,7 +205,7 @@
     object-fit: contain;
   }
   .viewer iframe {
-    height: 70vh;
+    height: 80vh;
   }
 
   /* ---- CTA fragment reuse for missing item state ---- */
