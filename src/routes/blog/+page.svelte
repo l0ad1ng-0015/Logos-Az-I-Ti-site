@@ -2,6 +2,27 @@
   export let title = "Блог | Логос – Аз и Ти";
   export let description =
     "Блогът на ОЦ Логос „Аз и ти“ скоро ще споделя полезни статии, логопедични съвети и насоки за родители относно развитието на речта, езика и комуникацията при децата.";
+
+  export let data;
+
+  $: items = data?.items ?? [];
+  $: allTags = data?.allTags ?? [];
+
+  let q = "";
+  let tag = "Всички";
+
+  $: filtered = items.filter((p) => {
+    const text = (
+      p.title +
+      " " +
+      p.excerpt +
+      " " +
+      (p.keywords || []).join(" ")
+    ).toLowerCase();
+    const okQ = q.trim() ? text.includes(q.trim().toLowerCase()) : true;
+    const okTag = tag === "Всички" ? true : (p.keywords || []).includes(tag);
+    return okQ && okTag;
+  });
 </script>
 
 <svelte:head>
@@ -150,11 +171,70 @@
   </div>
 </div>
 
-<div class="blog">
-  <h3 style="font-size: 1.3rem; margin-top: 40px; margin-bottom: 20px">
-    Очаквайте нови статии и съвети в нашия блог съвсем скоро!
-  </h3>
-</div>
+{#if !items.length}
+  <div class="empty">
+    <h3>Очаквайте нови статии и съвети в нашия блог съвсем скоро!</h3>
+  </div>
+{:else}
+  <section class="wrap">
+    <header class="hero">
+      <div class="hero__text">
+        <div class="controls">
+          <input
+            type="search"
+            placeholder="Търсене ключова дума, заглавие или откъс от статията..."
+            bind:value={q}
+            aria-label="Търсене"
+          />
+
+          <!-- <select bind:value={tag} aria-label="Филтър по тип">
+            <option>Всички</option>
+            {#each allTags as t}
+              <option value={t}>{t}</option>
+            {/each}
+          </select>
+        </div>
+
+        <div class="meta">
+          <span>{filtered.length} резултата</span>
+        </div> -->
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      {#each filtered as post}
+        <a class="card" href={`/blog/${post.id}`} aria-label={post.title}>
+          <div class="card__img">
+            {#if post.coverUrl}
+              <img src={post.coverUrl} alt={post.title} loading="lazy" />
+            {:else}
+              <div class="card__placeholder">LOGOS</div>
+            {/if}
+          </div>
+
+          <div class="card__body">
+            <div class="card__top">
+              <div class="date">{post.date}</div>
+              <div class="read">{post.readingMin} мин</div>
+            </div>
+
+            <h2>{post.title}</h2>
+            <p class="excerpt">{post.excerpt}</p>
+
+            {#if post.keywords?.length}
+              <div class="tags">
+                {#each post.keywords.slice(0, 4) as t}
+                  <span class="tag">{t}</span>
+                {/each}
+              </div>
+            {/if}
+          </div>
+        </a>
+      {/each}
+    </div>
+  </section>
+{/if}
 
 <style>
   /* ---- 0. Global ---- */
@@ -222,6 +302,160 @@
     font-size: 1.2em;
     line-height: 1.5;
     color: var(--dark-gray);
+  }
+
+  .wrap {
+    width: 90%;
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    background: var(--orange-light);
+    border-radius: 20px;
+  }
+
+  .hero {
+    border-radius: 18px;
+    padding: 18px 0;
+    margin-bottom: 20px;
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1030px;
+    gap: 12px;
+  }
+
+  .controls input[type="search"] {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    outline: none;
+    background: var(--background);
+  }
+
+  .controls input[type="search"]:focus {
+    border-color: var(--orange-light);
+    box-shadow: 0 0 0 3px var(--orange-light);
+  }
+
+  input,
+  select {
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    padding: 11px 12px;
+    outline: none;
+    background: #fff;
+    font-size: 14px;
+  }
+  input:focus,
+  select:focus {
+    border-color: #cfcfcf;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.04);
+  }
+
+  .meta {
+    font-size: 13px;
+    opacity: 0.7;
+  }
+
+  .grid {
+    margin-top: 16px;
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card {
+    display: grid;
+    grid-template-rows: 180px 1fr;
+    border: 1px solid #eee;
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background: #fff;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
+    transition:
+      transform 0.15s ease,
+      box-shadow 0.15s ease,
+      border-color 0.15s ease;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    border-color: #e2e2e2;
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.06);
+  }
+
+  .card__img {
+    background: #f6f6f6;
+  }
+  .card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .card__placeholder {
+    height: 100%;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    opacity: 0.25;
+  }
+
+  .card__body {
+    padding: 14px;
+  }
+  .card__top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    opacity: 0.7;
+  }
+
+  h2 {
+    margin: 8px 0 8px;
+    font-size: 18px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+  .excerpt {
+    margin: 0 0 10px;
+    opacity: 0.85;
+    line-height: 1.55;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .tag {
+    font-size: 12px;
+    padding: 6px 9px;
+    border: 1px solid #ededed;
+    border-radius: 999px;
+    background: #fafafa;
+    opacity: 0.9;
+  }
+
+  @media (max-width: 980px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .controls {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 560px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   /* ---- Media query - 955 ---- */
