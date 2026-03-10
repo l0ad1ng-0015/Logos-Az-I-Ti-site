@@ -5,6 +5,7 @@ export const posts = [
     excerpt:
       "Вижте всъщност кой е логопедът, какво включва логопедичната терапия и кога е най-добре да се обърнете към логопед.",
     date: "10-03-2026",
+    readingTime: 5,
     keywords: ["логопед", "деца", "професия", "терапия"],
     cover: "cover-profesiya-logoped.jpg",
     content: [
@@ -81,6 +82,7 @@ export const posts = [
 export const getPostById = (id) => posts.find((p) => p.id === id);
 
 export const estimateReadingMinutes = (post) => {
+  if (post.readingTime) return post.readingTime;
   const text = [post.title, post.excerpt, ...(post.content || [])].join(" ");
   const words = text.trim().split(/\s+/).filter(Boolean).length;
   const wpm = 180; // нормално темпо

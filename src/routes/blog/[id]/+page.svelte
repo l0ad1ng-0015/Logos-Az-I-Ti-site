@@ -381,10 +381,10 @@
     display: inline-block;
     padding: 10px 14px;
     border-radius: 12px;
-    border: 1px solid #e6e6e6;
+    border: 1px solid var(--orange);
     text-decoration: none;
     color: inherit;
-    background: #fff;
+    background: var(--orange-light);
   }
   .btn:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
