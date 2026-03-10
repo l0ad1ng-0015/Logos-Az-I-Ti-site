@@ -44,7 +44,7 @@
       <h2>Полезно</h2>
       <ul>
         <li>
-          <a href="/chesto-zadavani-vaprosichesto-zadavani-vaprosi">ЧЗВ</a>
+          <a href="/chesto-zadavani-vaprosi">ЧЗВ</a>
         </li>
         <li><a href="/blog">Блог</a></li>
         <li>
