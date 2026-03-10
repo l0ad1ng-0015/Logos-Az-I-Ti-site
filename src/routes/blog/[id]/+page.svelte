@@ -43,9 +43,38 @@
   </header>
 
   <article class="article">
-    {#each post.content as paragraph}
-      <p>{paragraph}</p>
-    {/each}
+    <div class="article-content">
+      <div class="subsection">
+        {#each post.content as item}
+          {#if item.type === "section"}
+            <div class="article-section">
+              <h2 class="section-title">{item.title}</h2>
+              <div class="section-content">
+                {#each item.items as subItem}
+                  {#if subItem.type === "paragraph"}
+                    <p class={subItem.variant}>{subItem.text}</p>
+                  {:else if subItem.type === "list"}
+                    <ul>
+                      {#each subItem.items as listItem}
+                        <li>{listItem}</li>
+                      {/each}
+                    </ul>
+                  {/if}
+                {/each}
+              </div>
+            </div>
+          {:else if item.type === "paragraph"}
+            <p class={item.variant}>{item.text}</p>
+          {:else if item.type === "list"}
+            <ul>
+              {#each item.items as listItem}
+                <li>{listItem}</li>
+              {/each}
+            </ul>
+          {/if}
+        {/each}
+      </div>
+    </div>
   </article>
 
   {#if imageUrls.length}
@@ -98,10 +127,15 @@
   .crumbs {
     display: flex;
     flex-wrap: wrap;
+    padding: 7px;
+    margin-bottom: 17px;
     gap: 8px;
     font-size: 13px;
     opacity: 0.75;
-    margin-bottom: 12px;
+    background: var(--orange-light);
+    border: 2px solid #f6d6bfcd;
+    box-shadow: 0 4px 12px rgba(248, 212, 186, 0.4);
+    border-radius: 8px;
   }
   .crumbs a {
     color: inherit;
@@ -118,7 +152,7 @@
     border: 1px solid #eee;
     border-radius: 18px;
     overflow: hidden;
-    background: #fff;
+    background: var(--orange-light);
     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
   }
   .hero__img {
@@ -161,19 +195,99 @@
   .tag {
     font-size: 12px;
     padding: 7px 10px;
-    border: 1px solid #ededed;
+    border: 1px solid rgba(67, 67, 67, 0.448);
     border-radius: 999px;
-    background: #fafafa;
+    background: var(--background);
+    color: var(--green-dark);
   }
 
   .article {
-    margin-top: 18px;
+    margin-top: 35px;
+    
   }
+
+  .article-content {
+    background: var(--orange-light);
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .subsection {
+    background: var(--background);
+    padding: 20px;
+    border: 2px solid var(--orange);
+    border-radius: 10px;
+  }
+
   .article p {
     line-height: 1.8;
     font-size: 16px;
     margin: 0 0 14px;
     opacity: 0.92;
+  }
+
+  .article-section {
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--orange-light);
+  }
+
+  .article-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .section-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 16px;
+    letter-spacing: -0.01em;
+  }
+
+  .section-content p {
+    margin-bottom: 10px;
+  }
+
+  
+
+  .article ul,
+  .article ol {
+    margin: 0 0 20px 24px;
+    padding: 0;
+  }
+
+  .article ul > li,
+  .article ol > li {
+    line-height: 1.8;
+    font-size: 16px;
+    margin: 0 0 10px;
+    opacity: 0.92;
+  }
+
+  .article ul > li {
+    list-style-type: disc;
+  }
+
+  .article ol > li {
+    list-style-type: decimal;
+  }
+
+  .article p.highlight {
+    background: var(--orange-light);
+    padding: 12px 16px;
+    border-left: 4px solid var(--orange);
+    border-radius: 4px;
+    margin: 16px 0 20px 0;
+  }
+
+  .article p.subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 24px 0 12px 0;
+    color: var(--green-dark);
   }
 
   .gallery {

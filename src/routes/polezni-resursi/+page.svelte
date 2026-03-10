@@ -325,7 +325,7 @@
     min-height: 160px;
     border: 1px solid var(--orange);
     border-radius: 12px;
-    background: #fff;
+    background: #fff; /* or var(--card) */
     box-shadow: 0 6px 18px rgba(22, 22, 22, 0.04);
     transition:
       transform 180ms ease,

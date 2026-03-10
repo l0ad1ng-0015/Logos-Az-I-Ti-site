@@ -72,8 +72,7 @@
     --green-dark: #2f4d19;
     --green-button: #e2f099;
     --green-button-hover: #e9f4b0;
-    --yellow: rgba(254, 246, 1, 255);
-    --blue-example: #e3f2ff;
+    --card: rgb(255 251 244);
     font-weight: 400;
     font-style: normal;
     zoom: 90%;

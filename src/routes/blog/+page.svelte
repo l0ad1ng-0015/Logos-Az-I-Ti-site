@@ -334,7 +334,7 @@
     border-radius: 10px;
     font-size: 1.25rem;
     outline: none;
-    background: var(--background);
+    background: var(--card);
   }
 
   .controls input[type="search"]:focus {
@@ -377,7 +377,7 @@
     overflow: hidden;
     text-decoration: none;
     color: inherit;
-    background: #fff;
+    background: var(--card);
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
     transition:
       transform 0.15s ease,
