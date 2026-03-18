@@ -330,7 +330,7 @@
   <div class="team-container">
     <h2>Нашите специалисти</h2>
     <!-- Sonia Ignatova -->
-    <div class="team-content" style="margin-bottom: 5rem;">
+    <div class="team-content" id="sonia-ignatova" style="margin-bottom: 5rem;">
       <div class="member-stats">
         <img src="/pfps/team/sonia.png" alt="Sonia" class="team-member" />
         <h3 class="team-member-name">Соня Игнатова</h3>
@@ -452,7 +452,7 @@
       </div>
     </div>
     <!-- Maria Tuputi -->
-    <div class="team-content">
+    <div class="team-content" id="maria-tuputi">
       <div class="member-stats">
         <img src="/pfps/team/maria.png" alt="Maria" class="team-member" />
         <h3 class="team-member-name">Мария-Паола Тупути</h3>
@@ -540,18 +540,18 @@
   <div class="believe-container">
     <h2>Ние вярваме, че:</h2>
     <div class="believe-content" style="margin-bottom: 5rem;">
-        <div class="bubble">
-        <img src="/svgs/za-nas/evaluate.svg" alt="Оцени нивото на развитие">
+      <div class="bubble">
+        <img src="/svgs/za-nas/evaluate.svg" alt="Оцени нивото на развитие" />
         <p>...всяко дете заслужава да бъде чуто.</p>
       </div>
 
       <div class="bubble">
-         <img src="/svgs/za-nas/collective.svg" alt="Оцени нивото на развитие">
+        <img src="/svgs/za-nas/collective.svg" alt="Оцени нивото на развитие" />
         <p>...заедно можем повече.</p>
       </div>
 
       <div class="bubble">
-         <img src="/svgs/za-nas/success.svg" alt="Оцени нивото на развитие">
+        <img src="/svgs/za-nas/success.svg" alt="Оцени нивото на развитие" />
         <p>
           ...успехът е път, който се изминава с доверие, търпение и постоянство.
         </p>
@@ -885,49 +885,49 @@
     max-width: 1000px;
   }
 
- .believe-content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  background: var(--orange-light);
+  .believe-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    background: var(--orange-light);
     margin-bottom: 30px;
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
+  }
 
-/* Балонче */
-.bubble {
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  align-items: center;
-  padding: 1.8rem;
-  gap: 1.2rem;
-  background: var(--background);
-  border: 3px solid var(--orange);
-  border-radius: 20px;
-}
+  /* Балонче */
+  .bubble {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.8rem;
+    gap: 1.2rem;
+    background: var(--background);
+    border: 3px solid var(--orange);
+    border-radius: 20px;
+  }
 
-.bubble:hover {
-  transition: all 0.3s ease;
-  transform: translateY(-4px);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
-}
+  .bubble:hover {
+    transition: all 0.3s ease;
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+  }
 
-/* SVG иконка */
-.bubble img {
-  width: 110px;
-  height: 110px;
-  object-fit: contain;
-  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.12));
-}
+  /* SVG иконка */
+  .bubble img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.12));
+  }
 
-/* Текст */
-.bubble p {
-  font-size: 1.15rem;
-  line-height: 1.5;
-}
+  /* Текст */
+  .bubble p {
+    font-size: 1.15rem;
+    line-height: 1.5;
+  }
 
   @keyframes slideInLeft {
     from {

@@ -1,6 +1,6 @@
 <script>
   export let data;
-  const { post, coverUrl, imageUrls, readingMin, related } = data;
+  const { post, coverUrl, imageUrls, readingMin, related, postAuthors } = data;
 </script>
 
 <svelte:head>
@@ -37,6 +37,27 @@
           {#each post.keywords as t}
             <span class="tag">{t}</span>
           {/each}
+        </div>
+      {/if}
+
+      {#if postAuthors.length}
+        <div class="authors">
+          <h3>
+            Автор{#if postAuthors.length > 1}и{/if}
+          </h3>
+          <div class="authors-grid">
+            {#each postAuthors as author}
+              <a class="author-card" href="/za-nas#{author.anchor}">
+                <div class="author-img">
+                  <img src={author.image} alt={author.name} loading="lazy" />
+                </div>
+                <div class="author-info">
+                  <div class="author-name">{author.name}</div>
+                  <div class="author-specialty">{author.specialty}</div>
+                </div>
+              </a>
+            {/each}
+          </div>
         </div>
       {/if}
     </div>
@@ -118,6 +139,15 @@
 </section>
 
 <style>
+  /* h2 {
+    font-size: 2.4rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--orange);
+    margin-bottom: 1rem;
+    text-align: left;
+  } */
+
   .wrap {
     max-width: 920px;
     margin: 0 auto;
@@ -203,7 +233,6 @@
 
   .article {
     margin-top: 35px;
-    
   }
 
   .article-content {
@@ -251,8 +280,6 @@
     margin-bottom: 10px;
   }
 
-  
-
   .article ul,
   .article ol {
     margin: 0 0 20px 24px;
@@ -281,6 +308,10 @@
     border-left: 4px solid var(--orange);
     border-radius: 4px;
     margin: 16px 0 20px 0;
+  }
+
+  .article p.bold {
+    font-weight: 700;
   }
 
   .article p.subtitle {
@@ -388,6 +419,59 @@
   }
   .btn:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .authors {
+    margin-top: 16px;
+  }
+  .authors h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    letter-spacing: -0.01em;
+    color: var(--green-dark);
+  }
+  .authors-grid {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .author-card {
+    text-decoration: none;
+    color: inherit;
+    border: 2px solid var(--orange);
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--background);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
+    transition:
+      transform 0.15s ease,
+      box-shadow 0.15s ease;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+  }
+  .author-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.06);
+  }
+  .author-img img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 12px;
+  }
+  .author-info {
+    flex: 1;
+  }
+  .author-name {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .author-specialty {
+    font-size: 14px;
+    opacity: 0.8;
   }
 
   @media (max-width: 900px) {

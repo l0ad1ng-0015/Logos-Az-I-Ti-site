@@ -1,5 +1,6 @@
 import { error } from "@sveltejs/kit";
 import { posts, getPostById, estimateReadingMinutes } from "$lib/blog/posts";
+import { authors, getAuthorById } from "$lib/blog/authors";
 
 export const load = async ({ params }) => {
   const post = getPostById(params.id);
@@ -35,11 +36,15 @@ export const load = async ({ params }) => {
     .sort((x, y) => y.common - x.common)
     .slice(0, 3);
 
+  // Зареждане на авторите
+  const postAuthors = (post.authorIds || []).map(id => getAuthorById(id)).filter(Boolean);
+
   return {
     post,
     coverUrl,
     imageUrls,
     readingMin: estimateReadingMinutes(post),
     related,
+    postAuthors,
   };
 };
