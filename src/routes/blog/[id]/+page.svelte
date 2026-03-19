@@ -1,6 +1,14 @@
 <script>
   export let data;
-  const { post, coverUrl, imageUrls, readingMin, related, postAuthors } = data;
+  console.log("Component rendered with post:", data.post?.id);
+
+  $: post = data.post;
+  $: coverUrl = data.coverUrl;
+  $: imageUrls = data.imageUrls;
+  $: readingMin = data.readingMin;
+  $: related = data.related;
+  $: postAuthors = data.postAuthors;
+  console.log("Post updated:", post?.id, post?.title);
 </script>
 
 <svelte:head>

@@ -3,6 +3,7 @@ import { posts, getPostById, estimateReadingMinutes } from "$lib/blog/posts";
 import { authors, getAuthorById } from "$lib/blog/authors";
 
 export const load = async ({ params }) => {
+  console.log("Loading blog post:", params.id);
   const post = getPostById(params.id);
   if (!post) throw error(404, "Статията не е намерена");
 
@@ -25,20 +26,19 @@ export const load = async ({ params }) => {
 
   // Още статии (по общи тагове)
   const related = posts
-    .filter((p) => p.id !== post.id)
-    .map((p) => {
-      const a = new Set(post.keywords || []);
-      const b = new Set(p.keywords || []);
-      const common = [...a].filter((x) => b.has(x)).length;
-      return { ...p, common, coverUrl: p.cover ? getImgUrl(p.cover) : "" };
-    })
-    .filter((p) => p.common > 0)
-    .sort((x, y) => y.common - x.common)
+    .filter((p) => p !== post && p.id !== post.id)
+    .map((p) => ({
+      ...p,
+      coverUrl: p.cover ? getImgUrl(p.cover) : "",
+    }))
     .slice(0, 3);
 
   // Зареждане на авторите
-  const postAuthors = (post.authorIds || []).map(id => getAuthorById(id)).filter(Boolean);
+  const postAuthors = (post.authorIds || [])
+    .map((id) => getAuthorById(id))
+    .filter(Boolean);
 
+  console.log("Returning data for post:", post.id);
   return {
     post,
     coverUrl,
