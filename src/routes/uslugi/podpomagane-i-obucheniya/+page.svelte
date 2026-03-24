@@ -487,7 +487,7 @@
           <ul
             style="margin-bottom: 0 !important; list-style: none; padding-left: 0;"
           >
-            <li>📞 Обадете се на тел: 0876860602</li>
+            <li>📞 Обадете се на тел: +359 876 860 602</li>
             <li>📧 Имейл: logos_aziti@abv.bg</li>
           </ul>
         </div>

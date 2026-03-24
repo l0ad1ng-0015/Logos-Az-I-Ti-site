@@ -652,7 +652,7 @@
     <h1 id="whyus-h">Защо да изберете нас?</h1>
     <div id="whyus-items">
       <div id="square">
-        <img src="/svgs/whyus/kid.svg" alt="Игрови подход">
+        <img src="/svgs/whyus/kid.svg" alt="Игрови подход" />
         <p>Игрови подход</p>
         {#if showAdditionalSection1}
           <p
@@ -675,7 +675,7 @@
       </div>
 
       <div id="square">
-        <img src="/svgs/whyus/support.svg" alt="Подкрепа">
+        <img src="/svgs/whyus/support.svg" alt="Подкрепа" />
         <p>Подкрепа</p>
         {#if showAdditionalSection2}
           <p
@@ -697,7 +697,7 @@
         {/if}
       </div>
       <div id="square">
-        <img src="/svgs/whyus/trust.svg" alt="Доверие и индивидуалност">
+        <img src="/svgs/whyus/trust.svg" alt="Доверие и индивидуалност" />
         <p>Доверие и индивидуалност</p>
         {#if showAdditionalSection3}
           <p
@@ -718,7 +718,7 @@
         {/if}
       </div>
       <div id="square">
-        <img src="/svgs/whyus/goals.svg" alt="Постигане на цели">
+        <img src="/svgs/whyus/goals.svg" alt="Постигане на цели" />
         <p>Постигане на цели</p>
         {#if showAdditionalSection4}
           <p
@@ -790,7 +790,7 @@
           </div>
           <div class="info-text">
             <h3>Телефон</h3>
-            <p><a href="tel:0876860602">087 686 0602</a></p>
+            <p><a href="tel:+359876860602">+359 876 860 602</a></p>
           </div>
         </div>
         <div class="info-item">

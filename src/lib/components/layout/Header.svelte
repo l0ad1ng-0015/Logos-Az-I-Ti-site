@@ -78,7 +78,9 @@
           on:mouseleave={() => (activeDropdown = null)}
         >
           <a href="/za-nas" on:click={handleLinkClick}>За нас</a>
-          <a href="/seminari" on:click={handleLinkClick}>Семинари</a>
+          <a href="/seminari-i-obucheniya" on:click={handleLinkClick}
+            >Семинари и <br /> обучения</a
+          >
           <a href="/galeriya" on:click={handleLinkClick}>Галерия</a>
         </div>
       </li>
@@ -245,7 +247,9 @@
           class:show={activeDropdown === "mobile-about"}
         >
           <a href="/za-nas" on:click={handleLinkClick}>За нас</a>
-          <a href="/seminari" on:click={handleLinkClick}>Семинари</a>
+          <a href="/seminari-i-obucheniya" on:click={handleLinkClick}
+            >Семинари и обучения
+          </a>
           <a href="/galeriya" on:click={handleLinkClick}>Галерия</a>
         </div>
         <hr />

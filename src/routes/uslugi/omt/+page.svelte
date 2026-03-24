@@ -559,7 +559,7 @@
             style="margin-bottom: 0 !important; list-style: none; padding-left: 0;"
           >
             <li>📩 logos_aziti@abv.bg</li>
-            <li>📞 0876860602</li>
+            <li>📞 +359 876 860 602</li>
           </ul>
         </div>
         <input type="hidden" bind:value={apples} />
