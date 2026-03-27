@@ -3,7 +3,7 @@ import { posts, getPostById, estimateReadingMinutes } from "$lib/blog/posts";
 import { authors, getAuthorById } from "$lib/blog/authors";
 
 export const load = async ({ params }) => {
-  console.log("Loading blog post:", params.id);
+  // console.log("Loading blog post:", params.id);
   const post = getPostById(params.id);
   if (!post) throw error(404, "Статията не е намерена");
 
@@ -38,7 +38,7 @@ export const load = async ({ params }) => {
     .map((id) => getAuthorById(id))
     .filter(Boolean);
 
-  console.log("Returning data for post:", post.id);
+  // console.log("Returning data for post:", post.id);
   return {
     post,
     coverUrl,

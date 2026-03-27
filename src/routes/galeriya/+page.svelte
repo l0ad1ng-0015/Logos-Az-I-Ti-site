@@ -5,6 +5,7 @@
 
   import { cubicOut } from "svelte/easing";
   import { onMount } from "svelte";
+  import { page } from "$app/stores";
 
   type Img = {
     id: string;
@@ -19,12 +20,23 @@
       | "Великденска терапевтилница"
       | "Коледна терапевтилница"
       | "Коледни партита"
-      | "Сърцата терапевтилница";
+      | "Сърцата терапевтилница"
+      | "Семинари и обучения";
   };
 
   // снимки
   const images: Img[] = [
     // Великден
+    {
+      id: "velik-01",
+      src: "/galeriya/src/velikden/1.jpg",
+      full: "/galeriya/src/velikden/1.jpg",
+      thumb: "/galeriya/thumbs/velikden/1.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Великденска терапевтилница 2025 г",
+      category: "Семинари и обучения",
+    },
     {
       id: "velik-01",
       src: "/galeriya/src/velikden/1.jpg",
@@ -268,6 +280,107 @@
       alt: "Терапевтилница 2024 г",
       category: "Сърцата терапевтилница",
     },
+    // Семинари и обучения
+    {
+      id: "seminari-01",
+      src: "/galeriya/src/seminari/1.jpg",
+      full: "/galeriya/src/seminari/1.jpg",
+      thumb: "/galeriya/thumbs/seminari/1.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Семинари и обучения",
+      category: "Семинари и обучения",
+    },
+    {
+      id: "seminari-02",
+      src: "/galeriya/src/seminari/2.jpg",
+      full: "/galeriya/src/seminari/2.jpg",
+      thumb: "/galeriya/thumbs/seminari/2.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Семинари и обучения",
+      category: "Семинари и обучения",
+    },
+    {
+      id: "seminari-03",
+      src: "/galeriya/src/seminari/3.jpg",
+      full: "/galeriya/src/seminari/3.jpg",
+      thumb: "/galeriya/thumbs/seminari/3.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Семинари и обучения",
+      category: "Семинари и обучения",
+    },
+    {
+      id: "seminari-04",
+      src: "/galeriya/src/seminari/4.jpg",
+      full: "/galeriya/src/seminari/4.jpg",
+      thumb: "/galeriya/thumbs/seminari/4.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Семинари и обучения",
+      category: "Семинари и обучения",
+    },
+    {
+      id: "seminari-05",
+      src: "/galeriya/src/seminari/5.jpg",
+      full: "/galeriya/src/seminari/5.jpg",
+      thumb: "/galeriya/thumbs/seminari/5.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Семинари и обучения",
+      category: "Семинари и обучения",
+    },
+    {
+      id: "seminari-06",
+      src: "/galeriya/src/seminari/6.jpg",
+      full: "/galeriya/src/seminari/6.jpg",
+      thumb: "/galeriya/thumbs/seminari/6.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Семинари и обучения",
+      category: "Семинари и обучения",
+    },
+    {
+      id: "seminari-07",
+      src: "/galeriya/src/seminari/7.jpg",
+      full: "/galeriya/src/seminari/7.jpg",
+      thumb: "/galeriya/thumbs/seminari/7.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Семинари и обучения",
+      category: "Семинари и обучения",
+    },
+    {
+      id: "seminari-08",
+      src: "/galeriya/src/seminari/8.jpg",
+      full: "/galeriya/src/seminari/8.jpg",
+      thumb: "/galeriya/thumbs/seminari/8.jpg",
+      w: 1962,
+      h: 2048,
+      alt: "Семинари и обучения",
+      category: "Семинари и обучения",
+    },
+    {
+      id: "seminari-09",
+      src: "/galeriya/src/seminari/9.jpg",
+      full: "/galeriya/src/seminari/9.jpg",
+      thumb: "/galeriya/thumbs/seminari/9.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Семинари и обучения",
+      category: "Семинари и обучения",
+    },
+    {
+      id: "seminari-10",
+      src: "/galeriya/src/seminari/10.jpg",
+      full: "/galeriya/src/seminari/10.jpg",
+      thumb: "/galeriya/thumbs/seminari/10.jpg",
+      w: 2048,
+      h: 1536,
+      alt: "Семинари и обучения",
+      category: "Семинари и обучения",
+    },
   ];
 
   const baseCats = [
@@ -276,9 +389,15 @@
     "Коледна терапевтилница",
     "Коледни партита",
     "Сърцата терапевтилница",
+    "Семинари и обучения",
   ] as const;
   type Cat = (typeof baseCats)[number];
   let activeCat: Cat = "Всички";
+  $: activeCat = baseCats.includes(
+    $page.url.searchParams.get("category") as Cat,
+  )
+    ? ($page.url.searchParams.get("category") as Cat)
+    : "Всички";
 
   // --- dedupe safeguard ---
   const dedupe = <T extends { id?: string; src: string }>(arr: T[]) => {
@@ -314,7 +433,7 @@
     if (typeof document === "undefined") return;
     if (lock) {
       (document.body as any).__prevOverflow = getComputedStyle(
-        document.body
+        document.body,
       ).overflow;
       document.body.style.overflow = "hidden";
     } else {
@@ -408,7 +527,7 @@
   // --- custom transition on wrapper (не върху <img>, за да не се бие с transform от zoom) ---
   function fadeSlide(
     node: Element,
-    { duration = 220, x = 22, baseScale = 0.96 } = {}
+    { duration = 220, x = 22, baseScale = 0.96 } = {},
   ) {
     return {
       duration,
@@ -603,7 +722,7 @@
 </div>
 
 <!-- Gallery -->
-<div class="gallery">
+<div class="gallery" id="gallery">
   <div class="gallery-container">
     <section class="grid">
       {#each visible as img, i (img.id)}
@@ -784,6 +903,9 @@
   .filters-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
     width: 90%;
     max-width: 1000px;
   }
@@ -797,7 +919,7 @@
     border: 0;
     border-radius: 999px;
     padding: 10px 14px;
-    margin: 0 10px;
+    margin: 0;
     font-size: 1.1rem;
     font-weight: 500;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);

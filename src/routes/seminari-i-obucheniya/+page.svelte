@@ -263,6 +263,7 @@
     <h2>Обучения, които сме провеждали:</h2>
     <div class="seminars-content">
       <h3>Играта – терапевтичен инструмент в логопедичната практика</h3>
+
       <div class="subsection">
         <p>Автори и водещи:</p>
         <p>Соня Игнатова - логопед и специален педагог</p>
@@ -379,6 +380,12 @@
         <p>
           Аз и ти. Дете и логопед. Игра и терапия. Това е сърцето на нашата
           мисия. Това е нашият общ път към детското развитие и общуване.
+        </p>
+        <p>
+          <a
+            href="/galeriya?category=Семинари%20и%20обучения#gallery"
+            class="gallery-link">Вижте снимки от обучението в галерията</a
+          >
         </p>
       </div>
     </div>
@@ -517,6 +524,29 @@
     margin-bottom: 0 !important;
   }
 
+  .gallery-link {
+    display: inline-block;
+    background: var(--orange);
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(247, 162, 116, 0.3);
+    transition: all 0.3s ease;
+    border: 2px solid var(--orange);
+    margin-top: 10px;
+  }
+
+  .gallery-link:hover {
+    background: var(--orange-dark);
+    border-color: var(--orange-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(247, 162, 116, 0.4);
+    color: white;
+  }
+
   /* ---- Media query - 955 ---- */
   @media screen and (max-width: 955px) {
     /* ---- 1. Heading ---- */
@@ -580,7 +610,43 @@
     }
   }
 
-  /* ---- Media query - 425 ---- */
+  /* ---- Media query - 475 ---- */
   @media screen and (max-width: 475px) {
+    .heading h1 {
+      font-size: 2rem;
+    }
+
+    .heading p,
+    .seminars h3,
+    .seminars p,
+    .subsection p,
+    .subsection li {
+      font-size: 0.95rem !important;
+      line-height: 1.45;
+    }
+
+    .seminars-content {
+      padding: 22px 14px;
+    }
+
+    .gallery-link {
+      font-size: 0.95rem;
+      padding: 10px 16px;
+    }
+
+    .seminars h3 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+      padding-left: 12px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .subsection {
+      padding: 14px;
+    }
   }
 </style>
