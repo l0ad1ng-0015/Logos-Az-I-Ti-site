@@ -12,7 +12,7 @@ export async function GET() {
     { url: "/kontakti", changefreq: "monthly", priority: 0.9 },
     { url: "/galeriya", changefreq: "monthly", priority: 0.9 },
     { url: "/blog", changefreq: "monthly", priority: 0.9 },
-    { url: "/seminari", changefreq: "monthly", priority: 0.8 },
+    { url: "/seminari-i-obucheniya", changefreq: "monthly", priority: 0.8 },
     { url: "/polezni-resursi", changefreq: "monthly", priority: 0.8 },
     { url: "/chesto-zadavani-vaprosi", changefreq: "monthly", priority: 0.8 },
     { url: "/otzivi", changefreq: "monthly", priority: 0.8 },
