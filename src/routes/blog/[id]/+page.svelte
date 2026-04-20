@@ -288,10 +288,19 @@
     margin-bottom: 10px;
   }
 
+  .section-content p:last-child,
+  .section-content li:last-child {
+    margin-bottom: 0;
+  }
+
   .article ul,
   .article ol {
     margin: 0 0 20px 24px;
     padding: 0;
+  }
+
+  .article ul:last-child {
+    margin-bottom: 0;
   }
 
   .article ul > li,
