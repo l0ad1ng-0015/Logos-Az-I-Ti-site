@@ -422,8 +422,14 @@
       </li>
 
       <div class="btns">
-        <button class="button" id="knigi2" style="background-color: var(--orange);">
-          <a href="/knigi-s-misiya" on:click={handleLinkClick}>Книги с мисия</a>
+        <button
+          class="button"
+          id="knigi2"
+          style="background-color: var(--orange);"
+        >
+          <a id="btn-a" href="/knigi-s-misiya" on:click={handleLinkClick}
+            >Книги с мисия</a
+          >
         </button>
       </div>
     </ul>
@@ -433,12 +439,15 @@
     <button class="button" id="knigi" style="background-color: var(--orange);">
       <a href="/knigi-s-misiya" on:click={handleLinkClick}>Книги с мисия</a>
     </button>
-    
-    <button class="button" id="chas" style="background-color: var(--green-button); color: white">
+
+    <button
+      class="button"
+      id="chas"
+      style="background-color: var(--green-button); color: white"
+    >
       <a href="/kontakti" on:click={handleLinkClick}>Запиши Час</a>
     </button>
   </div>
-
 
   <!-- Hamburger Icon -->
   <div class="hamburger" class:open={menuOpen} on:click={toggleMenu}>
@@ -533,6 +542,14 @@
     display: flex;
     align-items: center;
     gap: 5px;
+  }
+
+  #btn-a {
+    display: flex;
+    justify-content: center !important;
+    padding: 0;
+    text-decoration: none !important;
+    color: black !important;
   }
 
   .nav-links a:hover {
@@ -682,7 +699,8 @@
     gap: 30px;
   }
 
-  .button, #knigi2 {
+  .button,
+  #knigi2 {
     border: none;
     border-radius: 10px;
     padding: 9px 30px;
@@ -822,7 +840,8 @@
   }
 
   /* Small tablet query (old phone) */
-  @media screen and (max-width: 955px) /*better to use 1000px but to prevent some weird behavior with the hamburger menu, I set it to 955px*/ {
+  @media screen and (max-width: 955px) /*better to use 1000px but to prevent some weird behavior with the hamburger menu,
+    I set it to 955px*/ {
     nav {
       height: 95px;
       margin: none !important;
@@ -864,7 +883,7 @@
     .nav-links-mobile {
       display: none;
       position: absolute;
-      top: 95px;
+      top: 90px;
       left: 0;
       width: 100%;
       background-color: var(--orange-light);
@@ -926,6 +945,34 @@
       border: none;
       background-color: #a6a6a6;
     }
+
+    .nav-links-mobile .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      width: 50%;
+      margin: 16px auto 0 auto;
+      background-color: var(--orange);
+      color: black;
+      border-radius: 8px;
+      font-size: 1em;
+      box-shadow: none;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .nav-links-mobile .button:hover {
+      background-color: var(--green-button-hover);
+    }
+
+    .nav-links-mobile .button a {
+      color: black;
+      text-decoration: none;
+      flex-grow: 1;
+      text-align: center;
+    }
   }
 
   /* Phone query */
@@ -956,7 +1003,6 @@
       height: 50px;
     }
 
-    
     .nav-links a {
       font-size: 1.1em;
     }
@@ -964,7 +1010,7 @@
     .nav-links-mobile #knigi2 {
       display: flex !important;
     }
-    
+
     nav.scrolled .nav-links a {
       font-size: 1em;
     }
@@ -1004,6 +1050,10 @@
 
     .nav-links-mobile {
       top: 90px;
+    }
+
+    .nav-links-mobile .button {
+      width: 70%;
     }
 
     nav.scrolled .nav-links-mobile {
@@ -1058,6 +1108,16 @@
 
     .nav-links a {
       font-size: 0.9em;
+    }
+
+    .nav-links-mobile .button {
+      width: 60%;
+      font-size: 1.25rem !important;
+      margin: 12px auto 0 auto;
+    }
+
+    #chas {
+      font-size: 1rem;
     }
 
     .nav-links-mobile a {

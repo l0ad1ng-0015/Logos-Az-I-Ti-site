@@ -640,7 +640,11 @@
           с родителите, за да изградим сигурна среда, в която всяко дете се
           чувства разбрано, мотивирано и способно да разгърне своя потенциал.
         </p>
-        <img src="others/flag-icon.svg" alt="Flag Icon" />
+        <img
+          src="others/mission.svg"
+          alt="Flag Icon"
+          style="width: 1000px; height: auto;"
+        />
       </div>
     </div>
   </div>
@@ -1125,7 +1129,7 @@
 
   #mission-content img {
     flex: 1 1 30%;
-    max-width: 185px;
+    max-width: 220px;
     height: auto;
   }
 
