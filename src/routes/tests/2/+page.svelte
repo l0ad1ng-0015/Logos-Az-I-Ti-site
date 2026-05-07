@@ -176,8 +176,8 @@
     <div class="books-content">
       <div class="subsection">
         <p class="intro-text">
-          ✨ Понякога има дни, в които се случва магия… и остават завинаги в
-          сърцето. 🧡
+          Понякога има дни, в които се случва магия… и остават завинаги в
+          сърцето.
         </p>
         <p>
           С любезното съдействие и подкрепа на издателство "Или - Мили", на <strong
@@ -206,7 +206,7 @@
         </p>
 
         <h4
-          style="margin-top: 25px; margin-bottom: 15px; color: var(--orange); font-size: 1.2rem;"
+          style="margin-top: 25px; margin-bottom: 15px; color: var(--orange); font-size: 1.25rem;"
         >
           Специални благодарности на:
         </h4>
@@ -214,27 +214,27 @@
           style="margin-bottom: 20px !important; list-style: none; padding-left: 20px;"
         >
           <li style="margin-bottom: 12px;">
-            <strong>🧡 Издателство "Или-Мили"</strong> – за професионализма, отдадеността,
+            <strong>Издателство "Или-Мили"</strong> – за професионализма, отдадеността,
             за всеки изпипан детайл в подготовката и представянето на книгата, както
             и за прекрасните подаръци за всички гости.
           </li>
           <li style="margin-bottom: 12px;">
-            <strong>🧡 Osteria Tartufo</strong> - за уютната атмосфера и топлото
-            гостоприемство, които допринесоха този ден да бъде още по-специален.
+            <strong>Osteria Tartufo</strong> - за уютната атмосфера и топлото гостоприемство,
+            които допринесоха този ден да бъде още по-специален.
           </li>
           <li style="margin-bottom: 12px;">
-            <strong>📸 Evgeni Mishev Photography</strong> - за магията в кадър, за
-            таланта да улавя емоцията и да превръща миговете в незабравими спомени.
+            <strong>Evgeni Mishev Photography</strong> - за магията в кадър, за таланта
+            да улавя емоцията и да превръща миговете в незабравими спомени.
           </li>
           <li style="margin-bottom: 12px;">
-            <strong>📸 Bogdana Ivanova</strong> - за сърцето, вложено във всеки детайл
+            <strong>Bogdana Ivanova</strong> - за сърцето, вложено във всеки детайл
             от събитието, за усмивките и магичните кадри, дакосващи сърцето.
           </li>
           <li style="margin-bottom: 12px;">
-            <strong>🧡 Нашите семейства</strong> – за силата, подкрепата и вярата.
+            <strong>Нашите семейства</strong> – за силата, подкрепата и вярата.
           </li>
           <li>
-            <strong>🧡 Maria-Paola Tuputi</strong> - за съвместната работа и сърцето,
+            <strong>Maria-Paola Tuputi</strong> - за съвместната работа и сърцето,
             вложено в създаването на тази книга.
           </li>
         </ul>
@@ -296,19 +296,19 @@
         <div class="event-images">
           <div class="event-image">
             <img
-              src="/logos/nav-logo.png"
+              src="/pages/knigi-s-misiya/events/1.jpg"
               alt="Представяне на книга - снимка 1"
             />
           </div>
           <div class="event-image">
             <img
-              src="/logos/nav-logo.png"
+              src="/pages/knigi-s-misiya/events/2.jpg"
               alt="Представяне на книга - снимка 2"
             />
           </div>
           <div class="event-image">
             <img
-              src="/logos/nav-logo.png"
+              src="/pages/knigi-s-misiya/events/3.jpg"
               alt="Представяне на книга - снимка 3"
             />
           </div>
@@ -426,7 +426,7 @@
     color: #666;
     line-height: 1.7;
     margin-bottom: 15px;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
   }
 
   .intro-text {
@@ -446,7 +446,7 @@
   .subsection li {
     margin-bottom: 8px;
     position: relative;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
   }
 
   /* ---- 3. Book Images ---- */
@@ -494,7 +494,7 @@
   /* ---- 4. Event Images ---- */
   .event-images {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
     margin: 30px 0;
   }
@@ -532,7 +532,7 @@
     padding: 14px 28px;
     border-radius: 25px;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     box-shadow: 0 4px 15px rgba(247, 162, 116, 0.3);
     transition: all 0.3s ease;
     border: 2px solid var(--orange);
@@ -678,7 +678,7 @@
     } */
 
     .intro-text {
-      font-size: 1.2rem !important;
+      font-size: 1.4em !important;
     }
 
     .books-content {
