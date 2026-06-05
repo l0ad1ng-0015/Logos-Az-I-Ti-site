@@ -242,14 +242,14 @@
         <div class="book-images">
           <div class="book-cover">
             <img
-              src="/pages/knigi/zabavna-logopedia-front.jpg"
+              src="/pages/knigi-s-misiya/knigi/zabavna-logopedia-front.jpg"
               alt="Забавна логопедия – отпред"
             />
             <p class="image-label">Корица отпред</p>
           </div>
           <div class="book-cover">
             <img
-              src="/pages/knigi/zabavna-logopedia-back.jpg"
+              src="/pages/knigi-s-misiya/knigi/zabavna-logopedia-back.jpg"
               alt="Забавна логопедия – отзад"
             />
             <p class="image-label">Корица отзад</p>
@@ -528,6 +528,7 @@
     display: inline-block;
     background: var(--orange);
     color: white;
+    text-align: center;
     text-decoration: none;
     padding: 14px 28px;
     border-radius: 25px;

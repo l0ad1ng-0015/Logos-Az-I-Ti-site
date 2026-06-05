@@ -21,7 +21,8 @@
       | "Коледна терапевтилница"
       | "Коледни партита"
       | "Сърцата терапевтилница"
-      | "Семинари и обучения";
+      | "Семинари и обучения"
+      | "Книги с мисия"
   };
 
   // снимки
@@ -381,6 +382,117 @@
       alt: "Семинари и обучения",
       category: "Семинари и обучения",
     },
+    // Книги с мисия
+    {
+      id: "knigi-01",
+      src: "/galeriya/src/knigi-s-misiya/1.jpg",
+      full: "/galeriya/src/knigi-s-misiya/1.jpg",
+      thumb: "/galeriya/thumbs/knigi-s-misiya/1.jpg",
+      w: 567,
+      h: 423,
+      alt: "Книги с мисия",
+      category: "Книги с мисия",
+    },
+    {
+      id: "knigi-02",
+      src: "/galeriya/src/knigi-s-misiya/2.jpg",
+      full: "/galeriya/src/knigi-s-misiya/2.jpg",
+      thumb: "/galeriya/thumbs/knigi-s-misiya/2.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Книги с мисия",
+      category: "Книги с мисия",
+    },
+    {
+      id: "knigi-03",
+      src: "/galeriya/src/knigi-s-misiya/3.jpg",
+      full: "/galeriya/src/knigi-s-misiya/3.jpg",
+      thumb: "/galeriya/thumbs/knigi-s-misiya/3.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Книги с мисия",
+      category: "Книги с мисия",
+    },
+    {
+      id: "knigi-04",
+      src: "/galeriya/src/knigi-s-misiya/4.jpg",
+      full: "/galeriya/src/knigi-s-misiya/4.jpg",
+      thumb: "/galeriya/thumbs/knigi-s-misiya/4.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Книги с мисия",
+      category: "Книги с мисия",
+    },
+    {
+      id: "knigi-05",
+      src: "/galeriya/src/knigi-s-misiya/5.jpg",
+      full: "/galeriya/src/knigi-s-misiya/5.jpg",
+      thumb: "/galeriya/thumbs/knigi-s-misiya/5.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Книги с мисия",
+      category: "Книги с мисия",
+    },
+    {
+      id: "knigi-06",
+      src: "/galeriya/src/knigi-s-misiya/6.jpg",
+      full: "/galeriya/src/knigi-s-misiya/6.jpg",
+      thumb: "/galeriya/thumbs/knigi-s-misiya/6.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Книги с мисия",
+      category: "Книги с мисия",
+    },
+    {
+      id: "knigi-07",
+      src: "/galeriya/src/knigi-s-misiya/7.jpg",
+      full: "/galeriya/src/knigi-s-misiya/7.jpg",
+      thumb: "/galeriya/thumbs/knigi-s-misiya/7.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Книги с мисия",
+      category: "Книги с мисия",
+    },
+    {
+      id: "knigi-08",
+      src: "/galeriya/src/knigi-s-misiya/8.jpg",
+      full: "/galeriya/src/knigi-s-misiya/8.jpg",
+      thumb: "/galeriya/thumbs/knigi-s-misiya/8.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Книги с мисия",
+      category: "Книги с мисия",
+    },
+    {
+      id: "knigi-09",
+      src: "/galeriya/src/knigi-s-misiya/9.jpg",
+      full: "/galeriya/src/knigi-s-misiya/9.jpg",
+      thumb: "/galeriya/thumbs/knigi-s-misiya/9.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Книги с мисия",
+      category: "Книги с мисия",
+    },
+    {
+      id: "knigi-10",
+      src: "/galeriya/src/knigi-s-misiya/10.jpg",
+      full: "/galeriya/src/knigi-s-misiya/10.jpg",
+      thumb: "/galeriya/thumbs/knigi-s-misiya/10.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Книги с мисия",
+      category: "Книги с мисия",
+    },
+    {
+      id: "knigi-11",
+      src: "/galeriya/src/knigi-s-misiya/11.jpg",
+      full: "/galeriya/src/knigi-s-misiya/11.jpg",
+      thumb: "/galeriya/thumbs/knigi-s-misiya/11.jpg",
+      w: 1536,
+      h: 2048,
+      alt: "Книги с мисия",
+      category: "Книги с мисия",
+    },
   ];
 
   const baseCats = [
@@ -390,6 +502,7 @@
     "Коледни партита",
     "Сърцата терапевтилница",
     "Семинари и обучения",
+    "Книги с мисия",
   ] as const;
   type Cat = (typeof baseCats)[number];
   let activeCat: Cat = "Всички";
