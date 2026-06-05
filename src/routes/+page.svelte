@@ -642,7 +642,7 @@
         </p>
         <img
           src="others/mission.svg"
-          alt="Flag Icon"
+          alt="Mission Icon"
           style="width: 1000px; height: auto;"
         />
       </div>
@@ -1430,6 +1430,11 @@
       width: clamp(260px, 40vw, 360px);
     }
 
+    /* ---------- 3 MISSION ---------- */
+    #mission-content {
+    gap: 1rem;
+  }
+
     /* ---------- 5 CONTACTS ---------- */
     .contacts {
       flex-direction: column;
@@ -1518,7 +1523,7 @@
 
     .btn-hero {
       align-self: center;
-    }
+    }t
 
     .hero-right {
       margin-top: 25px;
@@ -1539,6 +1544,19 @@
     #whyus-h {
       margin-left: 0;
       /* text-align: center; */
+    }
+
+    #square {
+      width: 290px;
+    }
+
+    #square img {
+      width: 125px;
+      height: 125px;
+    }
+
+    #square p, .more-btn, .less-btn {
+      font-size: 1.1rem;
     }
 
     /* ---------- 5 Contacts ---------- */
@@ -1595,6 +1613,15 @@
 
     #stars {
       font-size: 16px;
+    }
+  }
+
+  /* ---- Media query - 650 ---- */
+  @media screen and (max-width: 650px) {
+    /* ---------- 3 Mission ---------- */
+    #mission-content img {
+      flex: 1 1 100%;
+      max-width: 250px;
     }
   }
 
