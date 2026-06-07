@@ -2,7 +2,7 @@ export async function GET() {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "SiteNavigationElement",
-    name: ["Начало", "За нас", "Услуги", "Блог", "За вас", "Контакти"],
+    name: ["Начало", "За нас", "Услуги", "Блог", "За вас", "Контакти", "Книги с мисия"],
     url: [
       "https://logosaziti.bg/",
       "https://logosaziti.bg/za-nas",
@@ -10,6 +10,7 @@ export async function GET() {
       "https://logosaziti.bg/blog",
       "https://logosaziti.bg/polezni-resursi",
       "https://logosaziti.bg/kontakti",
+      "https://logosaziti.bg/knigi-s-misiya"
     ],
   };
 

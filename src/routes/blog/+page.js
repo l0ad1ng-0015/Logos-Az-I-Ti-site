@@ -14,13 +14,11 @@ export const load = async () => {
     return entry ? entry[1] : "";
   };
 
-  const items = [...posts]
-    .sort((a, b) => (a.date < b.date ? 1 : -1))
-    .map((p) => ({
-      ...p,
-      coverUrl: p.cover ? getImgUrl(p.cover) : "",
-      readingMin: estimateReadingMinutes(p),
-    }));
+  const items = [...posts].map((p) => ({
+    ...p,
+    coverUrl: p.cover ? getImgUrl(p.cover) : "",
+    readingMin: estimateReadingMinutes(p),
+  }));
 
   // тагове за филтъра
   const tagsSet = new Set();
