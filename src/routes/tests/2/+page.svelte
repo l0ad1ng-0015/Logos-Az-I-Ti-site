@@ -525,6 +525,7 @@
     display: inline-block;
     background: var(--orange);
     color: white;
+    text-align: center;
     text-decoration: none;
     padding: 14px 28px;
     border-radius: 25px;

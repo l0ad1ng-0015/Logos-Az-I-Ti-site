@@ -989,8 +989,8 @@
       height: 90px;
     }
 
-    nav.scrolled + .navbar-spacer {
-      height: 65px;
+    nav.scrolled .nav-links-mobile {
+      top: 65px;
     }
 
     .logo {
@@ -1009,6 +1009,7 @@
 
     .nav-links-mobile #knigi2 {
       display: flex !important;
+      height: 65px !important;
     }
 
     nav.scrolled .nav-links a {

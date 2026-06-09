@@ -12,11 +12,11 @@ export async function GET() {
     { url: "/kontakti", changefreq: "monthly", priority: 0.9 },
     { url: "/galeriya", changefreq: "monthly", priority: 0.9 },
     { url: "/blog", changefreq: "monthly", priority: 0.9 },
+    { url: "/knigi-s-misiya", changefreq: "monthly", priority: 0.9 },
     { url: "/seminari-i-obucheniya", changefreq: "monthly", priority: 0.8 },
     { url: "/polezni-resursi", changefreq: "monthly", priority: 0.8 },
     { url: "/chesto-zadavani-vaprosi", changefreq: "monthly", priority: 0.8 },
     { url: "/otzivi", changefreq: "monthly", priority: 0.8 },
-
     // Подстраници / услуги (ако имаш отделни)
     { url: "/uslugi/ranna-prevenciya", changefreq: "monthly", priority: 0.7 },
     {
