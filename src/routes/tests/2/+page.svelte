@@ -205,91 +205,88 @@
           това, че вярвате и подкрепяте каузата.
         </p>
 
-        <h4
-          style="margin-top: 25px; margin-bottom: 15px; color: var(--orange); font-size: 1.25rem;"
-        >
-          Специални благодарности на:
-        </h4>
-        <ul
-          style="margin-bottom: 20px !important; list-style: none; padding-left: 20px;"
-        >
-          <li style="margin-bottom: 12px;">
-            <strong>Издателство "Или-Мили"</strong> – за професионализма, отдадеността,
-            за всеки изпипан детайл в подготовката и представянето на книгата, както
-            и за прекрасните подаръци за всички гости.
-          </li>
-          <li style="margin-bottom: 12px;">
-            <strong>Osteria Tartufo</strong> - за уютната атмосфера и топлото гостоприемство,
-            които допринесоха този ден да бъде още по-специален.
-          </li>
-          <li style="margin-bottom: 12px;">
-            <strong>Evgeni Mishev Photography</strong> - за магията в кадър, за таланта
-            да улавя емоцията и да превръща миговете в незабравими спомени.
-          </li>
-          <li style="margin-bottom: 12px;">
-            <strong>Bogdana Ivanova</strong> - за сърцето, вложено във всеки детайл
-            от събитието, за усмивките и магичните кадри, дакосващи сърцето.
-          </li>
-          <li style="margin-bottom: 12px;">
-            <strong>Нашите семейства</strong> – за силата, подкрепата и вярата.
-          </li>
-          <li>
-            <strong>Maria-Paola Tuputi</strong> - за съвместната работа и сърцето,
-            вложено в създаването на тази книга.
-          </li>
-        </ul>
-
         <div class="book-images">
           <div class="book-cover">
             <img
-              src="/pages/knigi/zabavna-logopedia-front.jpg"
+              src="/pages/knigi-s-misiya/knigi/zabavna-logopedia-front.jpg"
               alt="Забавна логопедия – отпред"
             />
             <p class="image-label">Корица отпред</p>
           </div>
           <div class="book-cover">
             <img
-              src="/pages/knigi/zabavna-logopedia-back.jpg"
+              src="/pages/knigi-s-misiya/knigi/zabavna-logopedia-back.jpg"
               alt="Забавна логопедия – отзад"
             />
             <p class="image-label">Корица отзад</p>
           </div>
         </div>
 
-        <p style="margin-top: 25px; line-height: 1.8;">
-          Споделям с Вас част от магията на този ден…
-        </p>
-        <p style="margin-top: 15px; line-height: 1.8;">
-          <strong>Защото…</strong>
-        </p>
-        <ul
-          style="margin: 15px 0 20px 0 !important; list-style: none; padding-left: 0;"
-        >
-          <li style="margin-bottom: 10px; font-size: 1.2rem;">
-            понякога една книга не е просто книга.
-          </li>
-          <li style="margin-bottom: 10px; font-size: 1.2rem;">Тя е път.</li>
-          <li style="margin-bottom: 10px; font-size: 1.2rem;">Тя е мисия.</li>
-          <li style="margin-bottom: 10px; font-size: 1.2rem;">
-            Тя е любов, превърната в думи.
-          </li>
-          <li style="margin-bottom: 10px; font-size: 1.2rem;">
-            А когато тези думи достигнат и докоснат детско сърце…
-          </li>
-          <li style="margin-bottom: 10px; font-size: 1.2rem;">
-            те се превръщат в <strong>смелост да говори!</strong>
-          </li>
-        </ul>
-        <p style="color: var(--orange); font-weight: 700;">Обич.</p>
+        <div class="book-summary">
+          <div class="price-block">
+            <span class="price-label">Цена:</span>
+            <span class="price-value">€14,90 (29,14 лв)</span>
+          </div>
+          <div class="book-mission">
+            <h4>Специални благодарности</h4>
+            <ul class="thanks-list">
+              <li>
+                <strong>Издателство "Или-Мили"</strong> – за професионализма, отдадеността,
+                за всеки изпипан детайл в подготовката и представянето на книгата,
+                както и за прекрасните подаръци за всички гости.
+              </li>
+              <li>
+                <strong>Osteria Tartufo</strong> - за уютната атмосфера и топлото
+                гостоприемство, които допринесоха този ден да бъде още по-специален.
+              </li>
+              <li>
+                <strong>Evgeni Mishev Photography</strong> - за магията в кадър,
+                за таланта да улавя емоцията и да превръща миговете в незабравими
+                спомени.
+              </li>
+              <li>
+                <strong>Bogdana Ivanova</strong> - за сърцето, вложено във всеки
+                детайл от събитието, за усмивките и магичните кадри, докосващи сърцето.
+              </li>
+              <li>
+                <strong>Нашите семейства</strong> – за силата, подкрепата и вярата.
+              </li>
+              <li>
+                <strong>Maria-Paola Tuputi</strong> - за съвместната работа и сърцето,
+                вложено в създаването на тази книга.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="story-section">
+          <div class="story-card">
+            <p class="story-intro">
+              Споделям с Вас част от магията на този ден…
+            </p>
+            <div class="story-content">
+              <p class="story-title"><strong>Защото...</strong></p>
+              <ul class="story-list">
+                <li>понякога една книга не е просто книга.</li>
+                <li>Тя е път.</li>
+                <li>Тя е мисия.</li>
+                <li>Тя е любов, превърната в думи.</li>
+                <li>А когато тези думи достигнат и докоснат детско сърце…</li>
+                <li>те се превръщат в <strong>смелост да говори!</strong></li>
+              </ul>
+            </div>
+            <p class="story-signature">Обич.</p>
+          </div>
+        </div>
 
         <div class="book-link-container">
           <a
             href="https://ilimili.bg/products/zabavna-logopedia"
             target="_blank"
             class="book-link"
-            title="Вижте книгата в издателство Или-Мили"
+            title="Вземете книгата в издателство Или-Мили"
           >
-            Вижте книгата в издателство "Или-Мили"
+            Вземете книгата в издателство "Или-Мили"
           </a>
         </div>
 
@@ -423,30 +420,30 @@
   }
 
   .subsection p {
-    color: #666;
-    line-height: 1.7;
-    margin-bottom: 15px;
-    font-size: 1.25rem;
+    color: #555;
+    line-height: 1.85;
+    margin-bottom: 18px;
+    font-size: 1.18rem;
   }
 
   .intro-text {
     font-size: 1.4rem !important;
     color: var(--orange) !important;
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
     margin-bottom: 25px;
   }
 
   .subsection ul {
-    color: #666;
-    line-height: 1.7;
+    color: #555;
+    line-height: 1.8;
     margin-bottom: 20px;
   }
 
   .subsection li {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     position: relative;
-    font-size: 1.25rem;
+    font-size: 1.18rem;
   }
 
   /* ---- 3. Book Images ---- */
@@ -462,10 +459,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    padding: 18px;
+    border-radius: 18px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
     transition:
       transform 0.3s ease,
       box-shadow 0.3s ease;
@@ -521,7 +518,7 @@
   .book-link-container {
     display: flex;
     justify-content: center;
-    margin: 30px 0;
+    margin: 30px 0 20px;
   }
 
   .book-link {
@@ -566,6 +563,139 @@
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(247, 162, 116, 0.4);
     color: white;
+  }
+
+  .book-summary {
+    margin-top: 30px;
+    display: grid;
+    gap: 24px;
+  }
+
+  .price-block {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .price-label {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #5e5c5c;
+  }
+
+  .price-value {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--orange);
+  }
+
+  .book-mission {
+    background: linear-gradient(135deg, #fcf9f7 0%, #f7f4ed 100%);
+    border: 1px solid rgba(242, 136, 47, 0.16);
+    border-radius: 20px;
+    border-left: 4px solid var(--orange);
+    margin: 0 35px;
+    padding: 24px;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.05);
+  }
+
+  .book-mission h4 {
+    margin-bottom: 18px;
+    color: var(--orange);
+    font-size: 1.35rem;
+    font-weight: 700;
+  }
+
+  .thanks-list {
+    list-style: disc;
+    padding-left: 20px;
+    color: #555;
+    line-height: 1.8;
+  }
+
+  .thanks-list li {
+    margin-bottom: 12px;
+    font-size: 1rem;
+  }
+
+  .story-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .story-card {
+    width: 100%;
+    max-width: 880px;
+    padding: 32px 28px;
+    border-radius: 30px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(255, 245, 235, 0.98)
+    );
+    border: 1px solid rgba(242, 136, 47, 0.18);
+    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(8px);
+  }
+
+  .story-intro {
+    font-size: 1.35rem;
+    color: #333;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin-bottom: 1rem;
+  }
+
+  .story-content {
+    display: grid;
+    gap: 18px;
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 24px;
+    border: 1px solid rgba(242, 136, 47, 0.12);
+  }
+
+  .story-title {
+    font-size: 1.18rem;
+    color: var(--orange);
+    margin: 0;
+    font-weight: 700;
+  }
+
+  .story-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .story-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 14px;
+    color: #555;
+    font-size: 1.12rem;
+    line-height: 1.75;
+  }
+
+  .story-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0.1rem;
+    color: var(--orange);
+    font-size: 1.3rem;
+    line-height: 1;
+  }
+
+  .story-signature {
+    margin-top: 22px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--orange);
+    text-align: right;
   }
 
   /* ---- Media query - 955 ---- */
