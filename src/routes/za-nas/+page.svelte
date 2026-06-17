@@ -321,7 +321,11 @@
           ></g
         >
       </svg>
-      <img src="/others/who-are-we.png" alt="Who are we" />
+      <img
+        src="/others/who-are-we.jpg
+      "
+        alt="Who are we"
+      />
     </div>
   </div>
 </div>
