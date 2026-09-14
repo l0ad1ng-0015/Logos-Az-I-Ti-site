@@ -638,6 +638,42 @@
   </div>
 </div>
 
+<!-- English courses promo -->
+<div class="english-promo">
+  <div class="english-promo-container">
+    <div class="english-promo-content">
+      <p class="english-promo-eyebrow">НОВО ЗА УЧЕБНАТА 2026/2027 ГОДИНА</p>
+      <h2>Курсове по английски език</h2>
+      <p class="english-promo-audience">За деца, тийнейджъри и възрастни</p>
+
+      <p class="english-promo-description">
+        Обучението е съобразено с възрастта и нивото на всеки курсист, с фокус
+        върху разбирането, свободното общуване и увереността при използването на
+        английския език.
+      </p>
+
+      <div class="english-promo-dates">
+        <p><strong>📅 Начало на учебната година:</strong> 05.10.2026 г.</p>
+        <p><strong>📝 Входящо ниво:</strong> 15–25.09.2026 г.</p>
+      </div>
+
+      <p class="english-promo-start">Записването започна!</p>
+
+      <a class="english-promo-phone" href="tel:+359876860602">
+        <span aria-hidden="true">📞</span> 0876 860 602
+      </a>
+    </div>
+
+    <div class="english-promo-image-wrap">
+      <img
+        src="/others/english-courses.png"
+        alt="Курсове по английски език за деца, тийнейджъри и възрастни"
+        class="english-promo-image"
+      />
+    </div>
+  </div>
+</div>
+
 <!-- Podhodi and Our mission section -->
 <div class="texts">
   <div class="texts-container">
@@ -775,42 +811,6 @@
           >
         {/if}
       </div>
-    </div>
-  </div>
-</div>
-
-<!-- English courses promo -->
-<div class="english-promo">
-  <div class="english-promo-container">
-    <div class="english-promo-content">
-      <p class="english-promo-eyebrow">НОВО ЗА УЧЕБНАТА 2026/2027 ГОДИНА</p>
-      <h2>Курсове по английски език</h2>
-      <p class="english-promo-audience">За деца, тийнейджъри и възрастни</p>
-
-      <p class="english-promo-description">
-        Обучението е съобразено с възрастта и нивото на всеки курсист, с фокус
-        върху разбирането, свободното общуване и увереността при използването на
-        английския език.
-      </p>
-
-      <div class="english-promo-dates">
-        <p><strong>📅 Начало на учебната година:</strong> 05.10.2026 г.</p>
-        <p><strong>📝 Входящо ниво:</strong> 15–25.09.2026 г.</p>
-      </div>
-
-      <p class="english-promo-start">Записването започна!</p>
-
-      <a class="english-promo-phone" href="tel:+359876860602">
-        <span aria-hidden="true">📞</span> 0876 860 602
-      </a>
-    </div>
-
-    <div class="english-promo-image-wrap">
-      <img
-        src="/others/english-courses.png"
-        alt="Курсове по английски език за деца, тийнейджъри и възрастни"
-        class="english-promo-image"
-      />
     </div>
   </div>
 </div>
@@ -1296,7 +1296,7 @@
 
   .english-promo-audience {
     margin: 0.55rem 0 0.9rem;
-    color: var(--orange);
+    color: var(--green-dark);
     font-size: 1.3rem;
     font-weight: 700;
   }
