@@ -142,7 +142,7 @@
     id="copy"
     style="width: 100%; max-width: 1000px; margin-top: 20px; text-align: center; border-top: 1px solid #cccccc6d; padding-top: 11px;"
   >
-    <p>&copy; 2025 ОЦ "Логос - Аз и Ти". Всички права запазени.</p>
+    <p>&copy; 2026 ОЦ "Логос - Аз и Ти". Всички права запазени.</p>
   </div>
 </footer>
 

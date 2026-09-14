@@ -605,6 +605,39 @@
   </div>
 </div>
 
+<!-- Bulgarian language & literature lessons promo -->
+<div class="bel-promo">
+  <div class="bel-promo-container">
+    <div class="bel-promo-content">
+      <p class="bel-promo-eyebrow">НОВО В „ЛОГОС – АЗ И ТИ“</p>
+      <h2>Индивидуални уроци по български език и литература</h2>
+      <p class="bel-promo-class">От 1. до 12. клас</p>
+
+      <p class="bel-promo-description">
+        Всяко дете учи със свое собствено темпо. Уроците са съобразени с
+        индивидуалното ниво и включват ясно обяснение, практически упражнения,
+        попълване на пропуски и затвърждаване на знанията.
+      </p>
+
+      <p class="bel-promo-quote">💭 „Аха… ето защо е така!“</p>
+
+      <p class="bel-promo-start">Записването започна!</p>
+
+      <a class="bel-promo-phone" href="tel:+359876860602">
+        <span aria-hidden="true">📞</span> 0876 860 602
+      </a>
+    </div>
+
+    <div class="bel-promo-image-wrap">
+      <img
+        src="/others/bel-lessons.jpg"
+        alt="Индивидуални уроци по български език и литература от 1. до 12. клас"
+        class="bel-promo-image"
+      />
+    </div>
+  </div>
+</div>
+
 <!-- Podhodi and Our mission section -->
 <div class="texts">
   <div class="texts-container">
@@ -742,6 +775,42 @@
           >
         {/if}
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- English courses promo -->
+<div class="english-promo">
+  <div class="english-promo-container">
+    <div class="english-promo-content">
+      <p class="english-promo-eyebrow">НОВО ЗА УЧЕБНАТА 2026/2027 ГОДИНА</p>
+      <h2>Курсове по английски език</h2>
+      <p class="english-promo-audience">За деца, тийнейджъри и възрастни</p>
+
+      <p class="english-promo-description">
+        Обучението е съобразено с възрастта и нивото на всеки курсист, с фокус
+        върху разбирането, свободното общуване и увереността при използването на
+        английския език.
+      </p>
+
+      <div class="english-promo-dates">
+        <p><strong>📅 Начало на учебната година:</strong> 05.10.2026 г.</p>
+        <p><strong>📝 Входящо ниво:</strong> 15–25.09.2026 г.</p>
+      </div>
+
+      <p class="english-promo-start">Записването започна!</p>
+
+      <a class="english-promo-phone" href="tel:+359876860602">
+        <span aria-hidden="true">📞</span> 0876 860 602
+      </a>
+    </div>
+
+    <div class="english-promo-image-wrap">
+      <img
+        src="/others/english-courses.png"
+        alt="Курсове по английски език за деца, тийнейджъри и възрастни"
+        class="english-promo-image"
+      />
     </div>
   </div>
 </div>
@@ -1069,6 +1138,231 @@
   width: 150px;
   height: 120px;  
 } */
+
+  /* ---------- Bulgarian language & literature promo ---------- */
+  .bel-promo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .bel-promo-container {
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.5rem;
+    padding: 2rem;
+    box-sizing: border-box;
+    background: var(--orange-light);
+    border: 2px solid var(--orange);
+    border-radius: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .bel-promo-content {
+    flex: 1 1 56%;
+    min-width: 0;
+  }
+
+  .bel-promo-eyebrow {
+    margin: 0 0 0.6rem;
+    color: var(--orange);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+
+  .bel-promo-content h2 {
+    margin: 0;
+    color: #000;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    line-height: 1.15;
+    font-weight: 700;
+  }
+
+  .bel-promo-class {
+    margin: 0.6rem 0 1rem;
+    color: var(--green-dark);
+    font-size: 1.35rem;
+    font-weight: 700;
+  }
+
+  .bel-promo-description {
+    margin: 0;
+    color: #333;
+    font-size: 1.15rem;
+    line-height: 1.55;
+  }
+
+  .bel-promo-quote {
+    margin: 1.2rem 0 0.8rem;
+    color: var(--orange);
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: 700;
+  }
+
+  .bel-promo-start {
+    margin: 0 0 1rem;
+    color: #000;
+    font-size: 1.15rem;
+    font-weight: 700;
+  }
+
+  .bel-promo-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.2rem;
+    border-radius: 999px;
+    background: var(--green-main);
+    color: #1c1c1c;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition:
+      transform 0.15s ease,
+      opacity 0.15s ease,
+      background 0.3s ease;
+  }
+
+  .bel-promo-phone:hover {
+    background: var(--green-button);
+    transform: translateY(-1px);
+    opacity: 0.95;
+  }
+
+  .bel-promo-image-wrap {
+    flex: 0 1 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bel-promo-image {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    border-radius: 16px;
+  }
+
+  /* ---------- English courses promo ---------- */
+  .english-promo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2.5rem;
+  }
+
+  .english-promo-container {
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 1.75rem;
+    box-sizing: border-box;
+    background: var(--orange-light);
+    border: 2px solid var(--orange);
+    border-radius: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  .english-promo-content {
+    flex: 1 1 58%;
+    min-width: 0;
+  }
+
+  .english-promo-eyebrow {
+    margin: 0 0 0.5rem;
+    color: var(--orange);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.035em;
+  }
+
+  .english-promo-content h2 {
+    margin: 0;
+    color: #000;
+    font-size: clamp(1.9rem, 3vw, 2.55rem);
+    line-height: 1.15;
+    font-weight: 700;
+  }
+
+  .english-promo-audience {
+    margin: 0.55rem 0 0.9rem;
+    color: var(--orange);
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  .english-promo-description {
+    margin: 0;
+    color: #333;
+    font-size: 1.08rem;
+    line-height: 1.5;
+  }
+
+  .english-promo-dates {
+    margin-top: 1rem;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .english-promo-dates p {
+    margin: 0.2rem 0;
+  }
+
+  .english-promo-start {
+    margin: 1rem 0 0.8rem;
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  .english-promo-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.15rem;
+    border-radius: 999px;
+    background: var(--green-main);
+    color: #1c1c1c;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition:
+      transform 0.15s ease,
+      opacity 0.15s ease,
+      background 0.3s ease;
+  }
+
+  .english-promo-phone:hover {
+    background: var(--green-button);
+    transform: translateY(-1px);
+    opacity: 0.95;
+  }
+
+  .english-promo-image-wrap {
+    flex: 0 1 38%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .english-promo-image {
+    width: 100%;
+    max-width: 330px;
+    height: auto;
+    border-radius: 16px;
+  }
 
   /* ---------- 3 Texts ---------- */
   .texts {
@@ -1430,10 +1724,20 @@
       width: clamp(260px, 40vw, 360px);
     }
 
+    /* ---------- Bulgarian language & literature promo ---------- */
+    .bel-promo-container {
+      gap: 1.5rem;
+      padding: 1.5rem;
+    }
+
+    .bel-promo-content h2 {
+      font-size: clamp(1.7rem, 4vw, 2.2rem);
+    }
+
     /* ---------- 3 MISSION ---------- */
     #mission-content {
-    gap: 1rem;
-  }
+      gap: 1rem;
+    }
 
     /* ---------- 5 CONTACTS ---------- */
     .contacts {
@@ -1523,15 +1827,58 @@
 
     .btn-hero {
       align-self: center;
-    }t
-
-    .hero-right {
+    }
+    t .hero-right {
       margin-top: 25px;
       justify-content: center;
     }
 
     .puzzle-img {
       width: 85%;
+    }
+
+    /* ---------- Bulgarian language & literature promo ---------- */
+    .bel-promo-container {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 1.25rem;
+      padding: 1.25rem;
+    }
+
+    .bel-promo-content {
+      flex-basis: auto;
+    }
+
+    .bel-promo-image-wrap {
+      flex-basis: auto;
+      width: 100%;
+    }
+
+    .bel-promo-image {
+      max-width: 100%;
+      border-radius: 12px;
+    }
+
+    /* ---------- English courses promo ---------- */
+    .english-promo-container {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 1.25rem;
+      padding: 1.25rem;
+    }
+
+    .english-promo-content {
+      flex-basis: auto;
+    }
+
+    .english-promo-image-wrap {
+      flex-basis: auto;
+      width: 100%;
+    }
+
+    .english-promo-image {
+      max-width: 100%;
+      border-radius: 12px;
     }
 
     /* ---------- 2 SERVICES ---------- */
@@ -1555,7 +1902,9 @@
       height: 125px;
     }
 
-    #square p, .more-btn, .less-btn {
+    #square p,
+    .more-btn,
+    .less-btn {
       font-size: 1.1rem;
     }
 
