@@ -309,7 +309,7 @@
   .grid {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 18px;
     max-width: 1030px;
     width: 97%;

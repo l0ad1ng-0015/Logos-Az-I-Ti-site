@@ -28,11 +28,15 @@
   }
 
   function handleScroll() {
-    isScrolled = window.scrollY > 120;
+    // Hysteresis: different thresholds for shrinking/expanding prevent flicker near the boundary
+    const y = window.scrollY;
+    if (!isScrolled && y > 120) isScrolled = true;
+    else if (isScrolled && y < 60) isScrolled = false;
   }
 
   onMount(() => {
-    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -483,13 +487,10 @@
   }
 
   /* Spacer to prevent content from being hidden behind sticky navbar */
+  /* Spacer keeps a fixed height — shrinking it on scroll changes the page height,
+     which shifts scrollY and makes the header toggle back and forth */
   .navbar-spacer {
     height: 110px;
-    transition: height 0.3s ease;
-  }
-
-  nav.scrolled + .navbar-spacer {
-    height: 80px;
   }
 
   nav.scrolled .logo {
@@ -795,10 +796,6 @@
       height: 95px;
     }
 
-    nav.scrolled + .navbar-spacer {
-      height: 70px;
-    }
-
     .logo {
       display: flex;
       justify-content: center;
@@ -853,10 +850,6 @@
 
     .navbar-spacer {
       height: 95px;
-    }
-
-    nav.scrolled + .navbar-spacer {
-      height: 70px;
     }
 
     .logo {
@@ -1035,10 +1028,6 @@
       height: 90px;
     }
 
-    nav.scrolled + .navbar-spacer {
-      height: 65px;
-    }
-
     .logo {
       width: 78px;
       height: 67px;
@@ -1081,10 +1070,6 @@
 
     .navbar-spacer {
       height: 90px;
-    }
-
-    nav.scrolled + .navbar-spacer {
-      height: 60px;
     }
 
     .logo {
